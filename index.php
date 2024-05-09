@@ -14,6 +14,10 @@
 </head>
 <body class="body">
 
+<style>
+    background: black;
+
+</style>
     <nav>
 
         <div class="Menu">
