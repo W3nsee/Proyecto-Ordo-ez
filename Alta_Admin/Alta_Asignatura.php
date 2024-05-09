@@ -13,6 +13,8 @@
 </head>
 <body class="body">
 
+    <h1>Prueba</h1>>
+
     <nav>
 
         <div class="Menu">
