@@ -108,8 +108,8 @@
 
     </nav>
 
-    <section>
-
+    <form class="form">
+    <div class="contenedor_form">
         <div class="titulo">
 
             <h1 class="text-titulo">ALTA DE ALUMNO</h1>
@@ -126,7 +126,7 @@
 
         <div class="form_apellido_p">
 
-            <h2 class="text_form">Apellido paterno</h2>
+            <h2 class="text_form">Apellido Paterno</h2>
 
             <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
 
@@ -135,7 +135,7 @@
 
         <div class="form_apellido_m">
 
-            <h2 class="text_form">Apellido materno</h2>
+            <h2 class="text_form">Apellido Materno</h2>
 
             <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
 
@@ -143,28 +143,21 @@
 
         <div class="form_fecha_nacimiento">
 
-            <h2 class="text_form">Fecha de nacimiento</h2>
+            <h2 class="text_form">Fecha de Nacimiento</h2>
 
             <input type="date" name="fechanac" value="2006-01-12"> 
 
         </div>
 
         <div class="form_sexo">
-
             <h2 class="text_form">Sexo</h2>
-
             <div class="opc_femenino">
-
                 <h3 class="text_sexo">F</h3>
-
             </div>
 
             <div class="opc_masculino">
-
                 <h3 class="text_sexo">M</h3>
-
             </div>
-
         </div>
 
         <div class="form_telefono">
@@ -244,8 +237,8 @@
             <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
 
         </div>
-
-    </section>
+</div>
+</form>
 
     <footer>
 
