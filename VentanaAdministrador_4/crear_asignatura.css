@@ -1,0 +1,116 @@
+body{
+    margin: 2%;
+    padding: 0px;
+ 
+}
+
+
+.caja {
+    position: relative;
+    margin: 20px;
+}
+
+
+
+.caja label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #202020;
+    background: white;
+    translate: 5px -7px;
+    width: 60px;
+}
+
+.label{
+    font-size: 20px;
+}
+
+.caja input {
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #292929;
+    border-radius: 8px;
+    outline: none;
+    color: #4b4b4b;
+    font-family: inherit;
+    font-size: 18px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px 10px 10px 30px;
+}
+
+#nombre_asig,#horas_asig{
+    float: inline-start;
+}
+
+
+/* Slider */
+
+
+.slider{
+    width: 95%;
+    
+    position: relative;
+    display: flex;
+   
+   /* scroll-snap-type: x mandatory;
+    */
+    margin: 4%;
+    
+    cursor: pointer;
+    
+    
+}
+
+.img_caja{
+    width: 20%; 
+    height: 400px;
+    position: sticky;
+    border-radius: 21px;
+    background-color: whitesmoke;
+    margin: 2%; 
+    padding: 15px;
+    border-radius: 21px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1.03) perspective(200px);
+}
+
+img{
+    width: 95%; 
+    height: 250px; 
+    border-radius: 21px;
+    object-fit: cover;
+    margin: 2%;
+}
+
+
+.slider :hover{
+    transform: scale(1.1) perspective(2500px) rotateY(5deg);
+    transition: 0.3s;
+  
+}
+
+
+.texto {
+    font-size: 20px; 
+    color: #333; 
+    translate: 5px -100px;
+ 
+}
+
+.boton{
+    width: 150px;
+    height: 30px;
+    border-radius: 21px;
+    float: right;
+    border: none;
+    backdrop-filter: blur(10px);
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
