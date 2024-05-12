@@ -89,8 +89,14 @@ Class Contacto extends Conexion{
 	Public function listarmaestro($nombre, $grado, $maestro, $id){
 		$this->sentencia = "SELECT p.nombre AS nombre_profesor, a.nombre AS asignatura
 							FROM profesor p
-							INNER JOIN asignatura a ON p.id = a.matricula_profesor;
-		";
+							INNER JOIN asignatura a ON p.id = a.matricula_profesor";
+		$bandera = $this->ejecutar_sentencia();
+	}
+
+	Public function listaralumno($nombre, $apellido_paterno, $apellido_materno, $grado, $grupo, $id){
+		$this->sentencia = "SELECT a.nombre, a.apellido_paterno, a.apellido_materno, s.grado, s.grupo
+							FROM alumno a
+							INNER JOIN salon s ON a.matricula_salon = s.id";
 		$bandera = $this->ejecutar_sentencia();
 	}
 }
