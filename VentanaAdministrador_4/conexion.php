@@ -4,7 +4,7 @@
  	private $host = 'localhost';
  	private $usuario = 'root'; //usuario q está en mysql server
  	private $password = '';
- 	private $base = 'montellano';
+ 	private $base = 'Escuela';
  	public $sentencia; //realiza más adelante las sentencias en sql, es publica para qe sea visible para otras clases
  	private $rows = array(); 
  	private $conexion; //ayuda a traer un metodo a su clase coleccion

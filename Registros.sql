@@ -15,18 +15,6 @@ CREATE TABLE alumno
     sexo varchar(1) NOT NULL
 );
 
-CREATE TABLE maestro (
-    id int PRIMARY KEY Auto_increment,
-    contrasena varchar(16) NOT NULL,
-    nombre varchar(24) NOT NULL,
-    apellido_paterno varchar(24) NOT NULL,
-    apellido_materno varchar(24) NOT NULL,
-    fecha_nacimiento date NOT NULL,
-    telefono int(14) NOT NULL,
-    correo varchar(40) NOT NULL,
-    sexo varchar(1) NOT NULL
-);
-
 INSERT INTO maestro VALUES ('','12345','Jorge','Guzman','Guzman','1994-10-01','1234567890','y5Yn9@example.com','M');
 INSERT INTO maestro VALUES ('','12345','Juan','Díaz','Díaz','1970-01-01','55555555','jj123@example.com','M');
 INSERT INTO maestro VALUES ('','12345','María','López','López','1980-05-05','55555556','ml456@example.com','F');

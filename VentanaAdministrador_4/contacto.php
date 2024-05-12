@@ -85,5 +85,13 @@ Class Contacto extends Conexion{
 		$this->sentencia = "UPDATE asignatura SET nombre='$nombre', grado='$grado', id_maestro = '$maestro' WHERE id = '$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
+
+	Public function listarmaestro($nombre, $grado, $maestro, $id){
+		$this->sentencia = "SELECT p.nombre AS nombre_profesor, a.nombre AS asignatura
+							FROM profesor p
+							INNER JOIN asignatura a ON p.id = a.matricula_profesor;
+		";
+		$bandera = $this->ejecutar_sentencia();
+	}
 }
 ?>
