@@ -1,13 +1,13 @@
 body{
     margin: 2%;
     padding: 0px;
- 
 }
 
 
 .caja {
     position: relative;
     margin: 20px;
+    float: inline-start;
 }
 
 
@@ -48,36 +48,26 @@ body{
 
 /* Slider */
 
-
 .slider{
     width: 95%;
-    
     position: relative;
-    display: flex;
-   
-   /* scroll-snap-type: x mandatory;
-    */
     margin: 4%;
-    
     cursor: pointer;
-    
-    
+    overflow: hidden;
 }
 
 .img_caja{
-    width: 20%; 
+    width: 33%; 
     height: 400px;
     position: sticky;
     border-radius: 21px;
     background-color: whitesmoke;
     margin: 2%; 
     padding: 15px;
-    border-radius: 21px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     transform: scale(1.03) perspective(200px);
+    float: left;
 }
 
 img{

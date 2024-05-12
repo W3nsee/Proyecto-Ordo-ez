@@ -36,7 +36,7 @@
       <div class="slider">
         <?php
 
-            require_once("contacto.php");
+            require_once("../contacto.php");
             $obj = new Contacto();
             $resultado = $obj->consultar();
 
