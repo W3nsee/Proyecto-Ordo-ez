@@ -61,6 +61,9 @@ CREATE TABLE justificante (
 CREATE TABLE asignatura ( --TERMINADO--
     id int PRIMARY KEY Auto_increment,
     nombre varchar 40 NOT NULL,
+    horas numeric 2 NOT NULL,
+    maestro varchar 40 NOT NULL,
+    grado varchar 1 NOT NULL,
     FOREIGN KEY matricula_profesor REFERENCES profesor (id),
     FOREIGN KEY matricula_horario REFERENCES horario (id),
     FOREIGN KEY matricula_alumno REFERENCES alumno (id),

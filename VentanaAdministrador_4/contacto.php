@@ -14,11 +14,6 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();
 	}
 
-	 public function altaasignatura($nombre, $grado, $maestro) {
-        $this->sentencia = "INSERT INTO asignatura VALUES ('','$nombre', '$grado', '$maestro')";
-        $bandera = $this->ejecutar_sentencia();
-        return $bandera;
-    }
 
 	public function consultaralumno(){
 		$this->sentencia = "SELECT * FROM alumno;";

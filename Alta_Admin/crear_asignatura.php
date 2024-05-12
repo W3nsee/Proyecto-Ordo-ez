@@ -19,6 +19,13 @@
                 <input type="number" name="horas_asig" placeholder="5">
                 <label name="horas">Horas</label>
             </div>
+            
+            <label>Grados</label>
+            <input type="radio" name="grado" value="1">1 
+            <input type="radio" name="grado" value="2">2
+            <input type="radio" name="grado" value="3">3
+            <br>
+
              <input type="hidden" name="maestro" id="maestroInput" class="boton">
             <input type="submit" name="insert" value="Guardar" class="boton">
     <style>
@@ -112,10 +119,11 @@ function actualizarMaestro(nombre) {
                 $nombre = isset($_REQUEST['nombre_asig']) ? $_REQUEST['nombre_asig'] : '';
                 $horas = isset($_REQUEST['horas_asig']) ? $_REQUEST['horas_asig'] : '';
                $maestro = isset($_POST['maestro']) ? $_POST['maestro'] : '';
+               $grado = isset($_REQUEST['grado']) ? $_REQUEST['grado'] : '';
 
                 require_once("contacto.php");
                 $obj = new Contacto(); 
-                $obj->guardar_asignatura($nombre,$horas,$maestro);
+                $obj->guardar_asignatura($nombre,$horas,$maestro,$grado);
                 echo "Asignatura Guardada";
                 
             }
