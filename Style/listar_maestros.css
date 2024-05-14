@@ -1,0 +1,32 @@
+body{
+    margin: 2%;
+    padding: 0px;
+}
+
+.contenedor{
+    width: 98%;
+    height: 100%;
+    
+}
+
+.maestros{
+    width: 25%;
+    height: 400px;
+    border-radius: 21px;
+    margin: 2%;
+    background-color: rgb(189, 179, 198);    
+    float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.foto{
+   
+    width: 80%;
+    height: 200px;
+    border-radius: 15%;
+    margin: 2%;
+    padding: 7%;
+    float: center;
+    
+}
+
