@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
     
     <!--Icons-->
-    <!--Estuve Aqui TFox-->
+    <!--Estuve Aqui TFox Parte 2-->
 
 </head>
 <body class="body">
