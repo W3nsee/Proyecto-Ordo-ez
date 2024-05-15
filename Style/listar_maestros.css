@@ -1,6 +1,7 @@
 body{
     margin: 2%;
     padding: 0px;
+    background-color: black;
 }
 
 .contenedor{
@@ -14,7 +15,7 @@ body{
     height: 400px;
     border-radius: 21px;
     margin: 2%;
-    background-color: rgb(189, 179, 198);    
+    background-color: rgb(206, 206, 206);    
     float: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
@@ -30,3 +31,6 @@ body{
     
 }
 
+.informacion_maestros{
+   float: center;
+}
