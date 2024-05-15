@@ -106,7 +106,7 @@ function actualizarMaestro(nombre) {
     
     }
     .selected {
-        animation: CambioColor 2s infinite;
+        animation: CambioColor 20s infinite;
       
     }
 </style>

@@ -124,12 +124,12 @@ class Contacto extends Conexion
 
 	Public function listarmaestro(){
 		//$nombre, $grado, $maestro, $id
-		$this->sentencia = "SELECT p.nombre AS nombre , a.nombre AS asignatura FROM maestro p INNER JOIN asignatura a ON p.id = a.id";
+		$this->sentencia = "SELECT p.nombre AS nombre , a.nombre AS asignatura FROM profesor p INNER JOIN asignatura a ON p.id = a.id";
 		$bandera = $this->ejecutar_sentencia();
 	}
 
 	public function listarmaestros_maestros(){
-		$this->sentencia = "SELECT nombre, apellido_paterno, apellido_materno FROM maestro";
+		$this->sentencia = "SELECT nombre, apellido_paterno, apellido_materno FROM profesor";
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
