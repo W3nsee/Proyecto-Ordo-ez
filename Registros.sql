@@ -1,47 +1,119 @@
-CREATE DATABASE Registro;
+DROP DATABASE IF EXISTS escuela;
 
-USE Registro;
+CREATE DATABASE escuela;
 
-CREATE TABLE alumno
-(
-    id int PRIMARY KEY Auto_increment,
-    contrasena varchar(16) NOT NULL,
-    nombre varchar(24) NOT NULL,
-    apellido_paterno varchar(24) NOT NULL,
-    apellido_materno varchar(24) NOT NULL,
-    fecha_nacimiento date NOT NULL,
-    telefono int(14) NOT NULL,
-    correo varchar(40) NOT NULL,
-    sexo varchar(1) NOT NULL
+USE escuela;
+
+CREATE TABLE Profesor (
+  Id_Profesor INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Profesor VARCHAR(255) NOT NULL UNIQUE,
+  Contraseña VARCHAR(255) NOT NULL,
+  Nombre VARCHAR(255) NOT NULL,
+  Apellido_Paterno VARCHAR(255) NOT NULL,
+  Apellido_Materno VARCHAR(255) NOT NULL,
+  Fecha_Nacimiento DATE NOT NULL,
+  Telefono VARCHAR(255) NOT NULL,
+  Correo VARCHAR(255) NOT NULL
 );
 
-INSERT INTO maestro VALUES ('','12345','Jorge','Guzman','Guzman','1994-10-01','1234567890','y5Yn9@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Juan','Díaz','Díaz','1970-01-01','55555555','jj123@example.com','M');
-INSERT INTO maestro VALUES ('','12345','María','López','López','1980-05-05','55555556','ml456@example.com','F');
-INSERT INTO maestro VALUES ('','12345','Carlos','Rodríguez','Rodríguez','1965-12-25','55555557','cr789@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Ana','García','García','1991-03-12','55555558','ag321@example.com','F');
-INSERT INTO maestro VALUES ('','12345','Pedro','Sánchez','Sánchez','1975-07-07','55555559','pss90@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Luisa','Martínez','Martínez','1987-11-01','55555560','lum89@example.com','F');
-INSERT INTO maestro VALUES ('','12345','José','González','González','1978-02-15','55555561','jg678@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Ana','González','González','1992-09-10','55555562','ang98@example.com','F');
-INSERT INTO maestro VALUES ('','12345','Juan','Hernández','Hernández','1972-04-04','55555563','jh567@example.com','M');
-INSERT INTO maestro VALUES ('','12345','María','García','García','1984-02-20','55555564','mg345@example.com','F');
-INSERT INTO maestro VALUES ('','12345','José','Rodríguez','Rodríguez','1971-08-30','55555565','jr678@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Ana','Martínez','Martínez','1993-06-25','55555566','am567@example.com','F');
-INSERT INTO maestro VALUES ('','12345','María','Hernández','Hernández','1981-01-15','55555567','mh456@example.com','F');
-INSERT INTO maestro VALUES ('','12345','José','García','García','1979-09-12','55555568','jg987@example.com','M');
-INSERT INTO maestro VALUES ('','12345','Ana','Sánchez','Sánchez','1994-07-10','55555569','as890@example.com','F');
-INSERT INTO maestro VALUES ('','12345','Juan','González','González','1974-03-20','55555570','jg345@example.com','M');
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('123456789', '123456789', 'Jorge', 'Guzman', 'Martinez', '2000-01-01', '123456789', 'gqOQh@example.com');
 
-INSERT INTO alumno VALUES ('','12345','Jorge','Guzman','Guzman','1994-10-01','1234567890','y5Yn9@example.com','M');
-INSERT INTO alumno VALUES ('','12345','Aurora','Pérez','Pérez','1995-02-13','0987654321','ap132@example.com','F');
-INSERT INTO alumno VALUES ('','12345','Juan','Huerta','Huerta','1994-08-20','0987654323','jh208@example.com','M');
-INSERT INTO alumno VALUES ('','12345','Ana','Gómez','Gómez','1996-04-16','0987654325','ag164@example.com','F');
-INSERT INTO alumno VALUES ('','12345','Pedro','Flores','Flores','1997-01-05','0987654327','pf051@example.com','M');
-INSERT INTO alumno VALUES ('','12345','María','Rodríguez','Rodríguez','1998-09-22','0987654329','mr229@example.com','F');
-INSERT INTO alumno VALUES ('','12345','Lucas','Sánchez','Sánchez','1999-05-30','0987654331','ls305@example.com','M');
-INSERT INTO alumno VALUES ('','12345','Adriana','Ruiz','Ruiz','2000-04-08','0987654333','ar084@example.com','F');
-INSERT INTO alumno VALUES ('','12345','José','Gómez','Gómez','2001-09-14','0987654335','jg149@example.com','M');
-INSERT INTO alumno VALUES ('','12345','Sandra','López','López','2002-01-10','0987654337','sl101@example.com','F');
-INSERT INTO alumno VALUES ('','12345','Guillermo','Pérez','Pérez','2003-03-25','0987654339','gp253@example.com','M');
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('987654321', '987654321', 'Juan', 'Martinez', 'Herrera', '2000-01-01', '123456789', 'gqOQh@example.com');
 
+
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('555555555', '555555555', 'Pedro', 'Pérez', 'Sánchez', '1990-01-01', '555555555', 'perez@example.com');
+
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('666666666', '666666666', 'Maria', 'Jiménez', 'Rodríguez', '1990-01-01', '666666666', 'maria@example.com');
+
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('444444444', '444444444', 'Luis', 'López', 'Martínez', '1980-01-01', '444444444', 'luis@example.com');
+
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('333333333', '333333333', 'Carlos', 'Rodríguez', 'Torres', '1985-01-01', '333333333', 'carlos@example.com');
+
+INSERT INTO Profesor (Matricula_Profesor, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('222222222', '222222222', 'Ana', 'Sánchez', 'García', '1995-01-01', '222222222', 'ana@example.com');
+
+
+
+
+CREATE TABLE Administrador (
+  Id_Administrador INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Admin VARCHAR(255) NOT NULL UNIQUE,
+  Contraseña VARCHAR(255) NOT NULL,
+  Nombre VARCHAR(255) NOT NULL,
+  Apellido_Paterno VARCHAR(255) NOT NULL,
+  Apellido_Materno VARCHAR(255) NOT NULL,
+  Fecha_Nacimiento DATE NOT NULL,
+  Telefono VARCHAR(255) NOT NULL,
+  Correo VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Alumno (
+  Id_Alumno INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Alumno VARCHAR(255) NOT NULL UNIQUE,
+  Contraseña VARCHAR(255) NOT NULL,
+  Nombre VARCHAR(255) NOT NULL,
+  Apellido_Paterno VARCHAR(255) NOT NULL,
+  Apellido_Materno VARCHAR(255) NOT NULL,
+  Fecha_Nacimiento DATE NOT NULL,
+  Telefono VARCHAR(255) NOT NULL,
+  Correo VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Asignatura (
+  Id_Asignatura INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Salon (
+  Id_Salon INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Horario (
+  Id_Horario INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Alumno VARCHAR(255) NOT NULL,
+  Matricula_Maestro VARCHAR(255) NOT NULL,
+  Matricula_Asignatura INT NOT NULL,
+  Id_Salon INT NOT NULL,
+  Dia VARCHAR(255) NOT NULL,
+  Hora_Inicio TIME NOT NULL,
+  Hora_Fin TIME NOT NULL,
+  FOREIGN KEY (Matricula_Alumno) REFERENCES Alumno(Matricula_Alumno),
+  FOREIGN KEY (Matricula_Maestro) REFERENCES Profesor(Matricula_Profesor),
+  FOREIGN KEY (Matricula_Asignatura) REFERENCES Asignatura(Id_Asignatura),
+  FOREIGN KEY (Id_Salon) REFERENCES Salon(Id_Salon)
+);
+
+CREATE TABLE Calificaciones (
+  Id_Calificacion INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Alumno VARCHAR(255) NOT NULL,
+  Matricula_Asignatura INT NOT NULL,
+  Parcial_1 DECIMAL(10,2) NOT NULL,
+  Parcial_2 DECIMAL(10,2) NOT NULL,
+  Parcial_3 DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (Matricula_Alumno) REFERENCES Alumno(Matricula_Alumno),
+  FOREIGN KEY (Matricula_Asignatura) REFERENCES Asignatura(Id_Asignatura)
+);
+
+CREATE TABLE Justificante (
+  Id_Justificante INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Alumno VARCHAR(255) NOT NULL,
+  Matricula_Asignatura INT NOT NULL,
+  Fecha DATE NOT NULL,
+  Motivo VARCHAR(255) NOT NULL,
+  FOREIGN KEY (Matricula_Alumno) REFERENCES Alumno(Matricula_Alumno),
+  FOREIGN KEY (Matricula_Asignatura) REFERENCES Asignatura(Id_Asignatura)
+);
+
+CREATE TABLE Alumno_Padre (
+  Id_Alumno_Padre INT AUTO_INCREMENT PRIMARY KEY,
+  Matricula_Alumno VARCHAR(255) NOT NULL,
+  Matricula_Padre VARCHAR(255) NOT NULL,
+  FOREIGN KEY (Matricula_Alumno) REFERENCES Alumno(Matricula_Alumno)
+);

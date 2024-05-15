@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de asignatura</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/style_alta_asignatura.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                    <!-- Tipografía -->
@@ -140,6 +140,35 @@
         <div class="subtitulo_profesor">
 
             <h1 class="text_subtitulo_profesor">Profesor que impartirá la asignatura</h1>
+
+        </div> 
+
+        <?php
+
+            require_once("../contacto.php");
+            $obj = new Contacto();
+            $resultado = $obj->consultar();
+
+        ?>
+        
+        <div class="limit_profesores">
+
+            <?php
+
+                while($profesor = $resultado->fetch_assoc()){
+
+                    echo "<div class='form_profesor'>";
+                    echo "<h2 class='text_form_profesor'>". $profesor["Nombre"] ." ";
+                    echo $profesor["Apellido_Paterno"];
+                    echo " ";
+                    echo $profesor["Apellido_Materno"];
+                    echo "</h2>";
+                    echo "<h2 class='text_form_profesor'>". $profesor["Matricula_Profesor"] ."</h2>";
+                    echo "</div>";
+
+                }   
+
+            ?>
 
         </div>
 

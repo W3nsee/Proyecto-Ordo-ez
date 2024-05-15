@@ -8,7 +8,7 @@ class Conexion
 	private $host = 'Localhost';
 	private $usuario = 'root';
 	private $password = '';
-	private $base = 'Escuela';
+	private $base = 'escuela';
 	public $sentencia;
 	private $rows = array();
 	private $conexion;

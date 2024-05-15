@@ -22,7 +22,7 @@
 
             <div class="btn-desplegar">
 
-                <img class="img-menu" src="img/menu.png" width="50px" height="50px">
+                <img class="img-menu" src="img/Logo_Montellano_Vec_Mesa de trabajo 1-02.svg" width="50px" height="50px">
 
             </div>
 

@@ -108,137 +108,135 @@
 
     </nav>
 
-    <form class="form">
-    <div class="contenedor_form">
-        <div class="titulo">
+<section>
+            <div class="titulo">
 
-            <h1 class="text-titulo">ALTA DE ALUMNO</h1>
-
-        </div>
-
-        <div class="form_nombres">
-
-            <h2 class="text_form">Nombres</h2>
-
-            <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
-
-        </div>
-
-        <div class="form_apellido_p">
-
-            <h2 class="text_form">Apellido Paterno</h2>
-
-            <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
-
-        </div>
-
-
-        <div class="form_apellido_m">
-
-            <h2 class="text_form">Apellido Materno</h2>
-
-            <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
-
-        </div>
-
-        <div class="form_fecha_nacimiento">
-
-            <h2 class="text_form">Fecha de Nacimiento</h2>
-
-            <input type="date" name="fechanac" value="2006-01-12"> 
-
-        </div>
-
-        <div class="form_sexo">
-            <h2 class="text_form">Sexo</h2>
-            <div class="opc_femenino">
-                <h3 class="text_sexo">F</h3>
-            </div>
-
-            <div class="opc_masculino">
-                <h3 class="text_sexo">M</h3>
-            </div>
-        </div>
-
-        <div class="form_telefono">
-
-            <h2 class="text_form">Teléfono</h2>
-
-            <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
-
-        </div>
-
-        <div class="form_grados">
-
-            <h2 class="text_form">Grados</h2>
-
-            <div class="opc_grado_1">
-
-                <h3 class="text_grado">1°</h3>
+                <h1 class="text-titulo">ALTA DE ALUMNO</h1>
 
             </div>
 
-            <div class="opc_grado_2">
+            <div class="form_nombres">
 
-                <h3 class="text_grado">2°</h3>
+                <h2 class="text_form">Nombres</h2>
 
-            </div>
-
-            <div class="opc_grado_3">
-
-                <h3 class="text_grado">3°</h3>
+                <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
 
             </div>
 
-        </div>
+            <div class="form_apellido_p">
 
-        <div class="form_correo">
+                <h2 class="text_form">Apellido Paterno</h2>
 
-            <h2 class="text_form">Correo</h2>
-
-            <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
-
-        </div>
-
-        <div class="form_grupos">
-
-            <h2 class="text_form">Grupos</h2>
-
-            <div class="opc_grupo_a">
-
-                <h3 class="text_grupo">A</h3>
+                <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
 
             </div>
 
-            <div class="opc_grupo_b">
 
-                <h3 class="text_grupo">B</h3>
+            <div class="form_apellido_m">
 
-            </div>
+                <h2 class="text_form">Apellido Materno</h2>
 
-            <div class="opc_grupo_c">
-
-                <h3 class="text_grupo">C</h3>
+                <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
 
             </div>
 
-        </div>
+            <div class="form_fecha_nacimiento">
 
-        <div class="form_password">
+                <h2 class="text_form">Fecha de Nacimiento</h2>
 
-            <h2 class="text_form">Contraseña</h2>
+                <input type="date" name="fechanac" value="2006-01-12"> 
 
-            <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+            </div>
 
-        </div>
+            <div class="form_sexo">
+                <h2 class="text_form">Sexo</h2>
+                <div class="opc_femenino">
+                    <h3 class="text_sexo">F</h3>
+                </div>
 
-        <div class="guardar">
+                <div class="opc_masculino">
+                    <h3 class="text_sexo">M</h3>
+                </div>
+            </div>
 
-            <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+            <div class="form_telefono">
 
-        </div>
-</div>
-</form>
+                <h2 class="text_form">Teléfono</h2>
+
+                <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
+
+            </div>
+
+            <div class="form_grados">
+
+                <h2 class="text_form">Grados</h2>
+
+                <div class="opc_grado_1">
+
+                    <h3 class="text_grado">1°</h3>
+
+                </div>
+
+                <div class="opc_grado_2">
+
+                    <h3 class="text_grado">2°</h3>
+
+                </div>
+
+                <div class="opc_grado_3">
+
+                    <h3 class="text_grado">3°</h3>
+
+                </div>
+
+            </div>
+
+            <div class="form_correo">
+
+                <h2 class="text_form">Correo</h2>
+
+                <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
+
+            </div>
+
+            <div class="form_grupos">
+
+                <h2 class="text_form">Grupos</h2>
+
+                <div class="opc_grupo_a">
+
+                    <h3 class="text_grupo">A</h3>
+
+                </div>
+
+                <div class="opc_grupo_b">
+
+                    <h3 class="text_grupo">B</h3>
+
+                </div>
+
+                <div class="opc_grupo_c">
+
+                    <h3 class="text_grupo">C</h3>
+
+                </div>
+
+            </div>
+
+            <div class="form_password">
+
+                <h2 class="text_form">Contraseña</h2>
+
+                <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+
+            </div>
+
+            <div class="guardar">
+
+                <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+
+            </div>
+</section>
 
     <footer>
 
