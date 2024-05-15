@@ -134,10 +134,10 @@ class Contacto extends Conexion
 		return $bandera;
 	}
 
-	Public function listaralumno($nombre, $apellido_paterno, $apellido_materno, $grado, $grupo, $id){
+	Public function listaralumno($id){
 		$this->sentencia = "SELECT a.nombre, a.apellido_paterno, a.apellido_materno, s.grado, s.grupo
 							FROM alumno a
-							INNER JOIN salon s ON a.matricula_salon = s.id";
+							INNER JOIN salon s ON a.matricula_salon = s.id='$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
 }

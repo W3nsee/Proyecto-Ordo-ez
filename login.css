@@ -1,0 +1,26 @@
+body{
+    margin: 2%;
+    padding: 0;
+}
+
+
+.login{
+    width: 30%;
+    height: 500px;
+    background-color: red;
+    border-radius: 21px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+
+}
+
+.usuario,.contraseña{
+    width: 80%;
+    border-radius: 21px;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid black;
+    float: center;
+}
