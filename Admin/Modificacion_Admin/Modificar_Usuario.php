@@ -44,7 +44,7 @@
 
             </a>
 
-            <a href="../Matricular_Admin/Matricualar_Alumno.php">
+            <a href="../Matricular_Admin/Matricular_Alumno.php">
 
                 <div class="opccionesMenu">
 

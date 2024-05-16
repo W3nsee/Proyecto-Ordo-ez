@@ -65,6 +65,24 @@ CREATE TABLE Alumno (
   Correo VARCHAR(255) NOT NULL
 );
 
+INSERT INTO Alumno (Matricula_Alumno, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('999999999', '999999999', 'Javier', 'Gonzalez', 'Torres', '2000-01-01', '123456789', 'gqOQh@example.com');
+
+INSERT INTO Alumno (Matricula_Alumno, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('111111111', '111111111', 'Pedro', 'Perez', 'Herrera', '2000-01-01', '123456789', 'gqOQh@example.com');
+
+INSERT INTO Alumno (Matricula_Alumno, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('222222222', '222222222', 'Maria', 'Jimenez', 'Rodriguez', '2000-01-01', '123456789', 'gqOQh@example.com');
+
+INSERT INTO Alumno (Matricula_Alumno, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('333333333', '333333333', 'Luis', 'Lopez', 'Martinez', '2000-01-01', '123456789', 'gqOQh@example.com');
+
+INSERT INTO Alumno (Matricula_Alumno, Contraseña, Nombre, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Telefono, Correo) VALUES
+('444444444', '444444444', 'Carlos', 'Rodriguez', 'Torres', '2000-01-01', '123456789', 'gqOQh@example.com');
+
+
+
+
 CREATE TABLE Asignatura (
   Id_Asignatura INT AUTO_INCREMENT PRIMARY KEY,
   Nombre VARCHAR(255) NOT NULL

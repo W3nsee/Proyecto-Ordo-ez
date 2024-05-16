@@ -63,7 +63,7 @@ class Contacto extends Conexion
 	}
 
 	public function consultarmaestro(){
-		$this->sentencia = "SELECT * FROM maestro;";
+		$this->sentencia = "SELECT * FROM Profesor;";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}

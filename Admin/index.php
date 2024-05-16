@@ -22,7 +22,7 @@
 
             <div class="btn-desplegar">
 
-                <img class="img-menu" src="img/Logo_Montellano_Vec_Mesa de trabajo 1-02.svg" width="50px" height="50px">
+                <img class="img-menu" src="img/menu.png" width="50px" height="50px">
 
             </div>
 
@@ -46,7 +46,7 @@
 
             </a>
 
-            <a href="Matricular_Admin/Matricualar_Alumno.php">
+            <a href="Matricular_Admin/Matricular_Alumno.php">
 
                 <div class="opccionesMenu">
 
@@ -120,7 +120,7 @@
 
         <div class="logo_fondo">
 
-            <img src="img/3.png" width="600px">
+            <img src="img/Logo_Montellano_Vec_Mesa de trabajo 1-02.svg" width="600px">
 
         </div>
 

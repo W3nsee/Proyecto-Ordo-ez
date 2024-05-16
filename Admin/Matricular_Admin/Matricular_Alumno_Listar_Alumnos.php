@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matricular alumno en asignatura</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/Estructura.css">
+    <link rel="stylesheet" href="../Style/Matricular_Listar.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                    <!-- Tipografía -->
@@ -116,23 +117,42 @@
 
         </div>
 
-        <a href="Matricular_Alumno_grupos.php">
+        <div class="seleccione">
 
-            <input class="opc_1" type="submit" name="Primero" value="Primer grado">
+            <h2 class="text_seleccione">Selecciona un alumno para matricular</h2>
 
-        </a>
+        </div>
 
-        <a href="Matricular_Alumno_grupos.php">
 
-            <input class="opc_2" type="submit" name="Segundo" value="Segundo grado">
+        <?php
 
-        </a>
+            require_once("../contacto.php");
+            require_once("../Matricular.php");
+            $obj = new Contacto();
+            $resultado = $obj->consultaralumno();
 
-        <a href="Matricular_Alumno_grupos.php">
+        ?>
 
-            <input class="opc_3" type="submit" name="Tercer0" value="Tercer grado">
+        <div class="limit_alumno">
 
-        </a>
+            <?php
+
+                while($alumno = $resultado->fetch_assoc()){
+
+                    echo "<div class='form_alumno'>";
+                    echo "<h2 class='text_form_alumno'>". $alumno["Nombre"] ." ";
+                    echo $alumno["Apellido_Paterno"];
+                    echo " ";
+                    echo $alumno["Apellido_Materno"];
+                    echo "</h2>";
+                    echo "<h2 class='text_form_alumno'>". $alumno["Matricula_Alumno"] ."</h2>";
+                    echo "</div>";
+
+                }   
+
+            ?>
+
+        </div>
 
     </section>
 

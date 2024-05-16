@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de asignatura</title>
     <link rel="stylesheet" href="../Style/style_alta_asignatura.css">
+    <link rel="stylesheet" href="../Style/Estructura.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                    <!-- Tipografía -->
@@ -43,7 +44,7 @@
 
             </a>
 
-            <a href="../Matricular_Admin/Matricualar_Alumno.php">
+            <a href="../Matricular_Admin/Matricular_Alumno.php">
 
                 <div class="opccionesMenu">
 
@@ -147,7 +148,7 @@
 
             require_once("../contacto.php");
             $obj = new Contacto();
-            $resultado = $obj->consultar();
+            $resultado = $obj->consultarmaestro();
 
         ?>
         
