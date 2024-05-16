@@ -153,12 +153,28 @@ class Contacto extends Conexion
 		return $bandera;
 	}
 
-	public function nombre_asignatura_desde_maestro(){
-
-		$this->sentencia = "SELECT asignatura.nombre FROM asignatura, maestro WHERE asignatura.id = maestro.id_asignatura";
-		$resultado = $this->obtener_sentencia();
-		return $resultado;
-
+	public function registrarFaltaAsistencia($alumno_id, $fecha_falta) {
+	
+		// Query para insertar la falta de asistencia en la base de datos
+		$this->sentencia = "INSERT INTO faltas_asistencia (alumno_id, fecha_falta) VALUES ('$alumno_id', '$fecha_falta')";
+	
+		// Ejecuta la consulta
+		$bandera = $this->ejecutar_sentencia();
+	
+		// Retorna la bandera para indicar si la inserción fue exitosa o no
+		return $bandera;
+	}
+	
+	public function modificarFaltaAsistencia($falta_id, $alumno_id, $nueva_fecha_falta) {
+	
+		// Query para actualizar la fecha de la falta de asistencia en la base de datos
+		$this->sentencia = "UPDATE faltas_asistencia SET fecha_falta = '$nueva_fecha_falta' WHERE id = '$falta_id' AND alumno_id = '$alumno_id'";
+	
+		// Ejecuta la consulta
+		$bandera = $this->ejecutar_sentencia();
+	
+		// Retorna la bandera para indicar si la actualización fue exitosa o no
+		return $bandera;
 	}
 	
 }
