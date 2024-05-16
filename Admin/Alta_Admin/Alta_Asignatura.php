@@ -146,9 +146,11 @@
 
         <?php
 
-            require_once("../contacto.php");
+            require_once("../../contacto.php");
+            require_once("../../conexion.php");
             $obj = new Contacto();
-            $resultado = $obj->consultarmaestro();
+            $datosMaestros = $obj->consultarmaestro();
+            $datosAsignatura = $obj->nombre_asignatura_desde_maestro();
 
         ?>
         
@@ -156,20 +158,41 @@
 
             <?php
 
-                while($profesor = $resultado->fetch_assoc()){
+                while($maestro = $datosMaestros->fetch_assoc()) {
 
-                    echo "<div class='form_profesor'>";
-                    echo "<h2 class='text_form_profesor'>". $profesor["Nombre"] ." ";
-                    echo $profesor["Apellido_Paterno"];
-                    echo " ";
-                    echo $profesor["Apellido_Materno"];
-                    echo "</h2>";
-                    echo "<h2 class='text_form_profesor'>". $profesor["Matricula_Profesor"] ."</h2>";
+                    
+
+                    $asignatura = $datosAsignatura->fetch_assoc();
+
+                    if (is_null($asignatura)) 
+                    {
+
+                        echo "<div class='form_profesor'>";
+                        echo "<h2 class='text_form_profesor'>". $maestro["nombre"] ." ";
+                        echo $maestro["apellido_paterno"];
+                        echo " ";
+                        echo $maestro["apellido_materno"];
+                        echo "</h2>";
+
+                    }
+                    else
+                    {
+
+                        
+
+                    }
+
                     echo "</div>";
 
                 }   
 
             ?>
+
+        </div>
+
+        <div class="guardar">
+
+            <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
 
         </div>
 

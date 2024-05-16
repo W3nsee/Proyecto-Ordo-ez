@@ -13,7 +13,7 @@ class Contacto extends Conexion
 	}
 
 	public function consultar(){
-		$this->sentencia = "SELECT * FROM Profesor;";
+		$this->sentencia = "SELECT * FROM maestro;";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
@@ -57,19 +57,19 @@ class Contacto extends Conexion
 
 
 	public function consultaralumno(){
-		$this->sentencia = "SELECT * FROM alumno;";
+		$this->sentencia = "SELECT * FROM alumno";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
 
 	public function consultarmaestro(){
-		$this->sentencia = "SELECT * FROM Profesor;";
+		$this->sentencia = "SELECT * FROM maestro";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
 
 	public function consultarasignatura(){
-		$this->sentencia = "SELECT * FROM asignatura;";
+		$this->sentencia = "SELECT * FROM asignatura";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
@@ -151,6 +151,14 @@ class Contacto extends Conexion
 		$this->sentencia = "SELECT id FROM profesor WHERE id = '$usuario_id' AND contraseña = '$contraseña'";
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
+	}
+
+	public function nombre_asignatura_desde_maestro(){
+
+		$this->sentencia = "SELECT asignatura.nombre FROM asignatura, maestro WHERE asignatura.id = maestro.id_asignatura";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+
 	}
 	
 }
