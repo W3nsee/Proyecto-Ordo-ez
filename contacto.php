@@ -140,5 +140,18 @@ class Contacto extends Conexion
 							INNER JOIN salon s ON a.matricula_salon = s.id='$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
+
+	public function login_alumno($usuario_id, $contraseña){
+		$this->sentencia = "SELECT id FROM usuarios WHERE id = '$usuario_id' AND contraseña = '$contraseña'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
+
+	public function login_profesor($usuario_id, $contraseña){
+		$this->sentencia = "SELECT id FROM profesor WHERE id = '$usuario_id' AND contraseña = '$contraseña'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
+	
 }
 ?>

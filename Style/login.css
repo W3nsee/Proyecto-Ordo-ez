@@ -24,3 +24,22 @@ body{
     border: 1px solid black;
     float: center;
 }
+
+
+.cerrar {
+  background-image: url("../img/Boton-Volver.png");
+}
+
+
+
+/* Mensaje de Error */
+.mensaje {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 21px;
+    width: 150px;
+    height: 50px;
+}
