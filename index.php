@@ -8,12 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>              <!-- Tipografía -->
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
-<<<<<<< HEAD
     
     <!--Icons-->
     <!--Estuve Aqui TFox Parte 2-->
-=======
->>>>>>> 9bbf95e59f7cf5318374ecd0e1d8e73afba62e10
 
     <link rel="stylesheet" href="indexcss.css">
 </head>
