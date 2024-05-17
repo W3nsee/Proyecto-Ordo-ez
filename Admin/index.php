@@ -120,7 +120,7 @@
 
         <div class="logo_fondo">
 
-            <img src="img/Logo_Montellano_Vec_Mesa de trabajo 1-02.svg" width="600px">
+            <img src="img/logo_Mesa de trabajo 1-02.svg" width="600px">
 
         </div>
 

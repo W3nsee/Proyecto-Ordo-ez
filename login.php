@@ -6,6 +6,7 @@
     <title>Iniciar sesión</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="Style/login.css">
 </head>
 <body>
@@ -32,6 +33,69 @@ if(isset($_POST['login'])){
     $id = $_POST['idusuario'];
     $contrasena = $_POST['contrasena'];
 
+=======
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="titulo">
+
+    <h1 class="text-titulo">Iniciar Sesión</h1>
+
+</div>
+
+<div class="login">
+
+    <form action="" method="post">
+
+        <div class="cerrar">
+
+        </div>
+
+        <div class="div_usuario">
+
+            <label class="text">
+                
+                Id del usuario: 
+
+            </label>
+
+            <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
+
+        </div>
+        
+        
+
+        <div class="div_contrasena">
+
+            <label class="text" >
+                
+                Contraseña: 
+
+            </label>
+
+            <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123">
+
+        </div>  
+
+
+        <input class="IniciarSesion" type="submit" name="login" value="Iniciar Sesion" id="boton">
+
+    </form>
+</div>
+
+</body>
+</html>
+
+<?php
+session_start(); // Iniciar sesión, s supone q la guarda y eso
+
+if(isset($_POST['login'])){
+      
+    $id = $_POST['idusuario'];
+    $contrasena = $_POST['contrasena'];
+
+>>>>>>> Stashed changes
     require_once("contacto.php");
     $obj = new contacto();
     $resultado = $obj->verificaridadmin($id);
@@ -39,7 +103,11 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
+<<<<<<< Updated upstream
             header("Location: MenuAdmin.php"); 
+=======
+            header("Location: Admin/index.php"); 
+>>>>>>> Stashed changes
             exit;
         }
     }

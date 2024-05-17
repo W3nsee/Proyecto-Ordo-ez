@@ -36,11 +36,11 @@ ul{
 
 
 .Inicio-Sesion{
-		width: 15px;
-    height: 15px; 
-    background-color: red;
-    border-radius: 50%;
+	width: auto;
+    height: auto; 
     display: inline-table;
+    color: #222222;
+    float: right;
 }
 
 .menu {

@@ -1,0 +1,140 @@
+body{
+
+    margin: 0px;
+
+}
+
+.titulo{
+
+    background-color: #222222; /* establece el color de fondo */
+    margin: 0px; /* establece el relleno de los elementos de la lista */
+    padding: 15px; /* establece el relleno de los elementos de la lista */
+
+}
+
+.text-titulo{
+
+    color: #f9f9f9; /* establece el color del texto */
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 25px; /* establece el tamaño de la fuente */
+    text-align: center; /* alinea el texto al centro */
+
+}
+
+.text{
+
+    color: #222222; /* establece el color del texto */
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 50px; /* establece el tamaño de la fuente */
+    text-align: center; /* alinea el texto al centro */
+
+}
+
+.login{
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #83072d; /* establece el color de fondo */
+    margin: 0px; /* establece el relleno de los elementos de la lista */
+    padding: 15px; /* establece el relleno de los elementos de la lista */
+    border-radius: 10px; /* esquina redondeada */
+    width: 500px;
+    height: 600px;
+
+}
+
+.IniciarSesion{
+    position: absolute;
+    bottom: 50px;
+    left: 33%;
+    color: #f9f9f9; /* establece el color del texto */
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 30px; /* establece el tamaño de la fuente */
+    text-align: center; /* alinea el texto al centro */
+    background-color: #83072d;
+    border: 0px;
+
+}
+
+.IniciarSesion:hover{
+
+    cursor: pointer;
+    background: #f9f9f9;
+    color: #222222;
+    transition: 0.5s;
+    transform: scale(1.1);
+
+}
+.usuario{
+
+    position: absolute;
+    left: 0;
+    margin-top: 65px;
+    outline: none; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    background: transparent;
+    transition: border-color 0.3s;
+    border-bottom: 3px solid #222222;  
+    color: #f9f9f9;
+    width: 400px;
+    height: 50px;
+
+}
+
+.usuario::placeholder{
+
+    color: #f9f9f9;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 30px; /* establece el tamaño de la fuente */
+    text-align: left; /* alinea el texto al centro */
+
+}
+
+.contrasena{
+
+    position: absolute;
+    left: 0;
+    margin-top: 65px;
+    outline: none; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    background: transparent;
+    transition: border-color 0.3s;
+    border-bottom: 3px solid #222222;  
+    color: #f9f9f9;
+    width: 400px;
+    height: 50px;
+
+}
+
+.contrasena::placeholder{
+
+    color: #f9f9f9;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 30px; /* establece el tamaño de la fuente */
+    text-align: left; /* alinea el texto al centro */
+
+}
+
+.div_usuario{
+
+    position: absolute;
+    left: 25px;
+    margin-top: 50px;
+
+}
+
+.div_contrasena{
+
+    position: absolute;
+    left: 25px;
+    margin-top: 200px;
+
+}

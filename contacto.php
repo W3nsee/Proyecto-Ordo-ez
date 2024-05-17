@@ -153,6 +153,25 @@ class Contacto extends Conexion
 		return $bandera;
 	}
 
+	public function verificaridadmin($id){
+		$this->sentencia = "SELECT * FROM administrador;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function verificaridmaestro($id){
+		$this->sentencia = "SELECT * FROM maestro;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function verificaridalumno($id){
+		$this->sentencia = "SELECT * FROM alumno;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+
 	public function registrarFaltaAsistencia($alumno_id, $fecha_falta) {
 	
 		// Query para insertar la falta de asistencia en la base de datos
