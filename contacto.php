@@ -176,6 +176,12 @@ class Contacto extends Conexion
 		// Retorna la bandera para indicar si la actualización fue exitosa o no
 		return $bandera;
 	}
+
+	public function listarasignaturas($id){
+		$this->sentencia = "SELECT nombre_asignatura FROM impartir WHERE id='$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
 	
 }
 ?>
