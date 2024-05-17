@@ -1,0 +1,41 @@
+body{
+    margin: 2%;
+    padding: 0;
+}
+
+
+.login{
+    width: 30%;
+    height: 500px;
+    background-color: red;
+    border-radius: 21px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+
+}
+
+.usuario,.contraseña{
+    width: 80%;
+    border-radius: 21px;
+    margin: 2%;
+    padding: 1%;
+    border: 1px solid black;
+    float: center;
+}
+
+
+
+
+/* Mensaje de Error */
+.mensaje {
+    display: none;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 21px;
+    width: 150px;
+    height: 50px;
+}

@@ -1,0 +1,160 @@
+/* -------------------------------- Nombre ----------------------------- */
+
+.form_nombres{
+    position: relative;
+    margin-bottom: 16px;
+    width: 284px;
+    height: 105px;
+    translate: 400px 50px;
+    display: flex;
+}
+
+.form_nombres h2{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #000000;
+    background: white;
+    translate: 5px -11px;
+    width: 90px;
+}
+
+.form_nombres input{
+    height: 56px;
+    width: 240px;
+    padding: 10px;
+    border: 2px solid #292929;
+    border-radius: 8px;
+    outline: none;
+    color: #4b4b4b;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px 10px 10px 30px;
+  
+}
+
+
+.text_form{
+
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 20px; /* establece el tamaño de la fuente */
+    margin: 0px;
+
+}
+
+/* -------------------------------- Apellido Paterno ----------------------------- */
+
+.form_apellido_p{
+    position: relative;
+    margin-bottom: 16px;
+    width: 284px;
+    height: 105px;
+    translate: 800px -70px;
+
+}
+
+.form_apellido_p h2{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: #000000;
+    background: white;
+    translate: 5px -11px;
+    width: 190px;
+}
+
+
+.form_apellido_p input{
+    height: 56px;
+    width: 240px;
+    padding: 10px;
+    border: 2px solid #292929;
+    border-radius: 8px;
+    outline: none;
+    color: #4b4b4b;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px 10px 10px 30px;
+}
+
+/* -------------------------------- Apellido Materno ----------------------------- */
+
+.form_apellido_m{
+    position: relative;
+    margin-bottom: 16px;
+    width: 284px;
+    height: 105px;
+    translate: 400px -50px;
+}
+
+.form_apellido_m h2{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: #000000;
+    background: white;
+    translate: 5px -11px;
+    width: 190px;
+}
+
+.form_apellido_m input{
+    height: 56px;
+    width: 240px;
+    padding: 10px;
+    border: 2px solid #292929;
+    border-radius: 8px;
+    outline: none;
+    color: #4b4b4b;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px 10px 10px 30px;
+}
+
+/* -------------------------------- Fecha de Nacimiento ----------------------------- */
+
+.form_fecha_nacimiento{
+    position: relative;
+    margin-bottom: 16px;
+    width: 284px;
+    height: 105px;
+    translate: 800px -170px;
+
+}
+
+
+.form_fecha_nacimiento h2{
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: #000000;
+    background: white;
+    translate: 5px -11px;
+    width: 230px;
+}
+
+.form_fecha_nacimiento input{
+    height: 56px;
+    width: 240px;
+    padding: 10px;
+    border: 2px solid #292929;
+    border-radius: 8px;
+    outline: none;
+    color: #4b4b4b;
+    font-family: inherit;
+    font-size: 16px;
+    background: #ffffff;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 10px 10px 10px 30px;
+}
+
+/* -------------------------------- Sexo ----------------------------- */
+
+.form_sexo{
+    translate: 480px -170px;
+}

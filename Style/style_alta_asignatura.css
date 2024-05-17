@@ -1,0 +1,104 @@
+.form_profesor {
+
+    position: relative;
+    margin: 20px;
+    float: inline-start;
+    background: #222222;
+    color: #f9f9f9;
+    width: 350px;
+    text-align: right;
+    padding-right: 40px;
+    border-radius: 50px;
+
+}
+
+.limit_profesores :hover{
+
+    cursor: pointer;
+
+}
+
+.limit_profesores{
+
+    float: left;
+    margin-left: 400px;
+    margin-bottom: 100px;
+    width: 900px;
+    height: auto;
+    border-radius: 10px;
+    padding: 0px;
+
+}
+
+.subtitulo_alta_asignatura{
+
+    padding-top: 30px;
+    padding-left: 400px;
+
+}
+
+.text_subtitulo_alta_asignatura{
+
+    margin: 0px;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 40px; /* establece el tamaño de la fuente */
+    color: #222222; /* establece el color del texto */
+
+}
+
+.form_grado{
+
+    padding-left: 400px;
+    padding-top: 35px;
+    padding-right: 400px;
+    float: left;
+
+
+}
+
+.text_form_grado{
+
+    margin: 0px;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 20px; /* establece el tamaño de la fuente */
+    color: #222222; /* establece el color del texto */
+
+}
+
+.subtitulo_profesor{
+
+    padding-top: 30px;
+    padding-left: 400px;
+    padding-right: 800px;
+    width: 780px;
+    float: left;
+
+}
+
+.text_subtitulo_profesor{
+
+    margin: 0px;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 40px; /* establece el tamaño de la fuente */
+    color: #222222; /* establece el color del texto */
+
+}
+
+.form_nombre_asignatura{
+
+
+    padding-left: 400px;
+    padding-top: 35px;
+    padding-right: 1000px;
+    float: left;
+
+}
+
+.text_form_nombre_asignatura{
+
+    margin: 0px;
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 20px; /* establece el tamaño de la fuente */
+    color: #222222; /* establece el color del texto */
+
+}

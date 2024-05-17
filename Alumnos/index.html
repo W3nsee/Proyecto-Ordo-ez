@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kuezis Rebirth</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+
+<span class="cerrar-sesion">
+    <img src="resources/Boton-Volver.png">
+</span>
+
+	<div class="menu" id="menu">
+		
+		
+		<div class="boton-contenedor" id="boton"></div>
+
+		<script src="script.js"></script>
+	
+	<ul class="nave-lista">
+			<li>
+				
+				<span class="material-symbols-outlined">
+				account_circle
+				</span>
+				<i id="bx-bx-grid-alt" class="nombre">Ariel</i>
+			</li>
+	
+		<hr>
+		<h1 class="titulo-menu">Menu</h1>
+
+		
+			<li onclick="cargarContenido('asignatura.html'); return false;">
+					<img src="resources/dashboard.png"></img>
+					<i id="bx-bx-grid-alt">Asignatura</i>
+			</li>
+
+			<li>
+					<img src="resources/horario.png"></img>
+					<i id="bx-bx-grid-alt">Horario</i>
+			</li>
+
+			<li>
+					<img src="resources/club.png"></img>
+					<i id="bx-bx-grid-alt">Clubes</i>
+			</li>
+
+			<li>
+					<img src="resources/compañeros.png"></img>
+					<i id="bx-bx-grid-alt">Compañeros</i>
+			</li>
+
+			<li>
+					<img src="resources/maestros.png"></img>
+					<i id="bx-bx-grid-alt">Maestros</i>
+			</li>
+
+			<li>
+					<img src="resources/justificante.png"></img>
+					<i id="bx-bx-grid-alt">Justificante</i>
+			</li>
+		</ul>
+	</div>
+
+
+	<div id="contenido"> <!-- Aqui va el otro archivo --->
+		<script>
+	    function cargarContenido(url) {
+	        fetch(url)
+	            .then(response => response.text())
+	            .then(data => {
+	                document.getElementById('contenido').innerHTML = data;
+	            })
+	            .catch(error => console.error('Hubo un problema', error));
+	     }
+		</script>
+</div>
+
+</body>
+</html>
