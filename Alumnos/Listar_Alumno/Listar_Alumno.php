@@ -124,9 +124,9 @@
 '
         <div>
             <?php 
-                require_once("");//Agregar Conexion al documento con sentencias
-                $obj = new /*Alumno*/(); //Falta agrega objeto de interconexion
-                $resultado = $obj->consultar();
+                require_once("contacto.php");//Agregar Conexion al documento con sentencias
+                $obj = new Contacto(); //Falta agrega objeto de interconexion
+                $resultado = $obj->consultaralumno();
                 echo "<table border=1>";
                 echo "<tr>";
                 echo "<th>ID</th>";

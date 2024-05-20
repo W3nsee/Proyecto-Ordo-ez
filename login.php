@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <<<<<<< Updated upstream
-    <link rel="stylesheet" href="Style/login.css">
+    <link rel="stylesheet" href="/../Style/login.css">
 </head>
 <body>
 
@@ -104,9 +104,9 @@ if(isset($_POST['login'])){
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
 <<<<<<< Updated upstream
-            header("Location: MenuAdmin.php"); 
+            header("Location: /../MenuAdmin.php"); 
 =======
-            header("Location: Admin/index.php"); 
+            header("Location: /../Admin/index.php"); 
 >>>>>>> Stashed changes
             exit;
         }
@@ -118,7 +118,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: MenuMaestro.php"); 
+            header("Location: /../MenuMaestro.php"); 
             exit;
         }
     }
@@ -129,7 +129,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             echo "Menú alumno todavía no está hecho";
-            // header("Location: MenuAlumno.php"); // Redirección
+            // header("Location: /../MenuAlumno.php"); // Redirección
             exit; 
         }
     }
