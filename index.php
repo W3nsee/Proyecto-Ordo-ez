@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< Updated upstream
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montellano</title>
@@ -13,14 +12,7 @@
     <!--Icons-->
     <!--Estuve Aqui TFox Parte 2-->
 
-    <link rel="stylesheet" href="indexcss.css">
-=======
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Kuezis Rebirth</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="javascript" type="text/javascript" href="script.js">
->>>>>>> Stashed changes
+    <link rel="stylesheet" href="Style/style.css">
 </head>
 <body>
 	<div>

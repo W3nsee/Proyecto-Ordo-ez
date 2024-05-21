@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de alumno</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/Estructura.css">
     <link rel="stylesheet" href="../Style/style_alta_usuario_alumno.css">
+    <link rel="stylesheet" href="../Style/inputs.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                    <!-- Tipografía -->
@@ -150,14 +151,21 @@
             </div>
 
             <div class="form_sexo">
+
                 <h2 class="text_form">Sexo</h2>
+
                 <div class="opc_femenino">
-                    <h3 class="text_sexo">F</h3>
+                    
+                    <input class="text_sexo" type="radio" name="sexo" value="F">
+
                 </div>
 
                 <div class="opc_masculino">
-                    <h3 class="text_sexo">M</h3>
+
+                    <input class="text_sexo" type="radio" name="sexo" value="M">
+
                 </div>
+
             </div>
 
             <div class="form_telefono">
@@ -174,19 +182,19 @@
 
                 <div class="opc_grado_1">
 
-                    <h3 class="text_grado">1°</h3>
+                    <input class="text_grado" type="radio" name="grado" value="1°">
 
                 </div>
 
                 <div class="opc_grado_2">
 
-                    <h3 class="text_grado">2°</h3>
+                    <input class="text_grado" type="radio" name="grado" value="2°">
 
                 </div>
 
                 <div class="opc_grado_3">
 
-                    <h3 class="text_grado">3°</h3>
+                    <input class="text_grado" type="radio" name="grado" value="3°">
 
                 </div>
 
@@ -206,19 +214,19 @@
 
                 <div class="opc_grupo_a">
 
-                    <h3 class="text_grupo">A</h3>
+                    <input class="text_grupo" type="radio" name="grupo" value="A">
 
                 </div>
 
                 <div class="opc_grupo_b">
 
-                    <h3 class="text_grupo">B</h3>
+                    <input class="text_grupo" type="radio" name="grupo" value="B">
 
                 </div>
 
                 <div class="opc_grupo_c">
 
-                    <h3 class="text_grupo">C</h3>
+                    <input class="text_grupo" type="radio" name="grupo" value="C">
 
                 </div>
 
@@ -251,3 +259,40 @@
     
 </body>
 </html>
+
+
+<!-- <?php
+
+
+    if(isset($_POST['guardar']))
+    {
+
+        if(empty($_POST['nombres']) || empty($_POST['apellidop']) || empty($_POST['apellidom']) || empty($_POST['fechanac']) || empty($_POST['sexo']) || empty($_POST['telefono']) || empty($_POST['grado']) || empty($_POST['correo']) || empty($_POST['grupo']) || empty($_POST['contrasena'])){
+            
+            echo "<script>alert('Debes llenar todos los campos');</script>";
+            
+        }else{
+            $nombres = $_POST['nombres'];
+            $apellidop = $_POST['apellidop'];
+            $apellidom = $_POST['apellidom'];
+            $fechanac = $_POST['fechanac'];
+            $sexo = $_POST['sexo'];
+            $telefono = $_POST['telefono'];
+            $grado = $_POST['grado'];
+            $correo = $_POST['correo'];
+            $grupo = $_POST['grupo'];
+            $contrasena = $_POST['contrasena'];
+        }
+    }
+
+    require_once("../../ArchivosDriversControles/contacto.php");
+    $obj = new contacto();
+    $resultado = $obj->altaalumno($nombres, $apellidop, $apellidom, $fechanac, $telefono, $correo, $sexo);
+
+    if($resultado){
+        echo "<script>alert('Alta exitosa');</script>";
+    }else{
+        echo "<script>alert('Alta fallida');</script>";
+    }
+
+?> -->

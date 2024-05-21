@@ -132,14 +132,13 @@ a{
 
 
 .footer{
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    display: flex;
+    bottom: 10px;
     width: 100%;
-    height: 50px;
+    height: 200px;
     background-color: #222222; /* establece el color de fondo */
-    padding: 30px;
-    padding-left: 200px;
+    align-items: center;
+    justify-content: center;
 
 }
 

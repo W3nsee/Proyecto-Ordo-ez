@@ -48,21 +48,23 @@ body{
 .IniciarSesion{
     position: absolute;
     bottom: 50px;
-    left: 33%;
+    left: 32%;
     color: #f9f9f9; /* establece el color del texto */
     font-family: "Sen"; /* establece la fuente */
     font-size: 30px; /* establece el tamaño de la fuente */
     text-align: center; /* alinea el texto al centro */
     background-color: #83072d;
     border: 0px;
+    padding: 10px;
+    border-radius: 21px;
 
 }
 
 .IniciarSesion:hover{
 
     cursor: pointer;
-    background: #f9f9f9;
-    color: #222222;
+    background: #222222;
+    color: #f9f9f9;
     transition: 0.5s;
     transform: scale(1.1);
 
@@ -81,8 +83,10 @@ body{
     transition: border-color 0.3s;
     border-bottom: 3px solid #222222;  
     color: #f9f9f9;
-    width: 400px;
+    width: 450px;
     height: 50px;
+
+    font-size: 35px;
 
 }
 
@@ -109,8 +113,10 @@ body{
     transition: border-color 0.3s;
     border-bottom: 3px solid #222222;  
     color: #f9f9f9;
-    width: 400px;
+    width: 450px;
     height: 50px;
+
+    font-size: 50px;
 
 }
 

@@ -6,83 +6,45 @@
     <title>Iniciar sesión</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< Updated upstream
-    <link rel="stylesheet" href="/../Style/login.css">
+    <link rel="stylesheet" href="Style/login.css">
 </head>
 <body>
 
-<h1>Iniciar Sesión</h1>
-<div class="login">
-    <form action="" method="post">
-        <div class="cerrar"></div>
-        <label>Id del usuario: </label>
-        <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
-        <label>Contraseña: </label>
-        <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123"><br><br>
-        <input type="submit" name="login" value="Iniciar Sesion" id="boton">
-    </form>
-</div>
-</body>
-</html>
+    <div class="titulo">
 
-<?php
-session_start(); // Iniciar sesión, s supone q la guarda y eso
+        <h1 class="text-titulo">Iniciar Sesión</h1>
 
-if(isset($_POST['login'])){
-      
-    $id = $_POST['idusuario'];
-    $contrasena = $_POST['contrasena'];
+    </div>
 
-=======
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
+    <div class="login">
 
-<div class="titulo">
+        <form action="" method="post">
 
-    <h1 class="text-titulo">Iniciar Sesión</h1>
+            <div class="cerrar">
 
-</div>
+            </div>
 
-<div class="login">
+            <div class="div_usuario">
 
-    <form action="" method="post">
+                <label class="text">Id del usuario:</label>
 
-        <div class="cerrar">
+                <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
 
-        </div>
+            </div>
 
-        <div class="div_usuario">
+            <div class="div_contrasena">
 
-            <label class="text">
-                
-                Id del usuario: 
+                <label class="text">Contraseña:</label>
 
-            </label>
+                <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123">
 
-            <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
+            </div>  
 
-        </div>
-        
-        
+            <input class="IniciarSesion" type="submit" name="login" value="Iniciar Sesion" id="boton">
 
-        <div class="div_contrasena">
+        </form>
 
-            <label class="text" >
-                
-                Contraseña: 
-
-            </label>
-
-            <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123">
-
-        </div>  
-
-
-        <input class="IniciarSesion" type="submit" name="login" value="Iniciar Sesion" id="boton">
-
-    </form>
-</div>
+    </div>
 
 </body>
 </html>
@@ -95,19 +57,14 @@ if(isset($_POST['login'])){
     $id = $_POST['idusuario'];
     $contrasena = $_POST['contrasena'];
 
->>>>>>> Stashed changes
-    require_once("contacto.php");
+    require_once("ArchivosDriversControles/contacto.php");
     $obj = new contacto();
     $resultado = $obj->verificaridadmin($id);
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-<<<<<<< Updated upstream
-            header("Location: /../MenuAdmin.php"); 
-=======
-            header("Location: /../Admin/index.php"); 
->>>>>>> Stashed changes
+            header("Location: Admin/index.php"); 
             exit;
         }
     }
@@ -118,7 +75,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: /../MenuMaestro.php"); 
+            header("Location: Maestros/index.php"); 
             exit;
         }
     }
@@ -133,8 +90,7 @@ if(isset($_POST['login'])){
             exit; 
         }
     }
-
-    echo "Inicio de sesión fallido";
+    
 }
 ?>
 

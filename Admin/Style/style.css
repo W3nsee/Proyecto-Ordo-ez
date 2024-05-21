@@ -1,11 +1,4 @@
-.body{
 
-    background: #f9f9f9; /* establece el color de fondo */
-    margin: 0px; /* establece el margen de la página */
-    height: 100%;
-    padding: 0px;
-
-}
 
 
 
@@ -148,21 +141,7 @@
     width: 90px;
 }
 
-.form_nombres input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-  
-}
+
 
 
 .text_form{
@@ -193,20 +172,7 @@
 }
 
 
-.form_apellido_p input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
+
 
 /* -------------------------------- Apellido Materno ----------------------------- */
 .form_apellido_m{
@@ -227,20 +193,7 @@
     width: 190px;
 }
 
-.form_apellido_m input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
+
 /* -------------------------------- Fecha de Nacimiento ----------------------------- */
 .form_fecha_nacimiento{
     position: relative;
@@ -262,20 +215,7 @@
     width: 230px;
 }
 
-.form_fecha_nacimiento input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
+
 
 /* -------------------------------- Sexo ----------------------------- */
 .form_sexo{
@@ -283,452 +223,20 @@
 }
 /* -------------------------------- Telefono Maestros ----------------------------- */
 
-.form_telefono{
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 800px -220px;
-}
-
-.form_telefono h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px 35px;
-    width: 100px;
-}
-
-.form_telefono input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
-
-.form_telefono_maestros{   
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 400px -50px;
-}
-
-.form_telefono_maestros h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px 40px;
-    width:  90px;
-}
-
-.form_telefono_maestros input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
+/* --------------------------------- Correo -------------------------------- */
 
 
-.form_grados{
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 450px -180px;
-
-}
-
-.opc_grado_1{
-    background: #222222;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s;
-    float: inline-start;
-
-}
-
-.opc_grado_1:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.opc_grado_2{
-
-    background: #222222;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s;
-    margin-left: 10px;
- float: inline-start;
-
-
-}
-
-.opc_grado_2:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.opc_grado_3{
-
-    background: #222222;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    transition: transform 0.5s;
-    margin-left: 10px;
-    float: inline-start;
+    
   
 
-}
 
-.opc_grado_3:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.text_grado{
-
-    font-family: "Sen"; /* establece la fuente */
-    font-size: 30px; /* establece el tamaño de la fuente */
-    margin: 0px;
-    color: #f9f9f9;
-    padding-top: 5px;
-    padding-left: 12px;
-
-}
-/* --------------------------------- Correo -------------------------------- */
-.form_correo{
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 800px -250px;
-}
-
-
-
-.form_correo h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px -11px;
-    width: 80px;
-}
-
-.form_correo input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
-
-.form_correo_maestros{
-    
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 800px -290px;
-}
-
-
-
-.form_correo_maestros h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px -10px;
-    width: 80px;
-}
-
-.form_correo_maestros input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
-    
-
-.form_grupos{
-    translate: 450px -250px;
-
-}
-
-.opc_grupo_a{
-
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #222222;
-    transition: transform 0.5s;
-    float: left;
-
-}
-
-.opc_grupo_a:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.opc_grupo_b{
-
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #222222;
-    transition: transform 0.5s;
-    margin-left: 10px;
-    float: left;
-
-}
-
-.opc_grupo_b:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.opc_grupo_c{
-
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #222222;
-    transition: transform 0.5s;
-    margin-left: 10px;
-    float: left;
-
-}
-
-.opc_grupo_c:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2)
-
-}
-
-.text_grupo{
-
-    font-family: "Sen"; /* establece la fuente */
-    font-size: 30px; /* establece el tamaño de la fuente */
-    margin: 0px;
-    color: #f9f9f9;
-    text-align: center;
-    padding-top: 5px;
-
-}
-
-.opc_femenino{
-
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #222222;
-    transition: transform 0.3s;
-    float: left;
-
-}
-
-.opc_masculino{
-
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background: #222222;
-    transition: transform 0.5s;
-    margin-left: 10px;
-    float: left;
-
-}
-
-.opc_masculino:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2) /* hace zoom y levanta el elemento */
-
-}
-
-.opc_femenino:hover{
-
-    cursor: pointer;
-    background: #83072d;
-    transform: scale(1.2) /* hace zoom y levanta el elemento */
-
-}
-
-.text_sexo{
-
-    font-family: "Sen"; /* establece la fuente */
-    margin: 0px;
-    text-align: center;
-    padding-top: 12px;
-    color: #f9f9f9;
-
-}
-
-.form_password{
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 800px -250px;
-}
-
-
-
-.form_password h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px 40px;
-    width: 120px;
-}
-
-.form_password input{
-    height: 56px;
-    width: 240px;
-    padding: 10px;
-    border: 2px solid #292929;
-    border-radius: 8px;
-    outline: none;
-    color: #4b4b4b;
-    font-family: inherit;
-    font-size: 16px;
-    background: #ffffff;
-    color: rgba(0, 0, 0, 0.75);
-    padding: 10px 10px 10px 30px;
-}
-
-.form_password_maestros{
-        position: relative;
-        margin-bottom: 16px;
-        width: 284px;
-        height: 105px;
-        translate: 800px -240px;
-    }
-    
-    
-    
-    .form_password_maestros h2{
-        position: absolute;
-        top: 0;
-        left: 20px;
-        color: #000000;
-        background: white;
-        translate: 5px -10px;
-        width: 120px;
-    }
-    
-    .form_password_maestros input{
-        height: 56px;
-        width: 240px;
-        padding: 10px;
-        border: 2px solid #292929;
-        border-radius: 8px;
-        outline: none;
-        color: #4b4b4b;
-        font-family: inherit;
-        font-size: 16px;
-        background: #ffffff;
-        color: rgba(0, 0, 0, 0.75);
-        padding: 10px 10px 10px 30px;
-
-    }
-
-.guardar{
-    
-    translate: 1000px -180px;    
-
-}
 
 .guardar_maestros{
     translate: 1000px -240px;
 
 }
 
-.btn_guardar{
 
-    display: inline-block; /* muestra el elemento como en bloque */
-    padding: 10px; /* establece el relleno de los elementos de la lista */
-    border-radius: 10px; /* esquina redondeada */
-    background: #222222; /* establece el color de fondo */
-    transition: transform 0.5s; /* transición suave para el efecto */
-    margin-top: auto; /* posiciona el texto debajo de los elementos anteriores */
-    color: #f9f9f9;
-    font-family: "Sen"; /* establece la fuente */
-    font-size: 20px; /* establece el tamaño de la fuente */
-
-}
-
-.btn_guardar:hover{
-
-    cursor: pointer;
-    background-color: #83072d; /* establece el color de fondo al pasar el cursor */
-    transform: scale(1.3) ; /* hace zoom y levanta el elemento */
-
-}
 
 .footer{
     position: fixed;
