@@ -104,17 +104,17 @@
 
 /* -------------------------------- Sexo ----------------------------- */
 
-.form_sexo{
+.form_sexo {
     position: relative;
     translate: 400px -150px;
     width: 250px;
 }
 
-.text_sexo{
+.text_sexo {
     display: none;
 }
 
-.opc_femenino, .opc_masculino{
+.opc_femenino, .opc_masculino {
     display: inline-block;
     height: 50px;
     width: 50px;
@@ -125,7 +125,7 @@
     position: relative;
 }
 
-.opc_femenino:after{
+.opc_femenino:after {
     content: "F";
     position: absolute;
     top: 50%;
@@ -136,8 +136,7 @@
     font-size: 18px;
 }
 
-.opc_masculino:after{
-
+.opc_masculino:after {
     content: "M";
     position: absolute;
     top: 50%;
@@ -148,10 +147,15 @@
     font-size: 18px;
 }
 
-.opc_femenino:hover, .opc_masculino:hover{
+.opc_femenino:hover, .opc_masculino:hover {
     background: #83072d;
     cursor: pointer;
 }
+
+.opc_femenino.selected, .opc_masculino.selected {
+    background: #83072d;
+}
+
 
 
 
