@@ -168,21 +168,6 @@
 
             </div>
 
-<script>
-function selectOption(sexo) {
-    // Elimina la clase 'selected' de ambas opciones
-    document.querySelector('.opc_femenino').classList.remove('selected');
-    document.querySelector('.opc_masculino').classList.remove('selected');
-
-    // Añade la clase 'selected' a la opción seleccionada
-    if (sexo === 'femenino') {
-        document.querySelector('.opc_femenino').classList.add('selected');
-    } else if (sexo === 'masculino') {
-        document.querySelector('.opc_masculino').classList.add('selected');
-    }
-}
-</script>
-
             <div class="form_telefono">
 
                 <h2 class="text_form">Teléfono</h2>
