@@ -201,6 +201,11 @@ class Contacto extends Conexion
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
+	public function consultarhorario($id){
+		$this->sentencia ="SELECT horas,lunes,martes,miercoles,jueves,viernes FROM Horario Where id='$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bsndera;
+	}
 	
 }
 ?>
