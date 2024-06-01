@@ -42,7 +42,8 @@ if(isset($_POST["mostrar"])){
     $idalumno = $_POST["idalumno"];
     $fecha = $_POST["fecha"]; // Recuperar la fecha de la falta de asistencia
 
-    require_once("contacto.php");
+    require_once("../ArchivosDriversControles/contacto.php");
+
     $obj3 = new contacto();
     $resultado = $obj3->consultarsolounalumnomatriculado($idalumno, $idasignatura);
     while ($registro = $resultado->fetch_assoc()) {
@@ -52,7 +53,8 @@ if(isset($_POST["mostrar"])){
         $apellidomaterno = $registro["apellido_materno"];
         $falta = $_POST["fecha"];
 
-        require_once("contacto.php");
+        require_once("../ArchivosDriversControles/contacto.php");
+
         $obj4 = new contacto();
         $obj4->ponerfalta($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,
             $apellidopaterno,$apellidomaterno,$falta);
@@ -66,7 +68,8 @@ if(isset($_POST["mostrar"])){
 <form action="" method="post">
     <select name="idmostrar">
         <?php
-        require_once("contacto.php");
+                   require_once("../ArchivosDriversControles/contacto.php");
+
         $obj = new contacto();
         $resultado = $obj->consultarasignaturaimpartida($maestro);
 
