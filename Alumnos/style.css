@@ -6,6 +6,10 @@ body{
 	position: relative;
 	background-color: whitesmoke;
 	background: url("https://i.pinimg.com/564x/0c/2e/a1/0c2ea1cba1db35ea18a8a40867751ca1.jpg");
+	background-repeat: no-repeat;
+	
+	
+
 }
 
 hr{
@@ -44,6 +48,7 @@ i{
 	margin: 0px;
 	text-align: left;
 	cursor: pointer;
+	position: fixed;
 }
 
 .menu{

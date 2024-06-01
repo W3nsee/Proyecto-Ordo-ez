@@ -135,9 +135,7 @@ class Contacto extends Conexion
 	}
 
 	Public function listaralumno($id){
-		$this->sentencia = "SELECT a.nombre, a.apellido_paterno, a.apellido_materno, s.grado, s.grupo
-							FROM alumno a
-							INNER JOIN salon s ON a.matricula_salon = s.id='$id'";
+		$this->sentencia = "SELECT m.nombre_alumno, m.apellido_paterno, m.apellido_materno FROM matricula m INNER JOIN impartir i on m.id_asignatura = i.id_asignatura where i.id_maestro = '$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
 

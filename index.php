@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montellano</title>
@@ -12,9 +16,61 @@
     <!--Icons-->
     <!--Estuve Aqui TFox Parte 2-->
 
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="Style/style.css">
+=======
+    <link rel="stylesheet" href="indexcss.css">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kuezis Rebirth</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="javascript" type="text/javascript" href="script.js">
+
+>>>>>>> Stashed changes
 </head>
 <body>
+
+
+<!--
+
+Locacion
+-----------------
+en mapa donde esta el colegio
+
+caracteristicas
+----------------
+codigo
+direccion
+telefono
+modalidad
+codifo postal
+email
+
+instalaciones
+-------------------
+salones de primaria
+
+
+servicios *
+---------------
+biblioteca
+cafeteria
+deportes
+sanitarios
+servicios generales
+
+
+informacion 
+-------------------
+estructura administrativa
+estructura docente
+
+proytecto de escuela *
+--------------------
+actividades relevantes
+
+-->
 	<div>
 		<main>
 			<!-- Navegación -->
@@ -36,7 +92,7 @@
 
 						<li>
 							<a href="login.php">
-								<div class="Inicio-Sesion">Iniciar Sesion</div>	
+								<div class="Inicio-Sesion"></div>	
 							</a>
 						</li>
 					</ul>
