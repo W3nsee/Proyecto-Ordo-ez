@@ -1,0 +1,32 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'poppins';
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	background-color: #242323;
+	color: #ffff;
+	padding: 0 3rem;
+	text-decoration: none;
+}
+
+.logo{
+	color: #f0ac45;
+	text-decoration: none;
+}
+
+.nav ul{
+	display: flex;
+	list-style-type: none;
+}
+
+.nav ul li{
+	margin: 15px 10px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #ffff;
+	font-size: 20px;
+}
