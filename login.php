@@ -85,8 +85,8 @@ if(isset($_POST['login'])){
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
-            echo "Menú alumno todavía no está hecho";
-            // header("Location: /../MenuAlumno.php"); // Redirección
+           // echo "Menú alumno todavía no está hecho";
+            header("Location: /Alumnos/index.php"); // Redirección
             exit; 
         }
     }
