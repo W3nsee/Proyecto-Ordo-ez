@@ -2,7 +2,7 @@
 session_start();
 $id = isset($_SESSION['id']) ? $_SESSION['id'] : ''; // Obtener id del maestro
 
-require_once("contacto.php");
+require_once("../ArchivosDriversControles/contacto.php");
 $obj = new contacto();
 $resultado = $obj->consultaralumnomatriculadoconidalumno($id);
 while ($registro = $resultado->fetch_assoc()) {

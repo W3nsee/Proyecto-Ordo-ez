@@ -102,6 +102,13 @@ Class Contacto extends Conexion{
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
+	
+	
+	public function listar_maestros_alumnos($id){
+		$this->sentencia = "SELECT impartir.nombre_asignatura, impartir.nombre_maestro, impartir.apellido_paterno, impartir.apellido_materno from impartir inner JOIN matricula on impartir.id_asignatura = matricula.id_asignatura where matricula.id_alumno = '$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
 
 	public function consultarmaestroconidasignatura($idasignatura){
 		$this->sentencia = "SELECT * FROM impartir WHERE id_asignatura = '$idasignatura';";
@@ -285,6 +292,13 @@ public function asignar_parcial_3($parcial_3, $idalumno, $idasignatura){
 	
 	public function listaralumnos($id){
 		$this->sentencia = 	"SELECT m.nombre_alumno, m.apellido_paterno, m.apellido_materno FROM matricula m INNER JOIN impartir i on m.id_asignatura = i.id_asignatura where i.id_maestro = '$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
+
+	
+	public function listar_alumnos_alumnos($id){
+		$this->sentencia = 	"SELECT a.nombre, a.apellido_paterno, a.apellido_materno FROM alumno a WHERE a.id_salon = (SELECT id_salon FROM alumno WHERE id = '$id')";
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
