@@ -147,5 +147,17 @@ a{
     font-size: 20px; /* establece el tamaño de la fuente */
     color: #f9f9f9; /* establece el color del texto */
     text-align: center; /* alinea el texto al centro */
+    margin-left: 300px;
+
+}
+
+.logo_fondo{
+
+    display: flex;
+    align-content: center;
+    padding-left: 40%;
+    top: 15%;
+    opacity: 85%;
+    z-index: -1;
 
 }

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alta de maestro</title>
-    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/style_alta_usuario_maestro.css">
+    <link rel="stylesheet" href="../Style/Estructura.css">
+    <link rel="stylesheet" href="../Style/inputs.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>                    <!-- Tipografía -->
@@ -116,86 +118,73 @@
 
         </div>
 
-        <div class="form_nombres">
+        <form action="" method="post">
 
-            <h2 class="text_form">Nombres</h2>
+            <div class="form_nombres_maestros">
 
-            <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
-
-        </div>
-
-        <div class="form_apellido_p">
-
-            <h2 class="text_form">Apellido paterno</h2>
-
-            <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
-
-        </div>
-
-
-        <div class="form_apellido_m">
-
-            <h2 class="text_form">Apellido materno</h2>
-
-            <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
-
-        </div>
-
-        <div class="form_fecha_nacimiento">
-
-            <h2 class="text_form">Fecha de nacimiento</h2>
-
-            <input type="date" name="fechanac" value="2006-01-12"> 
-
-        </div>
-
-        <div class="form_sexo">
-
-            <h2 class="text_form">Sexo</h2>
-
-            <div class="opc_femenino">
-
-                <h3 class="text_sexo">F</h3>
+                <h2 class="text_form">Nombres</h2>
+                <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
 
             </div>
 
-            <div class="opc_masculino">
+            <div class="form_apellido_p_maestros">
 
-                <h3 class="text_sexo">M</h3>
+                <h2 class="text_form">Apellido paterno</h2>
+                <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
 
             </div>
 
-        </div>
 
-        <div class="form_telefono_maestros">
+            <div class="form_apellido_m_maestros">
 
-            <h2 class="text_form">Teléfono</h2>
+                <h2 class="text_form">Apellido materno</h2>
+                <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
 
-            <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
+            </div>
 
-        </div>
+            <div class="form_fecha_nacimiento_maestros">
 
-        <div class="form_correo_maestros">
+                <h2 class="text_form">Fecha de nacimiento</h2>
+                <input type="date" name="fechanac" value="2006-01-12"> 
 
-            <h2 class="text_form">Correo</h2>
+            </div>
 
-            <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
+            <div class="form_sexo_maestros">
 
-        </div>
+                <h2 class="text_form">Sexo</h2>
+                <input class="opc_femenino" type="radio" name="sexo" value="F" checked>
+                <input class="opc_masculino" type="radio" name="sexo" value="M">
 
-        <div class="form_password_maestros">
+            </div>
 
-            <h2 class="text_form">Contraseña</h2>
+            <div class="form_telefono_maestros">
 
-            <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+                <h2 class="text_form">Teléfono (Casa o Celular)</h2>
+                <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
 
-        </div>
+            </div>
 
-        <div class="guardar_maestros">
+            <div class="form_correo_maestros">
 
-            <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+                <h2 class="text_form">Correo</h2>
+                <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
 
-        </div>
+            </div>
+
+            <div class="form_password_maestros">
+
+                <h2 class="text_form">Contraseña</h2>
+                <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+
+            </div>
+
+            <div class="guardar_maestros">
+
+                <input class="btn_guardar" type="submit" name="insertar" value="Guardar">
+
+            </div>
+
+        </form>
 
     </section>
 
@@ -208,6 +197,36 @@
         </div>
 
     </footer>
+
+    <?php
+    
+    if(isset($_POST['insertar']))
+    {
+
+        $nombres = $_POST['nombres'];
+        $apellidop = $_POST['apellidop'];
+        $apellidom = $_POST['apellidom'];
+        $fechanac = $_POST['fechanac'];
+        $sexo = $_POST['sexo'];
+        $telefono = $_POST['telefono'];
+        $correo = $_POST['correo'];
+        $contrasena = $_POST['contrasena'];
+
+        require_once("../../ArchivosDriversControles/contacto.php");
+        $obj = new contacto();
+        $obj-> altamaestro($nombres,$apellidop, $apellidom, $fechanac, $telefono, $correo, $sexo, $contrasena);
+
+        echo "<script>alert('Se guardaron los datos')</script>";
+
+    }
+    else
+    {
+
+        echo "<script>alert('No se guardaron los datos')</script>";
+
+    }
+
+    ?>
     
 </body>
 </html>

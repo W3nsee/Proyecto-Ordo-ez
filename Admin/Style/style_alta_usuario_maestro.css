@@ -9,7 +9,7 @@
 
 /* -------------------------------- Nombre ----------------------------- */
 
-.form_nombres{
+.form_nombres_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -18,7 +18,7 @@
     display: flex;
 }
 
-.form_nombres h2{
+.form_nombres_maestros h2{
     position: absolute;
     top: 0;
     left: 10px;
@@ -40,7 +40,7 @@
 
 /* -------------------------------- Apellido Paterno ----------------------------- */
 
-.form_apellido_p{
+.form_apellido_p_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -49,7 +49,7 @@
 
 }
 
-.form_apellido_p h2{
+.form_apellido_p_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
@@ -64,7 +64,7 @@
 
 /* -------------------------------- Apellido Materno ----------------------------- */
 
-.form_apellido_m{
+.form_apellido_m_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -72,7 +72,7 @@
     translate: 400px -50px;
 }
 
-.form_apellido_m h2{
+.form_apellido_m_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
@@ -84,7 +84,7 @@
 }
 /* -------------------------------- Fecha de Nacimiento ----------------------------- */
 
-.form_fecha_nacimiento{
+.form_fecha_nacimiento_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -94,7 +94,7 @@
 }
 
 
-.form_fecha_nacimiento h2{
+.form_fecha_nacimiento_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
@@ -108,19 +108,16 @@
 
 /* -------------------------------- Sexo ----------------------------- */
 
-.form_sexo {
+.form_sexo_maestros{
     position: relative;
     translate: 400px -150px;
     width: 250px;
 }
 
-.text_sexo {
+.text_sexo{
     display: none;
 }
 
-<<<<<<< Updated upstream
-.opc_femenino, .opc_masculino {
-=======
 .opc_femenino{
 
     appearance: none;
@@ -128,7 +125,6 @@
     border: 1px solid #000;
     border-radius: 50%;
     cursor: pointer;
->>>>>>> Stashed changes
     display: inline-block;
     height: 50px;
     margin: 0 10px 10px 0;
@@ -137,39 +133,12 @@
     width: 50px;
 }
 
-<<<<<<< Updated upstream
-.opc_femenino:after {
-    content: "F";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f9f9f9;
-    font-family: "Sen";
-    font-size: 18px;
-}
-
-.opc_masculino:after {
-    content: "M";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f9f9f9;
-    font-family: "Sen";
-    font-size: 18px;
-}
-
-.opc_femenino:hover, .opc_masculino:hover {
-    background: #83072d;
-=======
 .opc_masculino{
 
     appearance: none;
     background-color: #222222;
     border: 1px solid #000;
     border-radius: 50%;
->>>>>>> Stashed changes
     cursor: pointer;
     display: inline-block;
     height: 50px;
@@ -215,16 +184,11 @@
 
 }
 
-.opc_femenino.selected, .opc_masculino.selected {
-    background: #83072d;
-}
-
-
 
 
 /*-------------------------------- Telefono -----------------------------*/
 
-.form_telefono{
+.form_telefono_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -232,15 +196,15 @@
     translate: 800px -220px;
 }
 
-.form_telefono h2{
+.form_telefono_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
     color: #000000;
     background: #f9f9f9;
-    translate: 0px -12px;
+    translate: -8px -12px;
     text-align: center;
-    width: 92px;
+    width: 250px;
 }
 
 
@@ -251,16 +215,6 @@
     width: 284px;
     height: 105px;
     translate: 400px -50px;
-}
-
-.form_telefono_maestros h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px 40px;
-    width:  90px;
 }
 
 /*-------------------------------- Grupos -----------------------------*/
@@ -508,17 +462,17 @@
 
 /*------------------------------ Correo -----------------------------*/
 
-.form_correo{
+.form_correo_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
     height: 105px;
-    translate: 800px -250px;
+    translate: 800px -350px;
 }
 
 
 
-.form_correo h2{
+.form_correo_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
@@ -529,10 +483,9 @@
     width: 76px;
 }
 
+/*------------------------------ Contraseña -----------------------------*/
 
-
-.form_correo_maestros{
-    
+.form_password_maestros{
     position: relative;
     margin-bottom: 16px;
     width: 284px;
@@ -542,29 +495,7 @@
 
 
 
-.form_correo_maestros h2{
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: #000000;
-    background: white;
-    translate: 5px -10px;
-    width: 80px;
-}
-
-/*------------------------------ Contraseña -----------------------------*/
-
-.form_password{
-    position: relative;
-    margin-bottom: 16px;
-    width: 284px;
-    height: 105px;
-    translate: 800px -250px;
-}
-
-
-
-.form_password h2{
+.form_password_maestros h2{
     position: absolute;
     top: 0;
     left: 20px;
@@ -575,31 +506,9 @@
     width: 120px;
 }
 
-
-
-.form_password_maestros{
-        position: relative;
-        margin-bottom: 16px;
-        width: 284px;
-        height: 105px;
-        translate: 800px -240px;
-    }
-    
-    
-    
-    .form_password_maestros h2{
-        position: absolute;
-        top: 0;
-        left: 20px;
-        color: #000000;
-        background: white;
-        translate: 5px -10px;
-        width: 120px;
-    }
-
 /*------------------------------ Guardar -----------------------------*/
 
-.guardar{
+.guardar_maestros{
     
     translate: 1000px -180px;
     width: 250px;

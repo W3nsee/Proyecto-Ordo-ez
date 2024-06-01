@@ -131,3 +131,11 @@
     transform: scale(1.3) ; /* hace zoom y levanta el elemento */
 
 }
+
+.Section{
+
+    margin-right: auto;
+    height: auto;
+
+
+}

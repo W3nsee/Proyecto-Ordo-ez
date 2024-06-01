@@ -116,83 +116,87 @@
 
         </div>
 
-        <div class="subtitulo_alta_asignatura">
+        <div class="Section">
 
-            <h1 class="text_subtitulo_alta_asignatura">Dar de alta una asignatura</h1>
+            <div class="subtitulo_alta_asignatura">
 
-        </div>
+                <h1 class="text_subtitulo_alta_asignatura">Dar de alta una asignatura</h1>
 
-        <div class="form_nombre_asignatura">
+            </div>
 
-            <h2 class="text_form_nombre_asignatura">Nombre de la asignatura</h2>
+            <div class="form_nombre_asignatura">
 
-            <input type="text" name="nombre_asignatura" placeholder="Escriba el nombre de la asignatura" size="30">
+                <h2 class="text_form_nombre_asignatura">Nombre de la asignatura</h2>
 
-        </div>
+                <input type="text" name="nombre_asignatura" placeholder="Escriba el nombre de la asignatura" size="30">
 
-        <div class="form_grado">
+            </div>
 
-            <h2 class="text_form_grado">Grado al que se impartirá</h2>
+            <div class="form_grado">
 
-            <input type="text" name="grado" placeholder="Escriba el grado" size="30">
+                <h2 class="text_form_grado">Grado al que se impartirá</h2>
 
-        </div>
+                <input type="text" name="grado" placeholder="Escriba el grado" size="30">
 
-        <div class="subtitulo_profesor">
+            </div>
 
-            <h1 class="text_subtitulo_profesor">Profesor que impartirá la asignatura</h1>
+            <div class="subtitulo_profesor">
 
-        </div> 
+                <h1 class="text_subtitulo_profesor">Profesor que impartirá la asignatura</h1>
 
-        <?php
-
-            require_once("../../contacto.php");
-            require_once("../../conexion.php");
-            $obj = new Contacto();
-            $datosMaestros = $obj->consultarmaestro();
-            $datosAsignatura = $obj->nombre_asignatura_desde_maestro();
-
-        ?>
-        
-        <div class="limit_profesores">
+            </div> 
 
             <?php
 
-                while($maestro = $datosMaestros->fetch_assoc()) {
-
-                    
-
-                    $asignatura = $datosAsignatura->fetch_assoc();
-
-                    if (is_null($asignatura)) 
-                    {
-
-                        echo "<div class='form_profesor'>";
-                        echo "<h2 class='text_form_profesor'>". $maestro["nombre"] ." ";
-                        echo $maestro["apellido_paterno"];
-                        echo " ";
-                        echo $maestro["apellido_materno"];
-                        echo "</h2>";
-
-                    }
-                    else
-                    {
-
-                        
-
-                    }
-
-                    echo "</div>";
-
-                }   
+                require_once("../../ArchivosDriversControles/contacto.php");
+                require_once("../../ArchivosDriversControles/conexion.php");
+                $obj = new Contacto();
+                $datosMaestros = $obj->consultarmaestro();
+                $datosAsignatura = $obj->nombre_asignatura_desde_maestro();
 
             ?>
 
-        </div>
+            <div class="limit_profesores">
 
-        <div class="guardar">
+                <?php
 
-            <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+                    while($maestro = $datosMaestros->fetch_assoc()) {
+
+                        
+
+                        $asignatura = $datosAsignatura->fetch_assoc();
+
+                        if (is_null($asignatura)) 
+                        {
+
+                            echo "<div class='form_profesor'>";
+                            echo "<h2 class='text_form_profesor'>". $maestro["nombre"] ." ";
+                            echo $maestro["apellido_paterno"];
+                            echo " ";
+                            echo $maestro["apellido_materno"];
+                            echo "</h2>";
+
+                        }
+                        else
+                        {
+
+                            
+
+                        }
+
+                        echo "</div>";
+
+                    }   
+
+                ?>
+
+            </div>
+
+            <div class="guardar">
+
+                <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+
+            </div>
 
         </div>
 

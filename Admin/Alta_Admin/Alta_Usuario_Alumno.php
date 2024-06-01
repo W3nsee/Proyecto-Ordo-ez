@@ -117,134 +117,91 @@
 
             </div>
 
-            <div class="form_nombres">
+            <form action="" method="post">
 
-                <h2 class="text_form">Nombres</h2>
+                <div class="form_nombres">
 
-                <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
-
-            </div>
-
-            <div class="form_apellido_p">
-
-                <h2 class="text_form">Apellido Paterno</h2>
-
-                <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
-
-            </div>
-
-
-            <div class="form_apellido_m">
-
-                <h2 class="text_form">Apellido Materno</h2>
-
-                <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
-
-            </div>
-
-            <div class="form_fecha_nacimiento">
-
-                <h2 class="text_form">Fecha de Nacimiento</h2>
-
-                <input type="date" name="fechanac" value="2006-01-12"> 
-
-            </div>
-
-            <div class="form_sexo">
-
-                <h2 class="text_form">Sexo</h2>
-
-                <div class="opc_femenino">
-                    
-                    <input class="text_sexo" type="radio" name="sexo" value="F">
+                    <h2 class="text_form">Nombres</h2>
+                    <input type="text" name="nombres" placeholder=" Ejem. Jorge Arath">
 
                 </div>
 
-                <div class="opc_masculino">
+                <div class="form_apellido_p">
 
-                    <input class="text_sexo" type="radio" name="sexo" value="M">
-
-                </div>
-
-            </div>
-
-            <div class="form_telefono">
-
-                <h2 class="text_form">Teléfono</h2>
-
-                <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
-
-            </div>
-
-            <div class="form_grados">
-
-                <h2 class="text_form">Grados</h2>
-
-                <div class="opc_grado_1">
-
-                    <input class="text_grado" type="radio" name="grado" value="1°">
+                    <h2 class="text_form">Apellido Paterno</h2>
+                    <input type="text" name="apellidop" placeholder=" Ejem. Guzmán">
 
                 </div>
 
-                <div class="opc_grado_2">
+                <div class="form_apellido_m">
 
-                    <input class="text_grado" type="radio" name="grado" value="2°">
-
-                </div>
-
-                <div class="opc_grado_3">
-
-                    <input class="text_grado" type="radio" name="grado" value="3°">
+                    <h2 class="text_form">Apellido Materno</h2>
+                    <input type="text" name="apellidom" placeholder=" Ejem. Sandoval">
 
                 </div>
 
-            </div>
+                <div class="form_fecha_nacimiento">
 
-            <div class="form_correo">
-
-                <h2 class="text_form">Correo</h2>
-
-                <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
-
-            </div>
-
-            <div class="form_grupos">
-
-                <h2 class="text_form">Grupos</h2>
-
-                <div class="opc_grupo_a">
-
-                    <input class="text_grupo" type="radio" name="grupo" value="A">
+                    <h2 class="text_form">Fecha de Nacimiento</h2>
+                    <input type="date" name="fechanac" value="2006-01-12"> 
 
                 </div>
 
-                <div class="opc_grupo_b">
+                <div class="form_sexo">
 
-                    <input class="text_grupo" type="radio" name="grupo" value="B">
-
-                </div>
-
-                <div class="opc_grupo_c">
-
-                    <input class="text_grupo" type="radio" name="grupo" value="C">
+                    <h2 class="text_form">Sexo</h2>
+                    <input class="opc_femenino" type="radio" name="sexo" value="F" checked>
+                    <input class="opc_masculino" type="radio" name="sexo" value="M">
 
                 </div>
 
-            </div>
+                <div class="form_telefono">
 
-            <div class="form_password">
+                    <h2 class="text_form">Teléfono</h2>
+                    <input type="text" name="telefono" placeholder=" Ejem. 312 154 3659">
 
-                <h2 class="text_form">Contraseña</h2>
+                </div>
 
-                <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+                <div class="form_grados">
 
-            </div>
+                    <h2 class="text_form">Grados</h2>
+                    <input class="opc_grado_1" type="radio" name="grado" value="1°" checked>
+                    <input class="opc_grado_2" type="radio" name="grado" value="2°">
+                    <input class="opc_grado_3" type="radio" name="grado" value="3°">
 
-            <div class="guardar">
+                </div>
 
-                <input class="btn_guardar" type="submit" name="guardar" value="Guardar">
+                <div class="form_correo">
 
-            </div>
+                    <h2 class="text_form">Correo</h2>
+                    <input type="text" name="correo" placeholder=" Ejem. jorge@ex.com">
+
+                </div>
+
+                <div class="form_grupos">
+
+                    <h2 class="text_form">Grupos</h2>
+                    <input class="opc_grupo_a" type="radio" name="grupo" value="A" checked>
+                    <input class="opc_grupo_b" type="radio" name="grupo" value="B">
+                    <input class="opc_grupo_c" type="radio" name="grupo" value="C">
+
+                </div>
+
+                <div class="form_password">
+
+                    <h2 class="text_form">Contraseña</h2>
+                    <input type="text" name="contrasena" placeholder=" Ejem. 12345">
+
+                </div>
+
+                <div class="guardar">
+
+                    <input class="btn_guardar" type="submit" name="insertar" value="Guardar">
+
+                </div>
+
+            </form>
+
 </section>
 
     <footer>
@@ -256,43 +213,111 @@
         </div>
 
     </footer>
+
+    <?php
+
+    if(isset($_POST['insertar']))
+    {
+
+        $nombres = $_POST['nombres'];
+        $apellidop = $_POST['apellidop'];
+        $apellidom = $_POST['apellidom'];
+        $fechanac = $_POST['fechanac'];
+        $sexo = $_POST['sexo'];
+        $telefono = $_POST['telefono'];
+        $correo = $_POST['correo'];
+        $contrasena = $_POST['contrasena'];
+        $grado = $_POST['grado'];
+        $grupo = $_POST['grupo'];
+
+        if($grado == "1°")
+        {
+
+            if($grupo == "A")
+            {
+
+                $salon = 1;
+
+            }
+            else if ($grupo == "B") 
+            {
+                
+                $salon = 2;
+
+            }
+            elseif ($grupo == "C") 
+            {
+                
+                $salon = 3;
+
+            }
+
+        }
+        elseif ($grado == "2°") 
+        {
+
+            if($grupo == "A")
+            {
+
+                $salon = 4;
+            }
+            else if ($grupo == "B") 
+            {
+                
+                $salon = 5;
+
+            }
+            elseif ($grupo == "C") 
+            {
+                
+                $salon = 6;
+
+            }
+
+        }
+        elseif ($grado == "3°") 
+        {
+
+            if($grupo == "A")
+            {
+
+                $salon = 7;
+
+            }
+            else if ($grupo == "B") 
+            {
+                
+                $salon = 8;
+
+            }
+            elseif ($grupo == "C")
+            {
+                
+                $salon = 9;
+
+            }
+
+        }
+
+        require_once("../../ArchivosDriversControles/contacto.php");
+        $obj = new Contacto();
+        $obj->altaalumno($nombres, $apellidop, $apellidom, $fechanac, $telefono, $correo, $sexo, $salon);
+
+        echo "<script>alert('Se guardaron los datos')</script>";
+
+    }
+    else
+    {
+
+        echo "<script>alert('No se guardaron los datos')</script>";
+
+    }
+
+?>
     
 </body>
 </html>
 
 
-<!-- <?php
 
 
-    if(isset($_POST['guardar']))
-    {
-
-        if(empty($_POST['nombres']) || empty($_POST['apellidop']) || empty($_POST['apellidom']) || empty($_POST['fechanac']) || empty($_POST['sexo']) || empty($_POST['telefono']) || empty($_POST['grado']) || empty($_POST['correo']) || empty($_POST['grupo']) || empty($_POST['contrasena'])){
-            
-            echo "<script>alert('Debes llenar todos los campos');</script>";
-            
-        }else{
-            $nombres = $_POST['nombres'];
-            $apellidop = $_POST['apellidop'];
-            $apellidom = $_POST['apellidom'];
-            $fechanac = $_POST['fechanac'];
-            $sexo = $_POST['sexo'];
-            $telefono = $_POST['telefono'];
-            $grado = $_POST['grado'];
-            $correo = $_POST['correo'];
-            $grupo = $_POST['grupo'];
-            $contrasena = $_POST['contrasena'];
-        }
-    }
-
-    require_once("../../ArchivosDriversControles/contacto.php");
-    $obj = new contacto();
-    $resultado = $obj->altaalumno($nombres, $apellidop, $apellidom, $fechanac, $telefono, $correo, $sexo);
-
-    if($resultado){
-        echo "<script>alert('Alta exitosa');</script>";
-    }else{
-        echo "<script>alert('Alta fallida');</script>";
-    }
-
-?> -->

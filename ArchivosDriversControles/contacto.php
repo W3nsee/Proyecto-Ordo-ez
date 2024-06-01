@@ -43,14 +43,13 @@ class Contacto extends Conexion
     }
 
 	
-	public function altaalumno($nombre,$apellidopaterno,$apellidomaterno,$fechanacimiento,$telefono,$correo,$sexo){
-		$this->sentencia = "INSERT INTO alumno VALUES('','','$nombre','$apellidopaterno','$apellidomaterno','$fechanacimiento',
-			'$telefono','$correo','$sexo')";
+	public function altaalumno($nombre,$apellidopaterno,$apellidomaterno,$fechanacimiento,$telefono,$correo,$sexo,$salon){
+		$this->sentencia = "INSERT INTO alumno VALUES('','','$nombre','$apellidopaterno','$apellidomaterno','$fechanacimiento','$telefono','$correo','$sexo', '$salon')";
 		$bandera = $this->ejecutar_sentencia();
 	}
 
-	public function altamaestro($nombre,$apellidopaterno,$apellidomaterno,$fechanacimiento,$telefono,$correo,$sexo){
-		$this->sentencia = "INSERT INTO maestro VALUES('','','$nombre','$apellidopaterno','$apellidomaterno','$fechanacimiento',
+	public function altamaestro($nombre,$apellidopaterno,$apellidomaterno,$fechanacimiento,$telefono,$correo,$sexo,$contrasena){
+		$this->sentencia = "INSERT INTO maestro VALUES('','$contrasena','$nombre','$apellidopaterno','$apellidomaterno','$fechanacimiento',
 			'$telefono','$correo','$sexo')";
 		$bandera = $this->ejecutar_sentencia();
 	}
@@ -199,10 +198,19 @@ class Contacto extends Conexion
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
+<<<<<<< Updated upstream
 	public function consultarhorario($id){
 		$this->sentencia ="SELECT horas,lunes,martes,miercoles,jueves,viernes FROM Horario Where id='$id'";
 		$bandera = $this->ejecutar_sentencia();
 		return $bsndera;
+=======
+
+	public function nombre_asignatura_desde_maestro(){
+
+		$this->sentencia = "SELECT nombre_asignatura FROM impartir ";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+>>>>>>> Stashed changes
 	}
 	
 }

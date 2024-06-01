@@ -1,0 +1,54 @@
+.opc_alumno{
+
+    background: #222222;
+    display: flex;
+    margin-left: 30%;
+    margin-top: 10%;
+    justify-content: center;
+    height: 500px;
+    width: 350px;
+    transition: transform 0.5s; /* transición suave para el efecto */
+    float: left;
+
+}
+
+.opc_alumno:hover{
+
+    cursor: pointer;
+    background: #83072d;
+    transform: scale(1.4) translateY(-10px); /* hace zoom y levanta el elemento */
+
+}
+
+.text_opc{
+
+    font-family: "Sen"; /* establece la fuente */
+    font-size: 20px; /* establece el tamaño de la fuente */
+    color: #f9f9f9; /* establece el color del texto */
+    text-align: center; /* alinea el texto al centro */
+
+}
+
+.opc_maestro{
+
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-bottom: 10%;
+    float: left;
+    background: #222222;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 350px;
+    transition: transform 0.5s; /* transición suave para el efecto */
+
+
+}
+
+.opc_maestro:hover{
+
+    cursor: pointer;
+    background: #83072d;
+    transform: scale(1.4) translateY(-10px); /* hace zoom y levanta el elemento */
+
+}
