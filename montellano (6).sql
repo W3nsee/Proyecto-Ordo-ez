@@ -237,6 +237,31 @@ INSERT INTO `matricula` (`id_asignatura`, `nombre_asignatura`, `id_alumno`, `nom
 -- Estructura de tabla para la tabla `salon`
 --
 
+CREATE TABLE horario (
+    id int PRIMARY KEY Auto_increment,
+    horas int
+    FOREIGN KEY matricula_asignatura REFERENCES asignatura (id),
+    FOREIGN KEY matricula_salon REFERENCES salon (id)
+    lunes varchar [5][5],
+    martes varchar [5][5],
+    miercoles varchar [5][5],
+    jueves varchar [5][5],
+    viernes varchar [5][5]
+);
+
+CREATE TABLE horario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    horas INT,
+    matricula_asignatura INT,
+    matricula_salon INT,
+    lunes VARCHAR(5),
+    martes VARCHAR(5),
+    miercoles VARCHAR(5),
+    jueves VARCHAR(5),
+    viernes VARCHAR(5)
+);
+
+
 CREATE TABLE `salon` (
   `id` int(11) NOT NULL,
   `grado` varchar(1) NOT NULL,

@@ -1,3 +1,4 @@
+/*
 document.getElementById('boton').addEventListener('click', function() {
     const menu = document.getElementById('menu');
     const menu_mini = document.querySelector('.menu');
@@ -16,7 +17,7 @@ function cargarContenido(url) {
     
     // Una vez que el contenido está cargado, añadir la clase 'cargado' al contenedor
     document.getElementById('contenido').classList.add('cargado');
-  }
+  }*/
   
 
 

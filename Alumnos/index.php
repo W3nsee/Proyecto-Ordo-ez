@@ -9,7 +9,21 @@
 
 </head>
 <body>
+<?php
+session_start();
+require_once("../ArchivosDriversControles/contacto.php");
+if (isset($_SESSION['id'])) {
+   
+    $id = $_SESSION['id'];
 
+
+$obj = new contacto();
+$resultado = $obj->nombre_alumno($id);
+
+while ($registro = $resultado->fetch_assoc()) {
+    $nombre = $registro['nombre'];
+}
+?>
 <span class="cerrar-sesion">
     <img src="resources/Boton-Volver.png">
 </span>
@@ -22,12 +36,12 @@
 		<script src="script.js"></script>
 	
 	<ul class="nave-lista">
-			<li href="?opc=">
+			<li>
 				
 				<span class="material-symbols-outlined">
 				account_circle
 				</span>
-				<i id="bx-bx-grid-alt" class="nombre">Ariel</i>
+				<i id="bx-bx-grid-alt" class="nombre"><?php echo "$nombre"?></i>
 			</li>
 	
 		<hr>
@@ -39,7 +53,8 @@
 					<i id="bx-bx-grid-alt">Asignatura</i>
 			</li>
 		-->
-			<li onclick="cargarContenido('ListaHorario.php'); return false;">
+			<li>
+                <a href="?opc=horario"></a>
 					<img src="resources/horario.png"></img>
 					<i id="bx-bx-grid-alt">Horario</i>
 			</li>
@@ -49,23 +64,30 @@
 					<i id="bx-bx-grid-alt">Clubes</i>
 			</li>
 		-->
-			<li onclick="cargarContenido('listar_alumnos_alumnos.php'); return false;">
+            <li>
+                    <a href="?opc=compañeros"></a>
 					<img src="resources/compañeros.png"></img>
-					<i id="bx-bx-grid-alt">Listar Compañeros</i>
+					<i id="bx-bx-grid-alt">Compañeros</i>
 			</li>
 
-			<li href="">
+			<li>
+            <a href="?opc=maestros"></a>
+
 					<img src="resources/club.png"></img>
-					<i id="bx-bx-grid-alt">Listar Maestros</i>
+					<i id="bx-bx-grid-alt">Maestros</i>
 			</li>
 
-			<li onclick="cargarContenido('asignatura.html'); return false;">
+			<li>
+            <a href="?opc=calificacion"></a>
+
 					<img src="resources/dashboard.png"></img>
 					<i id="bx-bx-grid-alt">Calificaciones</i>
 			</li>
 
 
-			<li onclick="cargarContenido('asignatura.html'); return false;">
+			<li>
+            <a href="?opc=asistencia"></a>
+
 				<img src="resources/justificante.png"></img>
 				<i id="bx-bx-grid-alt">Asistencias</i>
 		</li>
@@ -88,7 +110,39 @@
 		
 		</script>
 		-->
+
+         <?php
+            if(isset($_REQUEST["opc"])){
+				switch ($_REQUEST["opc"]) {
+					case 'horario':
+						include("ListaHorario.php");
+					break;
+
+					case 'compañeros':
+						include("listar_alumnos_alumnos.php");
+					break;
+
+					case 'maestros':
+						include("listar_maestros_alumnos.php");
+					break;
+
+					case 'calificacion':
+						include(".php");
+					break;
+
+                    case 'asistencia':
+                        include("listarfaltas_alumno.php");
+                    break;
+				}
+			}
+
+        ?>
+		
 </div>
+
+<?php
+}
+?>
 
 </body>
 </html>

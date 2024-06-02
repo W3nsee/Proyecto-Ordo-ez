@@ -109,6 +109,11 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
+	public function listar_alumnos_alumnos($id){
+		$this->sentencia = 	"SELECT a.nombre, a.apellido_paterno, a.apellido_materno FROM alumno a WHERE a.id_salon = (SELECT id_salon FROM alumno WHERE id = '$id')";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
 
 	public function consultarmaestroconidasignatura($idasignatura){
 		$this->sentencia = "SELECT * FROM impartir WHERE id_asignatura = '$idasignatura';";
@@ -296,11 +301,23 @@ public function asignar_parcial_3($parcial_3, $idalumno, $idasignatura){
 		return $bandera;
 	}
 
-	
+	public function nombre_alumno($id){
+		$this->sentencia = 	"SELECT nombre FROM alumno WHERE id = '$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bandera;
+	}
+
+	/*
 	public function listar_alumnos_alumnos($id){
 		$this->sentencia = 	"SELECT a.nombre, a.apellido_paterno, a.apellido_materno FROM alumno a WHERE a.id_salon = (SELECT id_salon FROM alumno WHERE id = '$id')";
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
+	}
+	*/
+	public function consultarhorario($id){
+		$this->sentencia ="SELECT horas,lunes,martes,miercoles,jueves,viernes FROM Horario Where id='$id'";
+		$bandera = $this->ejecutar_sentencia();
+		return $bsndera;
 	}
 }
 ?>

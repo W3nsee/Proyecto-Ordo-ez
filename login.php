@@ -86,7 +86,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
            // echo "Menú alumno todavía no está hecho";
-            header("Location: Alumnos/index.html"); // Redirección
+            header("Location: Alumnos/index.php"); // Redirección
             exit; 
         }
     }
