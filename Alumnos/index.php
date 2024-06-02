@@ -8,20 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-<?php
-session_start();
-require_once("../ArchivosDriversControles/contacto.php");
-if (isset($_SESSION['id'])) {
-    $id = $_SESSION['id'];
 
-    $obj = new contacto();
-    $resultado = $obj->nombre_alumno($id);
-
-    while ($registro = $resultado->fetch_assoc()) {
-        $nombre = $registro['nombre'];
-    }
-}
-?>
 <span class="cerrar-sesion">
     <img src="resources/Boton-Volver.png">
 </span>

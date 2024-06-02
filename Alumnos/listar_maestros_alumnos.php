@@ -10,15 +10,14 @@
     </head>
     <body>
     <?php
-  if (session_status() == PHP_SESSION_NONE) {
+  
     session_start();
-}
-
-if (isset($_SESSION['id'])) {
-    $id = $_SESSION['id'];
-} 
 
     require_once("../ArchivosDriversControles/contacto.php");
+
+   
+    $id = $_SESSION['id']; 
+
 
 // Verifica si la sesión está iniciada y si el ID del usuario está disponible
 

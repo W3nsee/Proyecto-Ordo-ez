@@ -11,14 +11,14 @@
     <body>
     <?php
     
-    //session_start();
+    session_start();
     require_once("../ArchivosDriversControles/contacto.php");
-
-   
-   $id = $_SESSION['id'];
-  //  echo $id;
-
-   
+    
+if (!isset($_SESSION['id'])) {
+    // Si no hay sesión iniciada, redirige al usuario a la página de inicio de sesión
+    header("Location: ../login.php");
+    exit();
+}
 
     $obj = new contacto();
     $resultado = $obj->listar_alumnos_alumnos($id);
