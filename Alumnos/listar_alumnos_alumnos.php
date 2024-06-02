@@ -11,14 +11,14 @@
     <body>
     <?php
     
-    session_start();
+    //session_start();
     require_once("../ArchivosDriversControles/contacto.php");
 
    
    $id = $_SESSION['id'];
   //  echo $id;
 
-    $id = 101;
+   
 
     $obj = new contacto();
     $resultado = $obj->listar_alumnos_alumnos($id);

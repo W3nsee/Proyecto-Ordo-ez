@@ -13,7 +13,7 @@
 
 </head>
 <body class="body">
-
+<!--
     <nav>
 
         <div class="Menu">
@@ -107,7 +107,7 @@
         </div>
 
     </nav>
-
+-->
     <section>
 
         <div class="titulo">
@@ -121,10 +121,10 @@
             <h1 class="">HORARIO</h1>
 
         </div>
-
+'
         <div>
             <?php 
-                require_once("../ArchivosDriversControles/contacto.php");
+              require_once("../ArchivosDriversControles/contacto.php");
                 $obj = new Contacto(); 
                 $resultado = $obj->consultarhorario();
                 echo "<table border=1>";

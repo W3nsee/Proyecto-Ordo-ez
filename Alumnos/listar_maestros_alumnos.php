@@ -10,13 +10,19 @@
     </head>
     <body>
     <?php
+  if (session_status() == PHP_SESSION_NONE) {
     session_start();
+}
+
+if (isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+} 
+
     require_once("../ArchivosDriversControles/contacto.php");
 
 // Verifica si la sesión está iniciada y si el ID del usuario está disponible
 
    
-    $id = $_SESSION['id'];
 
     $obj = new contacto();
     $resultado = $obj->listar_maestros_alumnos($id);
