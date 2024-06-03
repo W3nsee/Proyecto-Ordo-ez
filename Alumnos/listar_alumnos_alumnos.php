@@ -10,22 +10,22 @@
     </head>
     <body>
     <?php
-    
-    session_start();
-    require_once("../ArchivosDriversControles/contacto.php");
-    
-    if(isset($_SESSION['id'])){
-    $id =  $_SESSION['id'];
-    
-    $obj = new contacto();
-    $resultado = $obj->listar_alumnos_alumnos($id);
+     session_start();
+      require_once("../ArchivosDriversControles/contacto.php");
 
-    while ($registro = $resultado->fetch_assoc()) {
-        $alumno = $registro['nombre']. " " .$registro['apellido_paterno']. " " .$registro['apellido_materno'];
-        echo "<div class='alumno' >" . $alumno . "</div>";
-    }
-    }
-
+      if (isset($_SESSION['id'])) {
+   
+        $id = $_SESSION['id'];
+      
+          $obj = new contacto();
+          $resultado = $obj->listar_alumnos_alumnos($id);
+      
+          while ($registro = $resultado->fetch_assoc()) {
+              $alumno = $registro['nombre']. " " .$registro['apellido_paterno']. " " .$registro['apellido_materno'];
+              echo "<div class='alumno' >" . $alumno . "</div>";
+          }
+        }
+      
 ?>
 
 <!--

@@ -41,7 +41,7 @@ if(isset($_POST['login'])){
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
             setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
-            header("Location: MenuAdmin.php"); 
+            header("Location: Admin/index.php"); 
             exit;
         }
     }
@@ -53,7 +53,7 @@ if(isset($_POST['login'])){
         {
             $_SESSION['id'] =  $id; // Guardar el ID del usuario en la sesión
             setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
-            header("Location: MenuMaestro.php"); 
+            header("Location: Maestros/index.php"); 
             exit;
         }
     }
