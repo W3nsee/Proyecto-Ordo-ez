@@ -1,3 +1,4 @@
+/*
 body{
 
     margin: 0px;
@@ -6,8 +7,8 @@ body{
 
 .titulo{
 
-    background-color: #222222; /* establece el color de fondo */
-    margin: 0px; /* establece el relleno de los elementos de la lista */
+    background-color: #222222; /* establece el color de fondo */ /*
+    margin: 0px; /* establece el relleno de los elementos de la lista */ /*
     padding: 15px; /* establece el relleno de los elementos de la lista */
 
 }
@@ -144,3 +145,4 @@ body{
     margin-top: 200px;
 
 }
+*/

@@ -14,12 +14,9 @@
     session_start();
     require_once("../ArchivosDriversControles/contacto.php");
     
-if (!isset($_SESSION['id'])) {
-    // Si no hay sesión iniciada, redirige al usuario a la página de inicio de sesión
-    header("Location: ../login.php");
-    exit();
-}
-
+    if(isset($_SESSION['id'])){
+    $id =  $_SESSION['id'];
+    
     $obj = new contacto();
     $resultado = $obj->listar_alumnos_alumnos($id);
 
@@ -27,7 +24,7 @@ if (!isset($_SESSION['id'])) {
         $alumno = $registro['nombre']. " " .$registro['apellido_paterno']. " " .$registro['apellido_materno'];
         echo "<div class='alumno' >" . $alumno . "</div>";
     }
-
+    }
 
 ?>
 

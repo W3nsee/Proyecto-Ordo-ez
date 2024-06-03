@@ -1,0 +1,7 @@
+  git clone -b sample-map-simple https://github.com/googlemaps/js-samples.git
+  cd js-samples
+  npm i
+  npm start
+
+  npm i -D @types/google.maps
+  npm install --save @types/google.maps

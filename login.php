@@ -10,51 +10,27 @@
 </head>
 <body>
 
-    <div class="titulo">
-
-        <h1 class="text-titulo">Iniciar Sesión</h1>
-
-    </div>
-
-    <div class="login">
-
-        <form action="" method="post">
-
-            <div class="cerrar">
-
-            </div>
-
-            <div class="div_usuario">
-
-                <label class="text">Id del usuario:</label>
-
-                <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
-
-            </div>
-
-            <div class="div_contrasena">
-
-                <label class="text">Contraseña:</label>
-
-                <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123">
-
-            </div>  
-
-            <input class="IniciarSesion" type="submit" name="login" value="Iniciar Sesion" id="boton">
-
-        </form>
-
-    </div>
-
+<h1>Iniciar Sesión</h1>
+<div class="login">
+    <form action="" method="post">
+        <div class="cerrar"></div>
+        <label>Id del usuario: </label>
+        <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
+        <label>Contraseña: </label>
+        <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123"><br><br>
+        <input type="submit" name="login" value="Iniciar Sesion" id="boton">
+    </form>
+</div>
 </body>
 </html>
 
 <?php
-session_start(); // Iniciar sesión, s supone q la guarda y eso
 
 if(isset($_POST['login'])){
       
-    $id = $_POST['idusuario'];
+   
+     $id = $_POST['idusuario'];
+
     $contrasena = $_POST['contrasena'];
 
     require_once("ArchivosDriversControles/contacto.php");
@@ -64,7 +40,8 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: Admin/index.php"); 
+            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
+            header("Location: MenuAdmin.php"); 
             exit;
         }
     }
@@ -74,8 +51,9 @@ if(isset($_POST['login'])){
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
-            $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: Maestros/index.php"); 
+            $_SESSION['id'] =  $id; // Guardar el ID del usuario en la sesión
+            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
+            header("Location: MenuMaestro.php"); 
             exit;
         }
     }
@@ -85,13 +63,17 @@ if(isset($_POST['login'])){
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
-           // echo "Menú alumno todavía no está hecho";
-            header("Location: Alumnos/index.php"); // Redirección
+            $_SESSION['id'] = $id;
+            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
+            
+             header("Location: Alumnos/index.php"); // Redirección
             exit; 
         }
     }
-    
+
+    echo "Inicio de sesión fallido";
 }
-?>
+
+?> 
 
 

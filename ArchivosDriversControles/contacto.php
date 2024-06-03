@@ -114,6 +114,7 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();
 		return $bandera;
 	}
+	
 
 	public function consultarmaestroconidasignatura($idasignatura){
 		$this->sentencia = "SELECT * FROM impartir WHERE id_asignatura = '$idasignatura';";
