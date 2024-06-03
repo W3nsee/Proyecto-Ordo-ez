@@ -25,23 +25,21 @@
 </html>
 
 <?php
+session_start(); // Iniciar sesión, s supone q la guarda y eso
 
 if(isset($_POST['login'])){
       
-   
-     $id = $_POST['idusuario'];
-
+    $id = $_POST['idusuario'];
     $contrasena = $_POST['contrasena'];
 
-    require_once("ArchivosDriversControles/contacto.php");
+    require_once("contacto.php");
     $obj = new contacto();
     $resultado = $obj->verificaridadmin($id);
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
-            header("Location: Admin/index.php"); 
+            header("Location: MenuAdmin.php"); 
             exit;
         }
     }
@@ -51,9 +49,8 @@ if(isset($_POST['login'])){
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
-            $_SESSION['id'] =  $id; // Guardar el ID del usuario en la sesión
-            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
-            header("Location: Maestros/index.php"); 
+            $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
+            header("Location: MenuMaestro.php"); 
             exit;
         }
     }
@@ -63,17 +60,14 @@ if(isset($_POST['login'])){
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
-            $_SESSION['id'] = $id;
-            setcookie("id_usuario", $_SESSION['id'], time() + 86400, "/");
-            
-             header("Location: Alumnos/index.php"); // Redirección
-            exit; 
+            $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
+            header("Location: MenuAlumno.php"); 
+            exit;
         }
     }
 
     echo "Inicio de sesión fallido";
 }
-
-?> 
+?>
 
 
