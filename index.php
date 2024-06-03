@@ -24,7 +24,7 @@
                    <!--  <img src="imagenes/1.jpg" alt=""> -->
                         <!-- Contenedor de la frase-->
                         <div class="cont_info_foto">
-                            <h1 class="sueños">Invertir en ti es darle <span class="resaltar">luz</span> a tus sueños</h1>
+                            <h2 class="sueños">Invertir en ti es darle <span class="resaltar">luz</span> a tus sueños</h2>
                         </div>
                 </div>
             </div>
@@ -32,11 +32,11 @@
             <!-- Info derecha -->
             <div class="cont_derecha">
                 <div class="cont_titulo">
-                    <h1>Montellano</h1>
+                    <h1 class="titulo">Montellano</h1>
                 </div>
 
                 <div class="cont_frase">
-                    <h1>La mejor inversion es en ti mismo</h1>
+                    <h1 class="subtitulo"><span class="mejor">La mejor</span> <span class="inversion">inversion</span> es en ti mismo.</h1>
                 </div>
             </div>
         </div>
