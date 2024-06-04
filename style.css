@@ -4,7 +4,7 @@ body{
     background-color: whitesmoke;
 }
 
-h1,h2{
+h1,h2,h3,h4,h5,h6{
 		font-family: helvetica,arial, sans-serif;
         font-weight: 100;
 }
@@ -94,41 +94,91 @@ h1,h2{
 color: #28d6a2;
 }
 
-/* -----------------------------------------------------------------------------------*/
+.login{
+    width: 12%;
+    height: 5%;
+    border: 1px solid #000;
+    float: right;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: whitesmoke;
+    border-radius: 21px;
+    
+}
 
+
+
+/* -----------------------------------------------------------------------------------*/
+/* ---------------------------------------- Frase --------------------------------------*/
+
+
+.cont_subfrase{
+    width: 100%;
+    height: 500px;
+   
+    
+    
+}
+
+.cont{
+    width: 60%;
+    float: center;
+}
+
+.frase{
+    font-size: 60px;
+}
+
+
+.engresados{
+    color: #Cc24d4;
+}
+
+.ingresados{
+    color: #28d6a2;
+}
+
+/* -----------------------------------------------------------------------------------*/
 /* ------------- Servicios -----------*/
 
 .servicios{
     width: 100%;
-    height: 450px;
+    height: 700px;
     position: relative;
-    background-color: aqua;
+    background-color: whitesmoke;
     /* padding: 1%; 
     display: flex; */
     margin-top: 1%;
    
 }
 
-    /* ---------- Cajas --------- */
 
-.serv_1,.serv_2,.serv_3,.serv_4,.serv_5{
-    width: 25%;
-    height: 400px;
-    background-color: blue;
-    margin: 1%;
-    float: inline-start;
-    border-radius: 21px;
+.servicio_principal{
+    width: 100%;
+    height: 450px;
 }
 
-    /* ---------- Caja 2 --------- */
- .img_serv_1,.img_serv_2,.img_serv_3,.img_serv_4,.img_serv_5{
-    width: 95%;
-    height: 50%;
-    object-fit: cover;
-    margin: 2%;
-    background: url('imagenes/5_1.jpg');
-    border-radius: 21px;
- }
+.servicio_izquierda{
+    width: 70%;
+    height: 450px;
+    float: inline-start;
+}
+
+.servicio_derecha{
+    width: 30%;
+    height: 450px;
+    background: url('imagenes/2_1.jpg') no-repeat;
+    float: inline-start;
+}
+
+
+.frase_servicio{
+    width: 40%;
+    float: center;
+}
+.frase_servicio h3{
+    font-size: 45px;
+}
 
 
 
@@ -140,19 +190,30 @@ color: #28d6a2;
     height: 450px;
     background-color:whitesmoke;
     display: flex;
+    position: absolute;
 }
 
-.img_inst_1,.img_inst_2,.img_inst_3{
-    width: 30%;
-    height: 430px;
+.img_inst_1,.img_inst_2,.img_inst_3,.img_inst_4{
+    width: 35%;
+    height: 370px;
     display: flex;
     background-color: rgb(71, 200, 57);
+    background: url('imagenes/s_3.jpeg');
+    object-fit: scale-down;
     margin: 1%;
     border-radius: 21px;
+    position: relative;
+    background-position: 0px -150px; 
+  
+    
 
 }
 
-.burbuja_1,.burbuja_2,.burbuja_3{
+.capa{
+    background: linear-gradient(transparent, #0315d6);
+}
+
+.burbuja_1,.burbuja_2,.burbuja_3,.burbuja_4{
     background-color: whitesmoke;
     width: 50%;
     height: 70px;
@@ -160,8 +221,8 @@ color: #28d6a2;
     border-bottom-right-radius: 50%;
 }
 
-.cont_text_inst{
-
+.inst_text{
+    font-size: 25px;
 }
 
 
@@ -171,10 +232,7 @@ color: #28d6a2;
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
- #map {
-    height: 100%;
-  }
-  
+ #map { height: 180px; }
   /* 
    * Optional: Makes the sample page fill the window. 
    */

@@ -38,7 +38,12 @@
                 <div class="cont_frase">
                     <h1 class="subtitulo"><span class="mejor">La mejor</span> <span class="inversion">inversion</span> es en ti mismo.</h1>
                 </div>
+
+                <button class="login">Iniciar Sesion</button>
+                
+                <div class="login">Iniciar Sesion</div>
             </div>
+
         </div>
 
 
@@ -85,6 +90,7 @@
                         </div>
                 </div>
             </div>
+
         </div>
      
 
@@ -94,7 +100,7 @@
             <div class="img_inst_1">
                 <div class="burbuja_1">
                     <div class="cont_text_inst">
-                        <h1>Cafeteria</h1>
+                        <h1 >Biblioteca</h1>
                     </div>
                 </div>
             </div>
@@ -103,7 +109,7 @@
             <div class="img_inst_2">
                 <div class="burbuja_2">
                     <div class="cont_text_inst">
-                        <h1>Servicios</h1>
+                        <h1>Cafeteria</h1>
                     </div>
                 </div>
             </div>
@@ -111,10 +117,19 @@
             <div class="img_inst_3">
                 <div class="burbuja_3">
                     <div class="cont_text_inst">
-                        <h1>Salon No. 15</h1>
+                        <h1>Deportes</h1>
                     </div>
                 </div>
             </div>
+
+            <div class="img_inst_4">
+                <div class="burbuja_4">
+                    <div class="cont_text_inst">
+                        <h1>Servicios</h1>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
