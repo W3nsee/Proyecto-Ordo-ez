@@ -223,6 +223,11 @@ Class Contacto extends Conexion{
        $this->ejecutar_sentencia();
     }
 
+    public function eliminarhorario($id){
+       $this->sentencia = "DELETE FROM horario WHERE id_asignatura = '$id'";
+       $this->ejecutar_sentencia();
+    }
+
 	Public function cargaralumno($idalumno){
 		$this->sentencia = "SELECT * FROM alumno WHERE id='$idalumno'";
 		$resultado = $this->obtener_sentencia();
