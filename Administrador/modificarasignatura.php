@@ -58,9 +58,10 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 
 //VALIDACIÓN HORARIOS ME ROMPÍ EL COCO AYUDA DIOS
 ?>
-<p>NOTA: No olvides seleccionar por lo menos un día e introducir su hora de inicio y de término para poder generar el horario.</p>
 
 <h2>Horario</h2>
+
+<p>NOTA: No olvides seleccionar por lo menos un día e introducir su hora de inicio y de término para poder generar el horario.</p>
 
 <label for="lunes">Lunes</label>:
 <input type="checkbox" name="lunes" id="lunes_check" onclick="toggleHora('lunes')" <?php if(isset($horarios['Lunes'])) echo 'checked'; ?>>
@@ -87,100 +88,74 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 <input type="time" name="viernes_inicio" id="viernes_inicio" value="<?php if(isset($horarios['Viernes'])) echo $horarios['Viernes']['inicio']; ?>" <?php if(!isset($horarios['Viernes'])) echo 'disabled'; ?>> -
 <input type="time" name="viernes_final" id="viernes_final" value="<?php if(isset($horarios['Viernes'])) echo $horarios['Viernes']['fin']; ?>" <?php if(!isset($horarios['Viernes'])) echo 'disabled'; ?>><br/><br/>
 
-<script>
-    function validarFormulario() {
-        var maestroSeleccionado = document.getElementById('maestroInput').value;
-        if (maestroSeleccionado == "") {
-            alert("Por favor, seleccione un maestro para impartir la asignatura.");
-            return false;
-        }
-        return true;
-    }
+<h1>Profesor que impartirá la asignatura:<h1>
+<input type="hidden" name="maestro" id="maestroInput" class="boton">
+<p>NOTA: No olvides seleccionar por lo menos un maestro antes de modificar los datos.</p>
 
-    //se envia el dia seleccionado en el checkbox por ejmplo
-    function toggleHora(dia) {
-        var checkBox = document.getElementById(dia + "_check");
-        var inicioInput = document.getElementById(dia + "_inicio");
-        var finInput = document.getElementById(dia + "_final");
+<!-- Slider de Maestros -->
+<div class="slider">
+    <?php
+    $obj4 = new Contacto();
+    $resultado_maestro = $obj4->consultarmaestro();
 
-        //lo permite hacer editable o no
-        if (checkBox.checked == true) {
-            inicioInput.disabled = false;
-            finInput.disabled = false;
-        } else {
-            inicioInput.disabled = true;
-            finInput.disabled = true;
+    while($registro_maestro = $resultado_maestro->fetch_assoc()){
+        if(isset($registro_maestro["nombre"])) {
+            $idmaestro = $registro_maestro["id"]; // Obtener el ID del maestro
+            //Campo oculto en onclick
+            echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\";' id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
+                    <div class='texto'>".$registro_maestro["nombre"]." ".$registro_maestro["apellido_paterno"]." ".$registro_maestro["apellido_materno"]."</div></div>";
         }
     }
-</script>
+    ?>
+    <script>
+    // Función para actualizar el valor de maestro en el campo oculto
+    function actualizarMaestro(idmaestro) {
+        document.getElementById('maestroInput').value = idmaestro;
+    }
+    </script>
 
+    <!-- Seleccion al maestro -->
+    <script>
+    var items = document.querySelectorAll('.img_caja');
+    var selectorItems = 0;
 
-             <h1>Profesor que impartirá la asignatura:<h1>
-                <p>NOTA: No olvides seleccionar por lo menos un maestro antes de modificar los datos.</p>
-             <input type="hidden" name="maestro" id="maestroInput" class="boton">
-             
-                <input type="hidden" name="id" value="<?php echo $_POST["idmodificar"];?>">
-                <input type="submit" name="modificar" value="Modificar">
-        </form>
-
-        <div class="slider">
-        <?php
-            $obj4 = new Contacto();
-            $resultado_maestro = $obj4->consultarmaestro();
-
-            while($registro_maestro = $resultado_maestro->fetch_assoc()){
-                if(isset($registro_maestro["nombre"])) {
-                    $idmaestro = $registro_maestro["id"]; // Obtener el ID del maestro
-                    //Campo oculto en onclick
-                    echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\";' id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
-                        <div class='texto'>".$registro_maestro["nombre"]." ".$registro_maestro["apellido_paterno"]." ".$registro_maestro["apellido_materno"]."</div></div>";
-                }
+    items.forEach(function(item) {
+        item.addEventListener('click', function() {
+            if (this.classList.contains('selected')) {
+                this.classList.remove('selected');
+                selectorItems--;
+                <?php 
+                    $nombre = "";
+                ?>
+            } else if (selectorItems < 1) {
+                this.classList.add('selected');
+                selectorItems++;
             }
-        ?>
-        <script>
-        // Función para actualizar el valor de maestro en el campo oculto
-        function actualizarMaestro(idmaestro) {
-            document.getElementById('maestroInput').value = idmaestro;
-        }
-        </script>
-
-        <!-- Seleccion al maestro -->
-        <script>
-        var items = document.querySelectorAll('.img_caja');
-        var selectorItems = 0;
-
-        items.forEach(function(item) {
-            item.addEventListener('click', function() {
-                if (this.classList.contains('selected')) {
-                    this.classList.remove('selected');
-                    selectorItems--;
-                    <?php 
-                        $nombre = "";
-                    ?>
-                } else if (selectorItems < 1) {
-                    this.classList.add('selected');
-                    selectorItems++;
-                }
-            });
         });
-        </script>
+    });
+    </script>
 
-        <!-- Cambiar el color de los bordes -->
-        <style>
-            @keyframes CambioColor {
-                0% {box-shadow: 0 0 0 3px red; }
-                25% {box-shadow: 0 0 0 3px orange; }
-                50% {box-shadow: 0 0 0 3px green; }
-                75% {box-shadow: 0 0 0 3px blue; }
-                100% {box-shadow: 0 0 0 3px red; }
-            }
-            .selected {
-                animation: CambioColor 2s infinite;
-            }
-        </style>
-        </div>
+    <!-- Cambiar el color de los bordes -->
+    <style>
+        @keyframes CambioColor {
+            0% {box-shadow: 0 0 0 3px red; }
+            25% {box-shadow: 0 0 0 3px orange; }
+            50% {box-shadow: 0 0 0 3px green; }
+            75% {box-shadow: 0 0 0 3px blue; }
+            100% {box-shadow: 0 0 0 3px red; }
+        }
+        .selected {
+            animation: CambioColor 2s infinite;
+        }
+    </style>
+</div>
 
-        <?php
+<input type="hidden" name="id" value="<?php echo $_POST["idmodificar"];?>">
+<!-- Botón de Modificar -->
+<input type="submit" name="modificar" value="Modificar">
+</form>
+
+<?php
      }
    }
 }
@@ -205,7 +180,61 @@ if(isset($_POST["modificar"])){
 
          $obj7 = new contacto();
          $obj7->modificarimpartir($id,$nombre,$maestro,$nombremaestro,$apellidopaterno,$apellidomaterno);
-         echo "Registro Modificado";
+
+         $obj13 = new contacto();
+         $obj13->eliminarhorario($id);
+
+    if (isset($_POST['lunes']) && $_POST['lunes'] === 'on') {
+
+        $dia = "Lunes";
+        $horainicio = $_POST['lunes_inicio'];
+        $horafinal = $_POST['lunes_fin'];
+
+        $obj8 = new contacto();
+        $obj8->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['martes']) && $_POST['martes'] === 'on') {
+
+        $dia = "Martes";
+        $horainicio = $_POST['martes_inicio'];
+        $horafinal = $_POST['martes_fin'];
+
+        $obj9 = new contacto();
+        $obj9->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['miercoles']) && $_POST['miercoles'] === 'on') {
+
+        $dia = "Miercoles";
+        $horainicio = $_POST['miercoles_inicio'];
+        $horafinal = $_POST['miercoles_fin'];
+
+        $obj10 = new contacto();
+        $obj10->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['jueves']) && $_POST['jueves'] === 'on') {
+
+        $dia = "Jueves";
+        $horainicio = $_POST['jueves_inicio'];
+        $horafinal = $_POST['jueves_fin'];
+
+        $obj11 = new contacto();
+        $obj11->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['viernes']) && $_POST['viernes'] === 'on') {
+
+        $dia = "Viernes";
+        $horainicio = $_POST['viernes_inicio'];
+        $horafinal = $_POST['viernes_fin'];
+
+        $obj12 = new contacto();
+        $obj12->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    echo "Registro Modificado";
 }
 ?>
 </body>
