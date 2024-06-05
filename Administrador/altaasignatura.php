@@ -6,7 +6,7 @@
     <title>Alta Asignatura</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="crear_asignatura.css">
+    <link rel="stylesheet" href="Administrador/crear_asignatura.css">
     <style>
         /* Sirve para cambiar el color de los placecholder */
         ::-webkit-input-placeholder {

@@ -1,5 +1,5 @@
 body{
-    margin: 2%;
+    margin: 0%;
     padding: 0px;
  
 }
@@ -69,7 +69,7 @@ body{
     height: 400px;
     position: sticky;
     border-radius: 21px;
-    background-color: whitesmoke;
+    background-color: #f9f9f9;
     margin: 2%; 
     padding: 15px;
     border-radius: 21px; 
