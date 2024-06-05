@@ -28,6 +28,7 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 21px;   
     background: url('imagenes/6_1.jpg'); 
     position: absolute;
+   
 }
 
 .cont_info_foto{
@@ -104,6 +105,7 @@ color: #28d6a2;
     background-color: whitesmoke;
     border-radius: 21px;
     
+    position: absolute;
 }
 
 
@@ -180,6 +182,15 @@ color: #28d6a2;
     font-size: 45px;
 }
 
+.cont_serv_2,.cont_serv_3,.cont_serv_4,.cont_serv_5{
+    width: 23%;
+    height: 200px;
+    background-color: red;
+    float: inline-start;
+    margin: 1%;
+    border-radius: 14px;
+}
+
 
 
 /* -------------------------------------- Instalaciones ------------------------------------*/
@@ -187,8 +198,8 @@ color: #28d6a2;
 
 .instalaciones{
     width: 100%;
-    height: 450px;
-    background-color:whitesmoke;
+    height: 400px;
+    background-color: whitesmoke;
     display: flex;
     position: absolute;
 }
@@ -223,6 +234,62 @@ color: #28d6a2;
 
 .inst_text{
     font-size: 25px;
+}
+
+/* ------------------------------------- INFORMACION --------------------------- */
+.informacion {
+    width: 98%;
+}
+
+.cont_administrativa {
+    display: flex;
+    align-items: center;
+    height: 1100px;
+    background-color: red;
+}
+
+.cont_foto {
+    flex: 0 0 20%;
+    height: 550px;
+    border-radius: 21px;
+    margin: 1%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    object-fit: cover;
+}
+
+.info_derecha_admin {
+    flex: 0 0 76%;
+    height: 1000px;
+    margin-left: auto;
+}
+
+.info_derecha_admin h4 {
+    font-size: 20px;
+    color: black;
+}
+
+
+/* ------------------------------ Proyecto ------------------------------------ */
+.proyecto{
+    width: 100%;
+  
+}
+
+.actividad_1{
+    width: 100%;
+    height: 400px;
+}
+
+.imagen_act_1{
+    width: 30%;
+    height: 400px;
+    background: url('imagenes/4_1.jpg');
+    border-radius: 21px;
 }
 
 
