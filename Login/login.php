@@ -51,7 +51,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: MenuMaestro.php"); 
+            header("Location: ../MenuMaestro.php"); 
             exit;
         }
     }
@@ -62,7 +62,7 @@ if(isset($_POST['login'])){
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: MenuAlumno.php"); 
+            header("Location: ../MenuAlumno.php"); 
             exit;
         }
     }
