@@ -15,9 +15,9 @@
     <form action="" method="post">
         <div class="cerrar"></div>
         <label>Id del usuario: </label>
-        <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082"><br></br>
+        <input type="text" class="usuario" name="idusuario" min="1" max="6" placeholder="20219082" required><br></br>
         <label>Contraseña: </label>
-        <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123"><br><br>
+        <input type="password" class="contrasena" name="contrasena" min="1" max="16" placeholder="Contraseña123" required><br><br>
         <input type="submit" name="login" value="Iniciar Sesion" id="boton">
     </form>
 </div>

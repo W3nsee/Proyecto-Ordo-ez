@@ -1,4 +1,4 @@
- <h1>Modificar Datos de un Maestro</h1> 
+<h1>Modificar Datos de un Maestro</h1> 
 <form action="" method="post">
 	<select name="idmodificar">
 		<?php
@@ -22,19 +22,20 @@
    	 	?>
    	 	<form action="" method="post">
    	 		 <br/><br/> 
-   	 	    Nombre: <input type="text" name="nombre" value="<?php echo $registro["nombre"];?>"><br/><br/> 
-   	 	    Apellido Paterno: <input type="text" name="apellidopaterno" value="<?php echo $registro["apellido_paterno"];?>"><br/><br/> 
-   	 	    Apellido Materno: <input type="text" name="apellidomaterno" value="<?php echo $registro["apellido_materno"];?>"><br/><br/> 
-   	 	    Fecha de Nacimiento: <input type="date" name="fechanacimiento" value="<?php echo $registro["fecha_nacimiento"];?>"><br/><br/> 
-   	 	    Telefono: <input type="text" name="telefono" value="<?php echo $registro["telefono"];?>"><br/><br/> 
-   	 	    Correo: <input type="text" name="correo" value="<?php echo $registro["correo"];?>"><br/><br/>
+   	 	    Nombre: <input type="text" name="nombre" value="<?php echo $registro["nombre"];?>" required><br/><br/> 
+   	 	    Apellido Paterno: <input type="text" name="apellidopaterno" value="<?php echo $registro["apellido_paterno"];?>" required><br/><br/> 
+   	 	    Apellido Materno: <input type="text" name="apellidomaterno" value="<?php echo $registro["apellido_materno"];?>"required><br/><br/> 
+   	 	    Fecha de Nacimiento: <input type="date" name="fechanacimiento" value="<?php echo $registro["fecha_nacimiento"];?>"required><br/><br/> 
+   	 	    Telefono: <input type="text" name="telefono" value="<?php echo $registro["telefono"];?>"required><br/><br/> 
+   	 	    Correo: <input type="text" name="correo" value="<?php echo $registro["correo"];?>"required><br/><br/>
    	 	    Sexo:
              <label>
-                <input type="radio" name="sexo" value="F">Femenino
+                <input type="radio" name="sexo" value="F" <?php echo ($registro["sexo"] == 'F') ? 'checked' : ''; ?>>Femenino
              </label>
-                <label>
-             <input type="radio" name="sexo" value="M">Masculino
+             <label>
+                <input type="radio" name="sexo" value="M" <?php echo ($registro["sexo"] == 'M') ? 'checked' : ''; ?>>Masculino
              </label><br/><br/>
+             
              Contraseña: <input type="text" name="contrasena" value="<?php echo $registro["contrasena"];?>"><br/><br/>
    	 	    <input type="hidden" name="id" value="<?php echo $_POST["idmodificar"];?>">
    	 	    <input type="submit" name="modificar" value="Modificar">

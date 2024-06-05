@@ -17,7 +17,7 @@
 <body>
     <h1>Dar de Alta una Asignatura</h1> 
     <!-- Formulario -->
-    <form action="" method="post">
+    <form id="altaForm" action="" method="post" onsubmit="return validarFormulario()">
         Nombre de la Asignatura: <input type="text" name="nombre" placeholder="Ejem. Español" required><br/><br/>
 
         <!-- Agregar campos de horario -->
@@ -47,7 +47,7 @@
         <input type="time" name="viernes_inicio" id="viernes_inicio" disabled> -
         <input type="time" name="viernes_fin" id="viernes_fin" disabled><br/><br/>
 
-        <h1>Profesor que impartirá la asignatura:<h1>
+        <h1>Profesor que impartirá la asignatura:</h1>
         <input type="hidden" name="maestro" id="maestroInput" class="boton">
         <input type="submit" name="insert" value="Guardar" class="boton">
     </form>
@@ -59,11 +59,16 @@
         $obj = new Contacto();
         $resultado = $obj->consultarmaestro();
        
-        while($registro = $resultado->fetch_assoc()){
-            if(isset($registro["nombre"])) {
-                $idmaestro = $registro['id']; // Obtener el ID del maestro
-                echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\" id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
-                <div class='texto'>".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</div></div>";
+        // Verificar si hay maestros disponibles antes de mostrarlos
+        if($resultado->num_rows == 0) {
+            echo "<p>No hay maestros disponibles.</p>";
+        } else {
+            while($registro = $resultado->fetch_assoc()){
+                if(isset($registro["nombre"])) {
+                    $idmaestro = $registro['id']; // Obtener el ID del maestro
+                    echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\" id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
+                    <div class='texto'>".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</div></div>";
+                }
             }
         }
         ?>
@@ -86,6 +91,39 @@
             inicio.disabled = true;
             fin.disabled = true;
         }
+    }
+
+    function validarFormulario() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var horasInicio = document.querySelectorAll('input[type="time"]:enabled');
+
+        var alMenosUnCheckboxSeleccionado = false;
+        var todasLasHorasEstablecidas = true;
+
+        checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+                alMenosUnCheckboxSeleccionado = true;
+            }
+        });
+
+        horasInicio.forEach(function(hora) {
+            if (hora.value === "") {
+                todasLasHorasEstablecidas = false;
+            }
+        });
+
+        if (!alMenosUnCheckboxSeleccionado) {
+            // Muestra un aviso en una ventanita en la parte superior
+            alert("Debe seleccionar al menos un día de horario.");
+            return false;
+        }
+
+        if (!todasLasHorasEstablecidas) {
+            alert("Debe establecer una hora de inicio y fin para cada día seleccionado.");
+            return false;
+        }
+
+        return true;
     }
     </script>
 
@@ -122,14 +160,19 @@
 </html>
 
 <?php
-// Incluir el archivo PHP que contiene la clase Contacto
 require_once("contacto.php");
 
-// Si se ha enviado el formulario
 if(isset($_POST['insert'])){
+
     // Recuperar los valores del formulario
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $maestro = isset($_POST['maestro']) ? $_POST['maestro'] : '';
+
+    // Validar si se ha seleccionado al menos un maestro
+    if(empty($maestro)) {
+        echo "Por favor, seleccione un maestro para impartir la asignatura.";
+        exit; // Detener la ejecución del script si no hay maestros seleccionados
+    }
 
     $obj = new Contacto(); 
     $obj->altaasignatura($nombre);
@@ -150,7 +193,56 @@ if(isset($_POST['insert'])){
 
     $obj2 = new contacto();
     $obj2->pasaridasignatura($id,$nombre,$maestro,$nombremaestro,$apellidopaterno,$apellidomaterno);
-
     echo "Asignatura Guardada";
+
+    if (isset($_POST['lunes']) && $_POST['lunes'] === 'on') {
+
+        $dia = "Lunes";
+        $horainicio = $_POST['lunes_inicio'];
+        $horafinal = $_POST['lunes_fin'];
+
+        $obj5 = new contacto();
+        $obj5->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['martes']) && $_POST['martes'] === 'on') {
+
+        $dia = "Martes";
+        $horainicio = $_POST['martes_inicio'];
+        $horafinal = $_POST['martes_fin'];
+
+        $obj6 = new contacto();
+        $obj6->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['miercoles']) && $_POST['miercoles'] === 'on') {
+
+        $dia = "Miercoles";
+        $horainicio = $_POST['miercoles_inicio'];
+        $horafinal = $_POST['miercoles_fin'];
+
+        $obj7 = new contacto();
+        $obj7->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['jueves']) && $_POST['jueves'] === 'on') {
+
+        $dia = "Jueves";
+        $horainicio = $_POST['jueves_inicio'];
+        $horafinal = $_POST['jueves_fin'];
+
+        $obj8 = new contacto();
+        $obj8->altahorario($id,$dia,$horainicio,$horafinal);
+    }
+
+    if (isset($_POST['viernes']) && $_POST['viernes'] === 'on') {
+
+        $dia = "Viernes";
+        $horainicio = $_POST['viernes_inicio'];
+        $horafinal = $_POST['viernes_fin'];
+
+        $obj9 = new contacto();
+        $obj9->altahorario($id,$dia,$horainicio,$horafinal);
+    }
 }
 ?>

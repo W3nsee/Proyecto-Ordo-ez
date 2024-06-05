@@ -50,10 +50,14 @@ Class Contacto extends Conexion{
     }
 
     public function pasaridasignatura($id, $nombre, $maestro, $nombremaestro, $apellidopaterno, $apellidomaterno) {
-    $this->sentencia = "INSERT INTO impartir VALUES ('$id','$nombre','$maestro','$nombremaestro','$apellidopaterno','$apellidomaterno')";
-    $bandera = $this->ejecutar_sentencia(); 
-}
+       $this->sentencia = "INSERT INTO impartir VALUES ('$id','$nombre','$maestro','$nombremaestro','$apellidopaterno','$apellidomaterno')";
+       $bandera = $this->ejecutar_sentencia(); 
+    }
 
+    public function altahorario($id,$dia,$horainicio,$horafinal){
+		$this->sentencia = "INSERT INTO horario VALUES('$id','$dia','$horainicio','$horafinal')";
+		$bandera = $this->ejecutar_sentencia();   
+	}
 
 	public function consultaralumno(){
 		$this->sentencia = "SELECT * FROM alumno;";
@@ -157,6 +161,12 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+	public function consultarhorario($idasignatura){
+		$this->sentencia = "SELECT * FROM horario WHERE id_asignatura = $idasignatura;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
 	public function contarfaltas($idalumno, $idasignatura) {
     $this->sentencia = "SELECT COUNT(*) AS fecha_falta FROM faltas_asistencia WHERE alumno_id = '$idalumno' AND id_asignatura = '$idasignatura'";
     $resultado = $this->obtener_sentencia();
@@ -231,6 +241,18 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+	Public function cargargradogrupo($idsalon){
+		$this->sentencia = "SELECT * FROM salon WHERE id='$idsalon'";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	Public function cargarhorario($idasignatura){
+		$this->sentencia = "SELECT * FROM horario WHERE id_asignatura='$idasignatura'";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
 	Public function modificaralumno($contrasena,$nombre,$apellidopaterno,$apellidomaterno,$fechanacimiento,$telefono,$correo,$sexo,$id){
 		$this->sentencia = "UPDATE alumno SET contrasena = '$contrasena', nombre='$nombre', apellido_paterno='$apellidopaterno',apellido_materno='$apellidomaterno',fecha_nacimiento='$fechanacimiento',telefono='$telefono',correo='$correo',sexo='$sexo' WHERE id = '$id'";
 		$bandera = $this->ejecutar_sentencia();
@@ -241,8 +263,13 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();
 	}
 
-	Public function modificarasignatura($nombre,$maestro,$id){
+	Public function modificarasignatura($nombre,$id){
 		$this->sentencia = "UPDATE asignatura SET nombre='$nombre' WHERE id = '$id'";
+		$bandera = $this->ejecutar_sentencia();
+	}
+
+	Public function modificarimpartir($id,$nombre,$maestro,$nombremaestro,$apellidopaterno,$apellidomaterno){
+		$this->sentencia = "UPDATE impartir SET id_maestro='$maestro', nombre_asignatura = '$nombre', nombre_maestro='$nombremaestro', apellido_paterno='$apellidopaterno' WHERE id_asignatura = '$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
 

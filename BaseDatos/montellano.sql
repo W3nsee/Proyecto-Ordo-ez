@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2024 a las 03:28:32
+-- Tiempo de generación: 05-06-2024 a las 05:52:41
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -71,7 +71,7 @@ CREATE TABLE `alumno` (
 --
 
 INSERT INTO `alumno` (`id`, `contrasena`, `nombre`, `apellido_paterno`, `apellido_materno`, `fecha_nacimiento`, `telefono`, `correo`, `sexo`, `id_salon`) VALUES
-(92, 'maya333', 'Arataki ', 'itto', 'Eusebio', '2024-05-04', 312116, 'itto@gmail.com', 'M', '1'),
+(92, 'maya333', 'Arataki ', 'itto', 'Eusebio', '2024-05-04', 312116, 'itto@gmail.com', 'M', '2'),
 (96, 'ittogod666', 'mi esposo', 'itto', 'mi vida', '2024-05-31', 312116, 'ITTO@GMAIL.COM', 'M', '2'),
 (97, 'deqwrewq', 'jose luis', 'juarez', 'lopez', '2024-05-15', 212666, 'joseluis@gmail.com', 'M', '7'),
 (101, 'jcarlos', 'juan carlos', 'perez', 'aaaa', '2024-05-03', 3452, 'jcarlos@gmail.com', 'M', '7'),
@@ -98,7 +98,11 @@ INSERT INTO `asignatura` (`id`, `nombre`) VALUES
 (1, 'Progra I'),
 (2, 'sistemas'),
 (4, 'progra II'),
-(7, 'matematicas');
+(7, 'matematicas'),
+(8, 'EspaÃ±ol'),
+(9, 'Ciencias'),
+(13, 'Caifanes'),
+(15, 'Topollillo');
 
 -- --------------------------------------------------------
 
@@ -165,12 +169,25 @@ INSERT INTO `faltas_asistencia` (`id`, `id_asignatura`, `nombre_asignatura`, `al
 --
 
 CREATE TABLE `horario` (
-  `id` int(11) NOT NULL,
-  `dia` varchar(10) NOT NULL,
-  `hora_inicio` varchar(4) NOT NULL,
-  `hora_final` varchar(4) NOT NULL,
-  `id_asignatura` varchar(20) NOT NULL
+  `id_asignatura` int(11) NOT NULL,
+  `dia` varchar(11) NOT NULL,
+  `hora_inicio` time NOT NULL,
+  `hora_final` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `horario`
+--
+
+INSERT INTO `horario` (`id_asignatura`, `dia`, `hora_inicio`, `hora_final`) VALUES
+(8, 'Lunes', '02:05:00', '03:00:00'),
+(9, 'Lunes', '19:40:00', '20:50:00'),
+(9, 'Martes', '19:40:00', '20:50:00'),
+(13, 'Martes', '20:30:00', '21:30:00'),
+(13, 'Jueves', '03:30:00', '04:30:00'),
+(13, 'Viernes', '21:30:00', '22:30:00'),
+(14, 'Lunes', '06:13:00', '18:15:00'),
+(15, 'Martes', '18:16:00', '18:17:00');
 
 -- --------------------------------------------------------
 
@@ -195,7 +212,15 @@ INSERT INTO `impartir` (`id_asignatura`, `nombre_asignatura`, `id_maestro`, `nom
 (1, 'Progra I', 2, 'hugo cesar', 'ponce', 'suarez'),
 (2, 'sistemas', 1, 'Angel', 'OrdoÃ±ez', 'Ayala'),
 (4, 'progra II', 2, 'hugo cesar', 'ponce', 'suarez'),
-(7, 'matematicas', 5, 'Gerardo ', 'itto', 'SuÃ¡rez');
+(7, 'matematicas', 5, 'Gerardo ', 'itto', 'SuÃ¡rez'),
+(8, 'EpaÃ±ol', 5, 'Gerardo ', 'itto', 'SuÃ¡rez'),
+(9, 'Ciencias', 2, 'hugo cesar', 'ponce', 'suarez'),
+(10, 'topollillo', 2, 'hugo cesar', 'ponce', 'suarez'),
+(11, 'sociales', 2, 'hugo cesar', 'ponce', 'suarez'),
+(12, 'Jose Maria', 2, 'hugo cesar', 'ponce', 'suarez'),
+(13, 'Caifanes', 5, 'Gerardo ', 'itto', 'Ayala'),
+(14, 'pepito', 2, 'hugo cesar', 'ponce', 'suarez'),
+(15, 'Topollillo', 5, 'Gerardo ', 'itto', 'Ayala');
 
 -- --------------------------------------------------------
 
@@ -252,7 +277,8 @@ INSERT INTO `matricula` (`id_asignatura`, `nombre_asignatura`, `id_alumno`, `nom
 (1, 'Progra I', 92, 'Arataki ', 'itto', 'Eusebio'),
 (4, 'progra II', 92, 'Arataki ', 'itto', 'Eusebio'),
 (7, 'matematicas', 102, 'pepito', 'Perez', 'Jimenez'),
-(7, 'matematicas', 96, 'mi esposo', 'itto', 'mi vida');
+(7, 'matematicas', 96, 'mi esposo', 'itto', 'mi vida'),
+(13, 'charly', 101, 'juan carlos', 'perez', 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -310,12 +336,6 @@ ALTER TABLE `faltas_asistencia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `horario`
---
-ALTER TABLE `horario`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `maestro`
 --
 ALTER TABLE `maestro`
@@ -347,19 +367,13 @@ ALTER TABLE `alumno`
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `faltas_asistencia`
 --
 ALTER TABLE `faltas_asistencia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT de la tabla `horario`
---
-ALTER TABLE `horario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `maestro`
