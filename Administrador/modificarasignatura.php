@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="crear_asignatura.css">
+    <script>
+        function toggleHora(dia) {
+            var checkbox = document.getElementById(dia + '_check');
+            var inicio = document.getElementById(dia + '_inicio');
+            var final = document.getElementById(dia + '_final');
+
+            inicio.disabled = !checkbox.checked;
+            final.disabled = !checkbox.checked;
+        }
+    </script>
 </head>
 
 <body>
@@ -88,7 +98,7 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 <input type="time" name="viernes_inicio" id="viernes_inicio" value="<?php if(isset($horarios['Viernes'])) echo $horarios['Viernes']['inicio']; ?>" <?php if(!isset($horarios['Viernes'])) echo 'disabled'; ?>> -
 <input type="time" name="viernes_final" id="viernes_final" value="<?php if(isset($horarios['Viernes'])) echo $horarios['Viernes']['fin']; ?>" <?php if(!isset($horarios['Viernes'])) echo 'disabled'; ?>><br/><br/>
 
-<h1>Profesor que impartirá la asignatura:<h1>
+<h1>Profesor que impartirá la asignatura:</h1>
 <input type="hidden" name="maestro" id="maestroInput" class="boton">
 <p>NOTA: No olvides seleccionar por lo menos un maestro antes de modificar los datos.</p>
 
@@ -188,7 +198,7 @@ if(isset($_POST["modificar"])){
 
         $dia = "Lunes";
         $horainicio = $_POST['lunes_inicio'];
-        $horafinal = $_POST['lunes_fin'];
+        $horafinal = $_POST['lunes_final'];
 
         $obj8 = new contacto();
         $obj8->altahorario($id,$dia,$horainicio,$horafinal);
@@ -198,7 +208,7 @@ if(isset($_POST["modificar"])){
 
         $dia = "Martes";
         $horainicio = $_POST['martes_inicio'];
-        $horafinal = $_POST['martes_fin'];
+        $horafinal = $_POST['martes_final'];
 
         $obj9 = new contacto();
         $obj9->altahorario($id,$dia,$horainicio,$horafinal);
@@ -208,7 +218,7 @@ if(isset($_POST["modificar"])){
 
         $dia = "Miercoles";
         $horainicio = $_POST['miercoles_inicio'];
-        $horafinal = $_POST['miercoles_fin'];
+        $horafinal = $_POST['miercoles_final'];
 
         $obj10 = new contacto();
         $obj10->altahorario($id,$dia,$horainicio,$horafinal);
@@ -218,7 +228,7 @@ if(isset($_POST["modificar"])){
 
         $dia = "Jueves";
         $horainicio = $_POST['jueves_inicio'];
-        $horafinal = $_POST['jueves_fin'];
+        $horafinal = $_POST['jueves_final'];
 
         $obj11 = new contacto();
         $obj11->altahorario($id,$dia,$horainicio,$horafinal);
@@ -228,7 +238,7 @@ if(isset($_POST["modificar"])){
 
         $dia = "Viernes";
         $horainicio = $_POST['viernes_inicio'];
-        $horafinal = $_POST['viernes_fin'];
+        $horafinal = $_POST['viernes_final'];
 
         $obj12 = new contacto();
         $obj12->altahorario($id,$dia,$horainicio,$horafinal);
