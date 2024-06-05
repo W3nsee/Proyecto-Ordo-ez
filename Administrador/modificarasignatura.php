@@ -43,6 +43,7 @@ if($resultado->num_rows == 0) {
 
 <?php
    if(isset($_POST["cargar"])){
+
     $obj2 = new contacto();
     $resultado = $obj2->cargarasignatura($_POST['idmodificar']);
      while ($registro = $resultado->fetch_assoc()){
@@ -51,7 +52,7 @@ if($resultado->num_rows == 0) {
         <form action="" method="post" onsubmit="return validarFormulario()">
              <br/><br/> 
                 Nombre: <input type="text" name="nombre" value="<?php echo $registro["nombre"];?>" required><br/><br/> 
-
+                
                 <?php 
 $obj3 = new contacto();
 $resultado_horario = $obj3->cargarhorario($idasignatura);
@@ -99,6 +100,20 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 <input type="time" name="viernes_final" id="viernes_final" value="<?php if(isset($horarios['Viernes'])) echo $horarios['Viernes']['fin']; ?>" <?php if(!isset($horarios['Viernes'])) echo 'disabled'; ?>><br/><br/>
 
 <h1>Profesor que impartirá la asignatura:</h1>
+
+<?php
+   //Obtener id del maestro anterior
+           $obj14 = new contacto();
+           $resultado = $obj14->consultarmaestroconidasignatura($idasignatura);
+           while ($registro = $resultado->fetch_assoc()){
+                $nombremaestro = $registro['nombre_maestro'];
+                $apellidopaterno = $registro['apellido_paterno'];
+                $apellidomaterno = $registro['apellido_materno'];
+
+                echo 'Anterior maestro que impartía la asignatura: ' . $nombremaestro . " " . $apellidopaterno .  " " .$apellidomaterno;
+           }
+?>
+
 <input type="hidden" name="maestro" id="maestroInput" class="boton">
 <p>NOTA: No olvides seleccionar por lo menos un maestro antes de modificar los datos.</p>
 

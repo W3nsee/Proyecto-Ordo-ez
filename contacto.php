@@ -274,7 +274,7 @@ Class Contacto extends Conexion{
 	}
 
 	Public function modificarimpartir($id,$nombre,$maestro,$nombremaestro,$apellidopaterno,$apellidomaterno){
-		$this->sentencia = "UPDATE impartir SET id_maestro='$maestro', nombre_asignatura = '$nombre', nombre_maestro='$nombremaestro', apellido_paterno='$apellidopaterno' WHERE id_asignatura = '$id'";
+		$this->sentencia = "UPDATE impartir SET id_maestro='$maestro', nombre_asignatura = '$nombre', nombre_maestro='$nombremaestro', apellido_paterno='$apellidopaterno', apellido_materno ='$apellidomaterno' WHERE id_asignatura = '$id'";
 		$bandera = $this->ejecutar_sentencia();
 	}
 
