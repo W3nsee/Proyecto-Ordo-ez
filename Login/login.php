@@ -32,16 +32,17 @@ if(isset($_POST['login'])){
     $id = $_POST['idusuario'];
     $contrasena = $_POST['contrasena'];
 
-    require_once("contacto.php");
+    require_once("../contacto.php");
     $obj = new contacto();
     $resultado = $obj->verificaridadmin($id);
     while ($registro = $resultado->fetch_assoc()) {
         if($id == $registro["id"] && $contrasena == $registro["contrasena"])
         {
             $_SESSION['id'] = $id; // Guardar el ID del usuario en la sesión
-            header("Location: MenuAdmin.php"); 
+            header("Location: ../MenuAdmin.php"); 
             exit;
         }
+        
     }
 
     $obj2 = new contacto();

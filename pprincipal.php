@@ -39,7 +39,7 @@
                     <h1 class="subtitulo"><span class="mejor">La mejor</span> <span class="inversion">inversion</span> es en ti mismo.</h1>
                 </div>
 
-                <form action="login.php">
+                <form action="Login/login.php">
                 
                     <button class="login">Iniciar Sesion</button>
 
