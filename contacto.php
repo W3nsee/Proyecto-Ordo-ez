@@ -8,6 +8,7 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+
 	public function verificaridmaestro($id){
 		$this->sentencia = "SELECT * FROM maestro;";
 		$resultado = $this->obtener_sentencia();
@@ -57,6 +58,18 @@ Class Contacto extends Conexion{
     public function altahorario($id,$dia,$horainicio,$horafinal){
 		$this->sentencia = "INSERT INTO horario VALUES('$id','$dia','$horainicio','$horafinal')";
 		$bandera = $this->ejecutar_sentencia();   
+	}
+
+	public function consultarsalon($grado,$grupo){
+		$this->sentencia = "SELECT * FROM salon WHERE grado = '$grado' AND grupo = '$grupo';";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function consultaralumnosalon($idsalon){
+		$this->sentencia = "SELECT * FROM alumno WHERE id_salon = '$idsalon';";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
 	}
 
 	public function consultaralumno(){
@@ -344,6 +357,7 @@ Class Contacto extends Conexion{
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
+	
 
 }
 ?>
