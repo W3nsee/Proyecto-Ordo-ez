@@ -1,0 +1,518 @@
+.titulo{
+
+    text-align: center; /*Centrar el texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 40px;  /*Tamaño de la fuente*/
+    color: #f9f9f9; /*Color del texto*/
+    background-color: #83072d; /*Color de fondo*/
+    margin: 0px;
+    padding: 40px;
+
+}
+
+.cont_form{
+
+    height: 900px;
+    width: 1000px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+}
+
+/*---------------------------- Nombres -----------------------------*/
+
+.cont_nombres{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: -50px 80px; /*Desplazar el texto*/
+
+}
+
+.label_nombres{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 120px -27px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 110px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_nombres{
+
+    height: 56px; /*Alto de la caja*/
+    width: 940px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px; /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Apellido Paterno -----------------------------*/
+
+.cont_apellido_paterno{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: -160px 150px; /*Desplazar el texto*/
+    width: 600px;
+
+}
+
+.label_apellido_paterno{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 230px -28px;  /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 190px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_apellido_paterno{
+
+    height: 56px; /*Alto de la caja*/
+    width: 350px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px; /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Apellido Materno -----------------------------*/
+
+.cont_apellido_materno{
+
+    display: flex; /*Centrar el texto*/
+    flex-direction: row-reverse;
+    justify-content: right; /*Centrar el texto*/
+    translate: 550px 84px; /*Desplazar el texto*/
+    width: 600px;
+    
+
+}
+
+.label_apellido_materno{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: -380px -28px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 280px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_apellido_materno{
+
+    height: 56px; /*Alto de la caja*/
+    width: 520px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #4b4b4b; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Fecha de Nacimiento -----------------------------*/
+
+.cont_fecha_nacimiento{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: -390px 150px; /*Desplazar el texto*/
+
+    
+
+}
+
+.label_fecha_nacimiento{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 250px -30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 240px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_fecha_nacimiento{
+
+    height: 56px; /*Alto de la caja*/
+    width: 340px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Telefono -----------------------------*/
+
+.cont_telefono{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: 450px 84px; /*Desplazar el texto*/
+    width: 500px;
+
+}
+
+.label_telefono{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 120px -30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 110px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_telefono{
+
+    height: 56px; /*Alto de la caja*/
+    width: 440px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Correo -----------------------------*/
+
+.cont_correo{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: -230px 150px; /*Desplazar el texto*/
+    width: 800px;
+
+}
+
+.label_correo{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 120px -30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 110px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.input_correo{
+
+    height: 56px; /*Alto de la caja*/
+    width: 340px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #ffffff; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Sexo -----------------------------*/
+
+.cont_sexo{
+
+    display: flex; /*Centrar el texto*/
+    flex-direction: row-reverse;
+    justify-content: center; /*Centrar el texto*/
+    translate: 420px 84px; /*Desplazar el texto*/
+    width: 500px;
+
+}
+
+.label_sexo{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: -160px -30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 80px; /*Ancho de la caja*/
+    border-radius: 10px;
+    
+}
+
+.border_sexo{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    align-items: center; /*Centrar el texto*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #4b4b4b; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+    width: 150px; /*Ancho de la caja*/
+    height: 70px; /*Alto de la caja*/
+}
+
+/*---------------------------- Sexo Femenino-----------------------------*/
+
+.input_sexo_femenino{
+
+    appearance: none; /*Centrar el texto*/
+    background-color: #222222; /*Color de fondo*/
+    border: 1px solid #222222; /*Borde de la caja*/
+    border-radius: 50%; /*Borde redondeado de la caja*/
+    cursor: pointer; /*Centrar el texto*/
+    display: inline-block; /*Centrar el texto*/
+    height: 50px; /*Alto de la caja*/
+    margin: 0 10px 10px 0; /*Espacio interno de la caja*/
+    padding: 0; /*Espacio interno de la caja*/
+    position: relative; /*Centrar el texto*/
+    width: 50px; /*Ancho de la caja*/
+    translate: -17px 6px; /*Desplazar el texto*/
+
+}
+.input_sexo_femenino:after{
+
+    content: "F"; /*Centrar el texto*/
+    color: #F9F9F9; /*Color del texto*/
+    display: block; /*Centrar el texto*/
+    font-size: 30px; /*Tamaño de la fuente*/
+    line-height: 50px; /*Tamaño de la fuente*/
+    text-align: center; /*Centrar el texto*/
+
+}
+
+.input_sexo_femenino:checked::before{
+
+    background-color: #83072d; /*Color de fondo*/
+    border-radius: 50%; /*Borde redondeado de la caja*/
+    font-size: 30px; /*Tamaño de la fuente*/
+    line-height: 50px; /*Tamaño de la fuente*/
+    text-align: center; /*Centrar el texto*/
+    content: "F"; /*Centrar el texto*/
+    color: #F9F9F9; /*Color del texto*/
+    display: block; /*Centrar el texto*/
+    height: 50px; /*Alto de la caja*/
+    position: absolute; /*Centrar el texto*/
+    width: 50px; /*Ancho de la caja*/
+
+}
+
+/*---------------------------- Sexo Masculino-----------------------------*/
+
+.input_sexo_masculino{
+
+    appearance: none; /*Centrar el texto*/
+    background-color: #222222; /*Color de fondo*/
+    border: 1px solid #222222; /*Borde de la caja*/
+    border-radius: 50%; /*Borde redondeado de la caja*/
+    cursor: pointer; /*Centrar el texto*/
+    display: inline-block; /*Centrar el texto*/
+    height: 50px; /*Alto de la caja*/
+    margin: 0 0 10px 10px; /*Espacio interno de la caja*/
+    padding: 0; /*Espacio interno de la caja*/
+    position: relative; /*Centrar el texto*/
+    width: 50px; /*Ancho de la caja*/
+    translate: 5px 6px; /*Desplazar el texto*/
+
+}
+
+.input_sexo_masculino:after{
+
+    content: "M"; /*Centrar el texto*/
+    color: #F9F9F9; /*Color del texto*/
+    display: block; /*Centrar el texto*/
+    font-size: 30px; /*Tamaño de la fuente*/
+    line-height: 50px; /*Tamaño de la fuente*/
+    text-align: center; /*Centrar el texto*/
+
+}
+
+.input_sexo_masculino:checked::before{
+
+    background-color: #83072d; /*Color de fondo*/
+    border-radius: 50%; /*Borde redondeado de la caja*/
+    font-size: 30px; /*Tamaño de la fuente*/
+    line-height: 50px; /*Tamaño de la fuente*/
+    text-align: center; /*Centrar el texto*/
+    content: "M"; /*Centrar el texto*/
+    color: #F9F9F9; /*Color del texto*/
+    display: block; /*Centrar el texto*/
+    height: 50px; /*Alto de la caja*/
+    position: absolute; /*Centrar el texto*/
+    width: 50px; /*Ancho de la caja*/
+
+}
+
+/*---------------------------- Contraseña ----------------------------*/
+
+.cont_password{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: -270px 154px; /*Desplazar el texto*/
+
+}
+
+
+.label_password{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 135px -30px;  /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 120px; /*Ancho de la caja*/
+    border-radius: 10px;
+}
+
+.input_password{
+
+    height: 50px; /*Alto de la caja*/
+    width: 240px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px; /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Botónes ----------------------------*/
+
+/*---------------------------- Generar ----------------------------*/
+
+.boton_generar{
+
+    border: none; /*Borrador de la caja*/
+    background-color: #222222;
+    color: #F9F9F9;
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+    height: 60px; /*Alto de la caja*/
+    width: 200px; /*Ancho de la caja*/
+
+}
+
+.boton_generar:hover{
+
+    background-color: #83072d; /*Color de fondo*/
+    color: #f9f9f9; /*Color del texto*/
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+    height: 60px; /*Alto de la caja*/
+    width: 200px; /*Ancho de la caja*/
+
+}
+
+/*---------------------------- Guardar ----------------------------*/
+
+.button_guardar{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: 300px 250px; /*Desplazar el texto*/ 
+    width: 300px;
+
+}
+
+.boton_guardar{
+
+    border: none; /*Borrador de la caja*/
+    background-color: #222222;
+    color: #F9F9F9;
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+    height: 60px; /*Alto de la caja*/
+    width: 120px; /*Ancho de la caja*/
+
+}
+
+.boton_guardar:hover{
+
+    background-color: #83072d; /*Color de fondo*/
+    color: #f9f9f9; /*Color del texto*/
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+    height: 60px; /*Alto de la caja*/
+    width: 120px; /*Ancho de la caja*/
+
+}

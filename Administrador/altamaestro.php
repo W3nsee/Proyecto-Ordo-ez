@@ -24,31 +24,93 @@ if(isset($_POST['insertar'])){
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alta Alumnos</title>
+    <link rel="stylesheet" href="Administrador/CSS/alta_maestro.css">
+
 </head>
 <body>
 
-<h1>Dar de Alta un Maestro</h1>
+<h1 class="titulo">Dar de Alta un Maestro</h1>
 
 <form action="" method="post">
-    Nombres: <input type="text" name="nombre" placeholder="Ejem. José María" required><br/><br/>
-    Apellido paterno: <input type="text" name="apellidopaterno" placeholder="Ejem. Pérez" required><br/><br/>
-    Apellido materno: <input type="text" name="apellidomaterno" placeholder="Ejem. Gómez" required><br/><br/>
-    Fecha de nacimiento: <input type="date" name="fechanacimiento" max="<?php echo date('Y-m-d'); ?>" required><br/><br/>
-    Telefono: <input type="text" name="telefono" placeholder="Ejem. 312 666 6666" required><br/><br/>
-    Correo: <input type="email" name="correo" placeholder="Ejem. nombre6@gmail.com" required><br/><br/>
-    Sexo:
-    <label>
-        <input type="radio" name="sexo" value="F" checked>Femenino
-    </label>
-    <label>
-        <input type="radio" name="sexo" value="M">Masculino
-    </label><br/><br/>
-    Contraseña: <input type="text" name="contrasena" id="contrasena" readonly><br/><br/>
-    <input type="button" value="Generar Contraseña" onclick="generarContrasena()">
-    <input type="submit" name="insertar" value="Guardar">
+
+    <div class="cont_form">
+
+    <div class="cont_nombres">
+
+    <h2 class="label_nombres">Nombres</h2>
+    <input class="input_nombres" type="text" name="nombre" placeholder="Ejem. José María" required> <br/><br/>
+
+    </div>
+
+    <div class="cont_apellido_paterno">
+
+    <h2 class="label_apellido_paterno">Apellido paterno</h2>
+    <input class="input_apellido_paterno" type="text" name="apellidopaterno" placeholder="Ejem. Pérez" required><br/><br/>
+
+    </div>
+
+    <div class="cont_apellido_materno">
+
+    <h2 class="label_apellido_materno">Apellido materno</h2>
+    <input class="input_apellido_materno" type="text" name="apellidomaterno" placeholder="Ejem. Gómez" required><br/><br/>
+
+    </div>
+
+    <div class="cont_fecha_nacimiento">
+
+    <h2 class="label_fecha_nacimiento">Fecha de nacimiento</h2>
+
+    <input class="input_fecha_nacimiento" type="date" name="fechanacimiento" max="<?php echo date('Y-m-d'); ?>" required><br/><br/><!-- Añadir el atributo max -->
+
+    </div>
+
+    <div class="cont_telefono">
+
+    <h2 class="label_telefono">Telefono</h2>
+    <input class="input_telefono" type="text" name="telefono" placeholder="Ejem. 312 666 6666" required><br/><br/>
+
+    </div>
+
+    <div class="cont_correo">
+
+    <h2 class="label_correo">Correo</h2>
+    <input class="input_correo" type="email" name="correo" placeholder="Ejem. nombre6@gmail.com" required><br/><br/>
+
+    </div>
+
+    <div class="cont_sexo">
+
+    <h2 class="label_sexo">Sexo</h2>
+        
+    <div class="border_sexo">
+
+        <input class="input_sexo_femenino" type="radio" name="sexo" value="F" checked>
+        <input class="input_sexo_masculino" type="radio" name="sexo" value="M"> <br/><br/>
+
+    </div>
+
+    </div>
+
+    <div class="cont_password">
+
+    <h2 class="label_password">Contraseña</h2>
+    <input class="input_password" type="password" id="contrasena" name="contrasena" readonly><br/><br/>
+    <input class="boton_generar" type="button" value="Generar Contraseña" onclick="generarContrasena()">
+
+    </div>
+
+    <div class="button_guardar">
+
+    <input class="boton_guardar" type="submit" name="insertar" value="Guardar">
+
+    </div>
+
+    </div>
+    
 </form>
 
 <script>
@@ -73,3 +135,4 @@ if(isset($_POST['insertar'])){
 
 </body>
 </html>
+
