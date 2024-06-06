@@ -40,13 +40,17 @@ if(isset($_POST["mostrar"])){
     $resultado = $obj4->consultarunafalta($idfalta);
     if ($registro = $resultado->fetch_assoc()) {
         $idasignatura = $registro['id_asignatura'];
+        $nombreasignatura = $registro['nombre_asignatura'];
         $idalumno = $registro['alumno_id'];
+        $nombrealumno = $registro['nombre_alumno'];
+        $apellidopaterno = $registro['apellido_paterno'];
+        $apellidomaterno = $registro['apellido_materno'];
         $fechafalta = $registro['fecha_falta'];
         $estado = "Pendiente";
     }
 
     $obj5 = new contacto();
-    $resultado = $obj5->agregarajustificante($idalumno,$idasignatura,$fechafalta,$motivo,$estado);
+    $resultado = $obj5->agregarajustificante($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,$apellidopaterno,$apellidomaterno,$fechafalta,$motivo,$estado);
     echo "Justificante solicitado";
 
 } else  {

@@ -59,8 +59,8 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();   
 	}
 
-	public function agregarajustificante($idalumno,$idasignatura,$fechafalta,$motivo,$estado){
-		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumno','$idasignatura','$fechafalta','$motivo','$estado')";
+	public function agregarajustificante($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,$apellidopaterno,$apellidomaterno,$fechafalta,$motivo,$estado){
+		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumn$idasignatura','$nombreasignatura','$idalumno','$nombrealumno','$apellidopaterno','$apellidonaterno','$fechafalta','$motivo','$estado')";
 		$bandera = $this->ejecutar_sentencia();   
 	}
 
@@ -198,6 +198,12 @@ Class Contacto extends Conexion{
 
 	public function consultarjustificantes($id){
 		$this->sentencia = "SELECT * FROM justificantes WHERE id_alumno = $id;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function listarjustificantes(){
+		$this->sentencia = "SELECT * FROM justificantes";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
