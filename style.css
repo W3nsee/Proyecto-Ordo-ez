@@ -109,8 +109,11 @@ color: #28d6a2;
     font-size: 14px;
     background-color: whitesmoke;
     border-radius: 21px;
-    
     position: absolute;
+}
+
+.login:hover {
+    background-color: #e8e8e8;
 }
 
 
@@ -174,11 +177,58 @@ color: #28d6a2;
 .servicio_derecha{
     width: 30%;
     height: 450px;
-    background: url('imagenes/2_1.jpg') no-repeat;
+    background: url('imagenes/s_3.jpeg') no-repeat;
     float: inline-start;
-    
+    background-size: cover;
+
 }
 
+.cont_serv_2,.cont_serv_3,.cont_serv_4,.cont_serv_5{
+    background-size: cover;
+    background: url('imagenes/s_2.jpeg') no-repeat;
+    mask-image: linear-gradient(rgb(0, 0, 0) 35%, transparent);
+
+}
+
+.cont_serv_3{
+    background: url('imagenes/s_4.jpg') no-repeat;
+
+}
+
+.cont_serv_4{
+    background: url('imagenes/s_5.jpg') no-repeat;
+
+}
+
+.cont_serv_5{
+    background: url('imagenes/s_6.jpg') no-repeat;
+
+}
+
+
+
+
+
+.frase_servicio{
+    float: center;
+}
+
+.text_frase_servicio{
+    color: #141414;
+   
+}
+
+.comodo{
+    color: #Cc24d4;
+}
+
+.siempre{
+    color: #28d6a2;
+}
+
+.lugar{
+    color:#b5b5b5;
+}
 
 .frase_servicio{
     width: 40%;
@@ -194,9 +244,25 @@ color: #28d6a2;
     background-color: red;
     float: inline-start;
     margin: 1%;
+    background-size: cover;
     border-radius: 14px;
 }
 
+.plus_1,.plus_2{
+    width: 15%;
+    float: inline-start;
+   margin-left: 5%;
+}
+
+.plus_1 svg,.plus_2 svg{
+    margin-left: 15%;
+}
+
+
+.plus_1 h4,.plus_2 h4{
+   font-size: 18px;
+   color:#acacac;
+}
 
 
 /* -------------------------------------- Instalaciones ------------------------------------*/
@@ -214,22 +280,38 @@ color: #28d6a2;
     height: 370px;
     display: flex;
     background-color: rgb(71, 200, 57);
-    background: url('imagenes/s_3.jpeg') no-repeat;
+    background: url('imagenes/instalaciones\ \(1\).jpg') no-repeat;
     margin: 1%;
     border-radius: 21px;
-    background-position: 0px -150px; 
+    background-position: 70% -50%; 
     float:inline-start;   
-
+    background-size: cover;
 }
 
-.burbuja_1,.burbuja_2,.burbuja_3,.burbuja_4{
+
+.img_inst_2{
+    background: url('imagenes/instalaciones\ \(2\).jpg') no-repeat;
+    background-size: cover;
+       background-position: 50% -50%;
+}
+
+.img_inst_3{
+    background: url('imagenes/instalaciones\ \(3\).jpg') no-repeat;
+    background-size: cover;
+}
+
+.burbuja_1,.burbuja_2,.burbuja_3{
     background-color: whitesmoke;
     width: 50%;
     height: 70px;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
+    opacity: 50%;
 }
 
+.cont_text_inst h1{
+    margin-left: 3%;
+}
 .inst_text{
     font-size: 25px;
 }
@@ -255,8 +337,11 @@ color: #28d6a2;
     width: 50%;
     height: 550px;
     border-radius: 21px;
-    background: url('imagenes/5_1.jpg') no-repeat center center;
+    background: url('imagenes/directora.jpg') no-repeat center center;
     background-size: cover;
+    -webkit-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
+box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.35);
 }
 
 .info_derecha_admin {
@@ -280,24 +365,45 @@ color: #28d6a2;
     width: 45%;
     display: flex;
     align-items: center;
-    background-color: whitesmoke;
+   
     border-radius: 21px;
     padding: 20px;
 }
 
 .foto_docente_1, .foto_docente_2 {
-    width: 50%;
+    width: 100%;
     height: 450px;
-    background: url('imagenes/6_1.jpg') no-repeat center center;
+    background: url('imagenes/hugo.jpg') no-repeat center center;
     background-size: cover;
     border-radius: 21px;
+    mask-image: linear-gradient(black 35%, transparent);
+    -webkit-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
+box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.35);
+}
+
+.foto_docente_2{
+    background: url('imagenes/ordoñez.jpg') no-repeat center center;
+    background-position: 78% 65%;
 }
 
 .nombre_docente_1, .cargos_docente_1, .nombre_docente_2, .cargos_docente_2 {
     font-size: 19px;
     width: 50%;
     padding-left: 20px;
+    float: center;
 }
+.cargos_docente_1, .cargos_docente_2{
+    color:#757575;
+     
+}
+
+.cargos ,.nombre_direccion{
+    color: black;
+    width: 50%;
+    font-size: 30px;
+}
+
 
 /* ------------------------------ Proyecto ------------------------------------ */
 .proyecto{
@@ -315,12 +421,19 @@ color: #28d6a2;
 .imagen_act_1,.imagen_act_2{
     width: 30%;
     height: 400px;
-    background: url('imagenes/4_1.jpg') no-repeat;
+    background: url('imagenes/proyecto_1.jpg') no-repeat center center;
     border-radius: 21px;
     float: inline-start;
+    background-size: cover;
+}
+
+.imagen_act_2{
+    background: url('imagenes/proyecto_2.jpg') no-repeat center center;
+    background-position: 50% 29%; 
 }
 
 .text_act_1{
+    margin: 2%;
     float: inline-start;
 }
 
@@ -338,6 +451,7 @@ color: #28d6a2;
 }
 
 .info_act_1,.info_act_2{
+    width: 40%;
     font-size: 20px;
 }
 
@@ -349,11 +463,29 @@ color: #28d6a2;
 
 /* ------------ Mapa -----------*/
 
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
- #map { height: 180px; }
+iframe{
+    width: 70%;
+    height: 600px;
+    margin: 1%;
+    border-radius: 21px;
+}
   /* 
    * Optional: Makes the sample page fill the window. 
    */
+
+/* ------------ Caracteristicas -----------*/
+
+.caracteristicas{
+    width: 25%;
+    float: inline-start;
+}
+
+.caracteristicas h3{
+    font-size: 23px;
+    margin: 0px;
+}
+
+.caracteristicas h4{
+    font-size: 17px;
+
+}
