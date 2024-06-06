@@ -60,7 +60,17 @@ Class Contacto extends Conexion{
 	}
 
 	public function agregarajustificante($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,$apellidopaterno,$apellidomaterno,$fechafalta,$motivo,$estado){
-		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumn$idasignatura','$nombreasignatura','$idalumno','$nombrealumno','$apellidopaterno','$apellidonaterno','$fechafalta','$motivo','$estado')";
+		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumno','$idasignatura','$nombreasignatura','$idalumno','$nombrealumno','$apellidopaterno','$apellidomaterno','$fechafalta','$motivo','$estado')";
+		$bandera = $this->ejecutar_sentencia();   
+	}
+
+	public function rechazarjustificante($idalumno){
+		$this->sentencia = "UPDATE justificantes SET estado = 'Rechazado' WHERE id_alumno = '$idalumno';";
+		$bandera = $this->ejecutar_sentencia();   
+	}
+
+	public function aceptarjustificante($idalumno){
+		$this->sentencia = "UPDATE justificantes SET estado = 'Aceptado' WHERE id_alumno = '$idalumno';";
 		$bandera = $this->ejecutar_sentencia();   
 	}
 

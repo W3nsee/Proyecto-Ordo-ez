@@ -14,6 +14,9 @@ if($resultado->num_rows > 0) {
     
     while ($registro = $resultado->fetch_assoc()) {
         echo "<option value='" . $registro["id_alumno"] . "'>" . $registro["fecha_falta"] . " - " . $registro["motivo"] . "</option>";
+        $id_alumno = $registro["id_alumno"];
+
+        
     }
     
     echo "</select>";
@@ -35,5 +38,23 @@ if(isset($_POST["seleccionar"])) {
     echo "<input type='hidden' name='idjustificante' value='$idjustificante'>";
     echo "<input type='submit' name='enviar' value='Enviar'>";
     echo "</form>";
+
 }
+
+if(isset($_POST["enviar"])) 
+    {
+        $idjustificante = $_POST["idjustificante"];
+        $accion = $_POST["accion"];
+
+        if($accion == "aceptar") {
+            
+            $obj->aceptarjustificante($id_alumno);
+
+        }
+        else if ($accion == "rechazar") {
+            $obj->rechazarjustificante($id_alumno);
+        }
+        
+        
+    }
 ?>
