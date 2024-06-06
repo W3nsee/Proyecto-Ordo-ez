@@ -59,6 +59,11 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();   
 	}
 
+	public function agregarajustificante($idalumno,$idasignatura,$fechafalta,$motivo,$estado){
+		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumno','$idasignatura','$fechafalta','$motivo','$estado')";
+		$bandera = $this->ejecutar_sentencia();   
+	}
+
 	public function consultarsalon($grado,$grupo){
 		$this->sentencia = "SELECT * FROM salon WHERE grado = '$grado' AND grupo = '$grupo';";
 		$resultado = $this->obtener_sentencia();
@@ -169,6 +174,12 @@ Class Contacto extends Conexion{
 
 	public function consultarfaltas($idalumno,$idasignatura){
 		$this->sentencia = "SELECT * FROM faltas_asistencia WHERE id_asignatura = '$idasignatura' AND alumno_id = '$idalumno';";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function consultarunafalta($id){
+		$this->sentencia = "SELECT * FROM faltas_asistencia WHERE id = '$id';";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}

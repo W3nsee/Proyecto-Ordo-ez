@@ -16,6 +16,7 @@
         <a href="?opc=listarmaestros_alumno"><li>Listar Maestros</li></a>
         <a href="?opc=listarcalificaciones"><li>Listar Calificaciones</li></a>
 		<a href="?opc=listarfaltas_alumno"><li>Listar Faltas</li></a>
+		<a href="?opc=solicitarjustificante"><li>Solicitar Justificante</li></a>
 		<a href="?opc=verificarjustificante"><li>Verificar Justificante</li></a>
 	  </ul>
 	</div>
@@ -41,6 +42,9 @@
 		    		case 'listarfaltas_alumno':
 		    		    include ("Alumno/listarfaltas_alumno.php");
 		    		    break;
+					case 'solicitarjustificante':
+						include ("Alumno/solicitarjustificante.php");
+						break;
 		    		case 'verificarjustificante':
 		    		    include ("Alumno/verificarjustificante.php");
 		    		    break;
