@@ -103,16 +103,24 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 <h1>Profesor que impartirá la asignatura:</h1>
 
 <?php
-   //Obtener id del maestro anterior
-           $obj14 = new contacto();
-           $resultado = $obj14->consultarmaestroconidasignatura($idasignatura);
-           while ($registro = $resultado->fetch_assoc()){
-                $nombremaestro = $registro['nombre_maestro'];
-                $apellidopaterno = $registro['apellido_paterno'];
-                $apellidomaterno = $registro['apellido_materno'];
+// Obtener id del maestro anterior
+$obj14 = new contacto();
+$resultado = $obj14->consultarmaestroconidasignatura($idasignatura);
 
-                echo 'Anterior maestro que impartía la asignatura: ' . $nombremaestro . " " . $apellidopaterno .  " " .$apellidomaterno;
-           }
+// Verificar si se encontraron datos del maestro
+if($resultado->num_rows > 0) {
+    // Mostrar los detalles del maestro anterior
+    while ($registro = $resultado->fetch_assoc()){
+        $nombremaestro = $registro['nombre_maestro'];
+        $apellidopaterno = $registro['apellido_paterno'];
+        $apellidomaterno = $registro['apellido_materno'];
+
+        echo 'Maestro que imparte la asignatura: ' . $nombremaestro . " " . $apellidopaterno .  " " .$apellidomaterno;
+    }
+} else {
+    // Mostrar un mensaje indicando que los datos están vacíos
+    echo 'AVISO: La asigantura no es impartida por ningun maestro por el momento.';
+}
 ?>
 
 <input type="hidden" name="maestro" id="maestroInput" class="boton">

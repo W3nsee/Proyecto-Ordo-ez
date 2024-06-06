@@ -27,7 +27,7 @@
 		    	switch($_GET["opc"])
 		    	{
 		    		case 'consultarhorario':
-		    		    include("Alumno/listahorario.php");
+		    		    include("Alumno/listarhorario.php");
 		    		    break;
 		    		case 'listaralumnos_alumno':
 		    		    include("Alumno/listaralumnos_alumno.php");
