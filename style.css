@@ -13,6 +13,11 @@ h1,h2,h3,h4,h5,h6{
     width: 100%
 }
 
+
+.titulo{
+    font-size: 35px;
+}
+
 /* ---------------------------------------- Principal --------------------------------------*/
 
     /* --------- Izquierda --------- */
@@ -30,7 +35,7 @@ h1,h2,h3,h4,h5,h6{
     width: 30%;
     height: 600px;
     border-radius: 21px;   
-    background: url('imagenes/6_1.jpg') no-repeat; 
+    background: url('imagenes/6_1.webp') no-repeat; 
     position: absolute;
     display: flex;
    
@@ -177,7 +182,7 @@ color: #28d6a2;
 .servicio_derecha{
     width: 30%;
     height: 450px;
-    background: url('imagenes/s_3.jpeg') no-repeat;
+    background: url('imagenes/s_3.webp') no-repeat;
     float: inline-start;
     background-size: cover;
 
@@ -185,23 +190,23 @@ color: #28d6a2;
 
 .cont_serv_2,.cont_serv_3,.cont_serv_4,.cont_serv_5{
     background-size: cover;
-    background: url('imagenes/s_2.jpeg') no-repeat;
+    background: url('imagenes/s_2.webp') no-repeat;
     mask-image: linear-gradient(rgb(0, 0, 0) 35%, transparent);
 
 }
 
 .cont_serv_3{
-    background: url('imagenes/s_4.jpg') no-repeat;
+    background: url('imagenes/s_4.webp') no-repeat;
 
 }
 
 .cont_serv_4{
-    background: url('imagenes/s_5.jpg') no-repeat;
+    background: url('imagenes/s_5.webp') no-repeat;
 
 }
 
 .cont_serv_5{
-    background: url('imagenes/s_6.jpg') no-repeat;
+    background: url('imagenes/s_6.webp') no-repeat;
 
 }
 
@@ -280,7 +285,7 @@ color: #28d6a2;
     height: 370px;
     display: flex;
     background-color: rgb(71, 200, 57);
-    background: url('imagenes/instalaciones\ \(1\).jpg') no-repeat;
+    background: url('imagenes/instalaciones\ \(1\).webp') no-repeat;
     margin: 1%;
     border-radius: 21px;
     background-position: 70% -50%; 
@@ -296,10 +301,10 @@ color: #28d6a2;
 }
 
 .img_inst_3{
-    background: url('imagenes/instalaciones\ \(3\).jpg') no-repeat;
+    background: url('imagenes/instalaciones\ \(3\).webp') no-repeat;
     background-size: cover;
 }
-
+/*
 .burbuja_1,.burbuja_2,.burbuja_3{
     background-color: whitesmoke;
     width: 50%;
@@ -315,7 +320,7 @@ color: #28d6a2;
 .inst_text{
     font-size: 25px;
 }
-
+*/
 /* ------------------------------------- INFORMACION --------------------------- */
 .informacion {
     width: 100%;
@@ -337,7 +342,7 @@ color: #28d6a2;
     width: 50%;
     height: 550px;
     border-radius: 21px;
-    background: url('imagenes/directora.jpg') no-repeat center center;
+    background: url('imagenes/directora.webp') no-repeat center center;
     background-size: cover;
     -webkit-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.75);
@@ -373,7 +378,7 @@ box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.35);
 .foto_docente_1, .foto_docente_2 {
     width: 100%;
     height: 450px;
-    background: url('imagenes/hugo.jpg') no-repeat center center;
+    background: url('imagenes/hugo.webp') no-repeat center center;
     background-size: cover;
     border-radius: 21px;
     mask-image: linear-gradient(black 35%, transparent);
@@ -383,7 +388,7 @@ box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.35);
 }
 
 .foto_docente_2{
-    background: url('imagenes/ordoñez.jpg') no-repeat center center;
+    background: url('imagenes/ordoñez.webp') no-repeat center center;
     background-position: 78% 65%;
 }
 
@@ -406,60 +411,68 @@ box-shadow: 10px 9px 27px -6px rgba(0,0,0,0.35);
 
 
 /* ------------------------------ Proyecto ------------------------------------ */
-.proyecto{
+.proyecto {
     width: 100%;
-  
 }
 
-.actividad_1{
+.actividad_1, .actividad_2 {
     width: 100%;
-    height: 400px;
     display: flex;
     background-color: whitesmoke;
+    margin-bottom: 20px; /* Añadido para separar las actividades */
 }
 
-.imagen_act_1,.imagen_act_2{
+.imagen_act_1, .imagen_act_2 {
     width: 30%;
     height: 400px;
-    background: url('imagenes/proyecto_1.jpg') no-repeat center center;
     border-radius: 21px;
-    float: inline-start;
     background-size: cover;
+    background: url('imagenes/proyecto_1.webp') no-repeat center center;
+    background-size: cover;
+    float: inline-start;
 }
 
-.imagen_act_2{
-    background: url('imagenes/proyecto_2.jpg') no-repeat center center;
+.imagen_act_2 {
+    background: url('imagenes/proyecto_2.webp') no-repeat center center;
     background-position: 50% 29%; 
+
 }
 
-.text_act_1{
-    margin: 2%;
-    float: inline-start;
+.text_act_1, .text_act_2 {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.imagen_act_2,.text_act_2{
-    float: inline-end;
-}
-
-.text_act_2{
-    float: inline-start;
-}
-
-
-.titulo_act_1,.titulo_act_2{
+.titulo_act_1, .titulo_act_2 {
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
-.info_act_1,.info_act_2{
+.info_act_1, .info_act_2 {
     width: 40%;
     font-size: 20px;
+    float: inline-start;
+   
+}
+/*
+.actividad_1 .imagen_act_1 {
+    order: 1;
 }
 
-
-.nombre_docente_1, .nombre_docente_2{
-    font-size: 25px;
+.actividad_1 .text_act_1 {
+    order: 2;
 }
 
+.actividad_2 .text_act_2 {
+    order: 1;
+}
+
+.actividad_2 .imagen_act_2 {
+    order: 2;
+}
 
 /* ------------ Mapa -----------*/
 
