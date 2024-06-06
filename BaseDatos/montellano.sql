@@ -3,11 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-06-2024 a las 05:52:41
+-- Tiempo de generación: 06-06-2024 a las 18:26:25
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
-
-USE montellano;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -73,7 +71,7 @@ CREATE TABLE `alumno` (
 --
 
 INSERT INTO `alumno` (`id`, `contrasena`, `nombre`, `apellido_paterno`, `apellido_materno`, `fecha_nacimiento`, `telefono`, `correo`, `sexo`, `id_salon`) VALUES
-(92, 'maya333', 'Arataki ', 'itto', 'Eusebio', '2024-05-04', 312116, 'itto@gmail.com', 'M', '2'),
+(92, 'maya333', 'Arataki ', 'itto', 'Eusebio', '2024-05-04', 312116, 'itto@gmail.com', 'M', '1'),
 (96, 'ittogod666', 'mi esposo', 'itto', 'mi vida', '2024-05-31', 312116, 'ITTO@GMAIL.COM', 'M', '2'),
 (97, 'deqwrewq', 'jose luis', 'juarez', 'lopez', '2024-05-15', 212666, 'joseluis@gmail.com', 'M', '7'),
 (101, 'jcarlos', 'juan carlos', 'perez', 'aaaa', '2024-05-03', 3452, 'jcarlos@gmail.com', 'M', '7'),
@@ -101,10 +99,9 @@ INSERT INTO `asignatura` (`id`, `nombre`) VALUES
 (2, 'sistemas'),
 (4, 'progra II'),
 (7, 'matematicas'),
-(8, 'EspaÃ±ol'),
+(8, 'EpaÃ±ol'),
 (9, 'Ciencias'),
-(13, 'Caifanes'),
-(15, 'Topollillo');
+(13, 'charly');
 
 -- --------------------------------------------------------
 
@@ -187,9 +184,7 @@ INSERT INTO `horario` (`id_asignatura`, `dia`, `hora_inicio`, `hora_final`) VALU
 (9, 'Martes', '19:40:00', '20:50:00'),
 (13, 'Martes', '20:30:00', '21:30:00'),
 (13, 'Jueves', '03:30:00', '04:30:00'),
-(13, 'Viernes', '21:30:00', '22:30:00'),
-(14, 'Lunes', '06:13:00', '18:15:00'),
-(15, 'Martes', '18:16:00', '18:17:00');
+(13, 'Viernes', '21:30:00', '22:30:00');
 
 -- --------------------------------------------------------
 
@@ -220,9 +215,25 @@ INSERT INTO `impartir` (`id_asignatura`, `nombre_asignatura`, `id_maestro`, `nom
 (10, 'topollillo', 2, 'hugo cesar', 'ponce', 'suarez'),
 (11, 'sociales', 2, 'hugo cesar', 'ponce', 'suarez'),
 (12, 'Jose Maria', 2, 'hugo cesar', 'ponce', 'suarez'),
-(13, 'Caifanes', 5, 'Gerardo ', 'itto', 'Ayala'),
-(14, 'pepito', 2, 'hugo cesar', 'ponce', 'suarez'),
-(15, 'Topollillo', 5, 'Gerardo ', 'itto', 'Ayala');
+(13, 'charly', 1, 'Angel', 'OrdoÃ±ez', 'Ayala');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `justificantes`
+--
+
+CREATE TABLE `justificantes` (
+  `id_asignatura` int(24) DEFAULT NULL,
+  `nombre_asignatura` varchar(24) DEFAULT NULL,
+  `id_alumno` int(24) DEFAULT NULL,
+  `nombre_alumno` varchar(24) DEFAULT NULL,
+  `apellido_paterno` varchar(24) DEFAULT NULL,
+  `apellido_materno` varchar(24) DEFAULT NULL,
+  `fecha_falta` date DEFAULT NULL,
+  `motivo` varchar(500) DEFAULT NULL,
+  `estado` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -369,7 +380,7 @@ ALTER TABLE `alumno`
 -- AUTO_INCREMENT de la tabla `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `faltas_asistencia`
