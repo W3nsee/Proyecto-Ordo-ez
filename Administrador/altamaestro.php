@@ -36,7 +36,7 @@ if(isset($_POST['insertar'])){
     Nombres: <input type="text" name="nombre" placeholder="Ejem. José María" required><br/><br/>
     Apellido paterno: <input type="text" name="apellidopaterno" placeholder="Ejem. Pérez" required><br/><br/>
     Apellido materno: <input type="text" name="apellidomaterno" placeholder="Ejem. Gómez" required><br/><br/>
-    Fecha de nacimiento: <input type="date" name="fechanacimiento" required><br/><br/>
+    Fecha de nacimiento: <input type="date" name="fechanacimiento" max="<?php echo date('Y-m-d'); ?>" required><br/><br/>
     Telefono: <input type="text" name="telefono" placeholder="Ejem. 312 666 6666" required><br/><br/>
     Correo: <input type="email" name="correo" placeholder="Ejem. nombre6@gmail.com" required><br/><br/>
     Sexo:

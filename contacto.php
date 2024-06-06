@@ -8,6 +8,7 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+
 	public function verificaridmaestro($id){
 		$this->sentencia = "SELECT * FROM maestro;";
 		$resultado = $this->obtener_sentencia();
@@ -356,6 +357,7 @@ Class Contacto extends Conexion{
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
+	
 
 }
 ?>

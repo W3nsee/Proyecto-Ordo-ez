@@ -24,9 +24,10 @@ if(isset($_POST["mostrar"])){
         echo "<br><br>";
 
         echo "<label for='fecha'>Fecha de la falta: </label>";
-        echo "<input type='date' id='fecha' name='fecha' required>"; // Añadimos el atributo 'required' para asegurar que la fecha no esté vacía
+        echo "<input type='date' id='fecha' name='fecha' required max='" . date('Y-m-d') . "' min='" . date('Y-01-01') . "' request>";
 
-        // Validar fecha para que no sea futura
+
+        // validación fecha para que no sea futura
         echo "<script>";
         echo "document.getElementById('fecha').setAttribute('max', new Date().toISOString().split('T')[0]);";
         echo "</script>";
@@ -45,33 +46,22 @@ if(isset($_POST["mostrar"])){
     $idalumno = $_POST["idalumno"];
     $fecha = $_POST["fecha"]; // Recuperar la fecha de la falta de asistencia
 
-    // Verificar si la fecha es válida (no es una fecha futura)
-    if(strtotime($fecha) <= strtotime(date('Y-m-d'))) {
-
         require_once("contacto.php");
         $obj3 = new contacto();
 
-        // Verificar si ya existe un registro para este alumno y esta asignatura en esta fecha
-        if (!$obj3->existeFalta($idalumno, $idasignatura, $fecha)) {
-            $resultado = $obj3->consultarsolounalumnomatriculado($idalumno, $idasignatura);
-            while ($registro = $resultado->fetch_assoc()) {
-                $nombreasignatura = $registro["nombre_asignatura"];
-                $nombrealumno = $registro["nombre_alumno"];
-                $apellidopaterno = $registro["apellido_paterno"];
-                $apellidomaterno = $registro["apellido_materno"];
-                $falta = $_POST["fecha"];
+        $resultado = $obj3->consultarsolounalumnomatriculado($idalumno, $idasignatura);
+        while ($registro = $resultado->fetch_assoc()) {
+            $nombreasignatura = $registro["nombre_asignatura"];
+            $nombrealumno = $registro["nombre_alumno"];
+            $apellidopaterno = $registro["apellido_paterno"];
+            $apellidomaterno = $registro["apellido_materno"];
+            $falta = $_POST["fecha"];
 
-                $obj4 = new contacto();
-                $obj4->ponerfalta($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,
-                    $apellidopaterno,$apellidomaterno,$falta);
-                echo "Falta de Asistencia Colocada";
-            }
-        } else {
-            echo "Ya existe un registro con esos datos.";
+            $obj4 = new contacto();
+            $obj4->ponerfalta($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,
+                $apellidopaterno,$apellidomaterno,$falta);
+            echo "Falta de Asistencia Colocada";
         }
-    } else {
-        echo "Seleccione una fecha válida. No puede seleccionar una fecha futura";
-    }
 
 } else {
     require_once("contacto.php");
