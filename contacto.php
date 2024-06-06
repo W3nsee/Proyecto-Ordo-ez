@@ -8,7 +8,6 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
-
 	public function verificaridmaestro($id){
 		$this->sentencia = "SELECT * FROM maestro;";
 		$resultado = $this->obtener_sentencia();
@@ -57,6 +56,11 @@ Class Contacto extends Conexion{
 
     public function altahorario($id,$dia,$horainicio,$horafinal){
 		$this->sentencia = "INSERT INTO horario VALUES('$id','$dia','$horainicio','$horafinal')";
+		$bandera = $this->ejecutar_sentencia();   
+	}
+
+	public function agregarajustificante($idalumno,$idasignatura,$fechafalta,$motivo,$estado){
+		$this->sentencia = "INSERT INTO justificantes VALUES('$idalumno','$idasignatura','$fechafalta','$motivo','$estado')";
 		$bandera = $this->ejecutar_sentencia();   
 	}
 
@@ -174,8 +178,26 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+	public function consultarunafalta($id){
+		$this->sentencia = "SELECT * FROM faltas_asistencia WHERE id = '$id';";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
 	public function consultarhorario($idasignatura){
 		$this->sentencia = "SELECT * FROM horario WHERE id_asignatura = $idasignatura;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function consultarcalificacion($id,$idasignatura){
+		$this->sentencia = "SELECT * FROM calificacion WHERE id_asignatura = $idasignatura AND id_alumno = '$id'";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
+	public function consultarjustificantes($id){
+		$this->sentencia = "SELECT * FROM justificantes WHERE id_alumno = $id;";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}
@@ -221,15 +243,25 @@ Class Contacto extends Conexion{
        $this->ejecutar_sentencia();
     }
 
+	public function eliminarcalificacionalumno($id){
+		$this->sentencia = "DELETE FROM calificacion WHERE id_alumno = '$id'";
+		$this->ejecutar_sentencia();
+	}
+
+	public function eliminarfaltaalumno($id){
+		$this->sentencia = "DELETE FROM faltas_asistencia WHERE alumno_id = '$id'";
+		$this->ejecutar_sentencia();
+	 }
+
     public function eliminarmatriculaasignatura($id){
        $this->sentencia = "DELETE FROM matricula WHERE id_asignatura = '$id'";
        $this->ejecutar_sentencia();
     }
 
-    public function eliminaridmaestro($id){
-       $this->sentencia = "DELETE FROM impartir WHERE id_maestro = '$id'";
-       $this->ejecutar_sentencia();
-    }
+    public function eliminarmaestroimpartir($id){
+		$this->sentencia = "UPDATE impartir SET nombre_maestro = '', apellido_paterno = '', apellido_materno = '', id_maestro = '' WHERE id_maestro = '$id'";
+		$this->ejecutar_sentencia();
+	}	
 
     public function eliminaridasignatura($id){
        $this->sentencia = "DELETE FROM impartir WHERE id_asignatura = '$id'";
@@ -240,6 +272,16 @@ Class Contacto extends Conexion{
        $this->sentencia = "DELETE FROM horario WHERE id_asignatura = '$id'";
        $this->ejecutar_sentencia();
     }
+
+	public function eliminartodocalificacion($id){
+		$this->sentencia = "DELETE FROM calificacion WHERE id_asignatura = '$id'";
+		$this->ejecutar_sentencia();
+	}
+
+	public function eliminartodofaltas($id){
+		$this->sentencia = "DELETE FROM faltas_asistencia WHERE id_asignatura = '$id'";
+		$this->ejecutar_sentencia();
+	}
 
 	Public function cargaralumno($idalumno){
 		$this->sentencia = "SELECT * FROM alumno WHERE id='$idalumno'";
