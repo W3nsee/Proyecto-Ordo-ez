@@ -59,8 +59,8 @@ Class Contacto extends Conexion{
 		$bandera = $this->ejecutar_sentencia();   
 	}
 
-	public function consultarsalon(){
-		$this->sentencia = "SELECT * FROM salon;";
+	public function consultarsalon($grado,$grupo){
+		$this->sentencia = "SELECT * FROM salon WHERE grado = '$grado' AND grupo = '$grupo';";
 		$resultado = $this->obtener_sentencia();
 		return $resultado;
 	}

@@ -3,47 +3,61 @@
     if(!isset($_POST["seleccionar"]) && !isset($_POST["cargar"]) && !isset($_POST["modificar"])) {
 ?>
     <h1>Modificar Datos de un Alumno</h1> 
-    <form action="" method="post">
-        <select name="idsalon">
-            <?php
-               require_once("contacto.php");
-               $obj = new contacto();
-               $resultado_grupos = $obj->consultarsalon();
 
-               while ($registro = $resultado_grupos->fetch_assoc()) {
-                   echo 'Selecciona un grado y grupo: ';
-                   echo "<option value=".$registro["id"].">".$registro["grado"].".- ".$registro["grupo"]."</option>";
-               }
-            ?>
-        </select>
+    <p>Selecciona el grado y grupo del alumno: <p>
+    <form action="" method="post">
+    Grado: <br/></br>
+      <label>
+         <input type="radio" name="grado" value="1" checked>1
+      </label>
+      <label>
+         <input type="radio" name="grado" value="2">2
+      </label>
+      <label>
+         <input type="radio" name="grado" value="3">3
+      </label><br/><br/>
+   Grupo: <br/><br/>
+      <label>
+         <input type="radio" name="grupo" value="A" checked>A
+      </label>
+      <label>
+         <input type="radio" name="grupo" value="B">B
+      </label>
+      <label>
+         <input type="radio" name="grupo" value="C">C
+      </label><br/><br/>
+
         <input type="submit" name="seleccionar" value="Seleccionar">
     </form>
 <?php
     }
 
     if(isset($_POST["seleccionar"])){
-        $idsalon = $_POST['idsalon'];
+        
+        $grado = $_POST['grado'];
+        $grupo = $_POST['grupo'];
 
         require_once("contacto.php");
-        $obj2 = new contacto();
-        $resultado_alumnos = $obj2->consultaralumnosalon($idsalon);
+        $obj4 = new contacto();
+        $resultado = $obj4->consultarsalon($grado,$grupo);
+        while ($registro = $resultado->fetch_assoc()){
+            $idsalon = $registro['id'];
+        }
 
-        if($resultado_alumnos->num_rows == 0) {
+        $obj5 = new contacto();
+        $resultado = $obj5->consultaralumnosalon($idsalon);
+        if($resultado->num_rows == 0) {
             echo "<h2>No hay alumnos disponibles para este grupo.</h2>";
         } else {
-?>
-            <h1>Seleccionar Alumno</h1> 
-            <form action="" method="post">
-                <select name="idmodificar">
-                    <?php
-                       while ($registro = $resultado_alumnos->fetch_assoc()) {
-                           echo "<option value=".$registro["id"].">".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</option>";
-                       }
-                    ?>
-                </select>
-                <input type="submit" name="cargar" value="Cargar Datos">
-            </form>
-<?php
+            echo "<h1>Seleccionar Alumno</h1>"; 
+            echo "<form action='' method='post'>";
+            echo "<select name='idmodificar'>";
+            while ($registro = $resultado->fetch_assoc()){
+                echo "<option value=".$registro["id"].">".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</option>";
+            }
+            echo "</select>";
+            echo "<input type='submit' name='cargar' value='Cargar Datos'>";
+            echo "</form>";
         }
     }
 
@@ -51,7 +65,7 @@
         require_once("contacto.php");
         $obj = new contacto();
         $resultado = $obj->cargaralumno($_POST['idmodificar']);
-         while ($registro = $resultado->fetch_assoc()){
+        while ($registro = $resultado->fetch_assoc()){
             $idsalon = $registro["id_salon"];
 ?>
         <form action="" method="post">
