@@ -8,7 +8,6 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
-
 	public function verificaridmaestro($id){
 		$this->sentencia = "SELECT * FROM maestro;";
 		$resultado = $this->obtener_sentencia();
@@ -250,6 +249,16 @@ Class Contacto extends Conexion{
        $this->sentencia = "DELETE FROM horario WHERE id_asignatura = '$id'";
        $this->ejecutar_sentencia();
     }
+
+	public function eliminartodocalificacion($id){
+		$this->sentencia = "DELETE FROM calificacion WHERE id_asignatura = '$id'";
+		$this->ejecutar_sentencia();
+	}
+
+	public function eliminartodofaltas($id){
+		$this->sentencia = "DELETE FROM faltas_asistencia WHERE id_asignatura = '$id'";
+		$this->ejecutar_sentencia();
+	}
 
 	Public function cargaralumno($idalumno){
 		$this->sentencia = "SELECT * FROM alumno WHERE id='$idalumno'";
