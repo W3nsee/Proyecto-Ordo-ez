@@ -1,27 +1,67 @@
-<h1>Dar de Baja un Alumno</h1> 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dar de Baja un Alumno</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function confirmarEliminar() {
+            return confirm("¿Estás seguro de que deseas eliminar este alumno?");
+        }
+        function validarFormulario() {
+            var seleccion = document.getElementById("ideliminar").value;
+            if (seleccion === "") {
+                alert("Por favor, selecciona un alumno antes de continuar.");
+                return false; // Evita que el formulario se envíe si no se ha seleccionado un alumno
+            }
+            return confirmarEliminar(); // Envía el formulario solo si se confirma la eliminación
+        }
 
-<form action="" method="post">
-	<select name=ideliminar>
-		<?php
-		 require_once("contacto.php");
-		 $obj = new contacto();
-		 $obj2 = new contacto();
-		 if (isset($_POST["eliminar"])){
-		 	$obj->bajaalumno($_POST["ideliminar"]);
-		 	$obj2->eliminarmatriculaalumno($_POST["ideliminar"]);
-		 }
-		 $resultado = $obj->consultaralumno();
-		 while($registro = $resultado->fetch_assoc()){
-		 	echo "<option value=".$registro["id"].">".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</option>";
-		 }
+    </script>
+</head>
+<body>
+    <h1>Dar de Baja un Alumno</h1> 
 
-		?>
-	</select>
-	<input type="submit" name="eliminar" value="Eliminar Alumno">
-</form>
+    <?php
+    require_once("contacto.php");
+    $obj = new contacto();
+    $resultado = $obj->consultaralumno();
 
-<?php
-   if(isset($_POST["eliminar"])){
-   	echo "Alumno Eliminado";
-   }
-?>
+    if ($resultado->num_rows === 0) {
+        echo "<p>No hay alumnos disponibles.</p>";
+    } else {
+        ?>
+
+        <form action="" method="post" onsubmit="return validarFormulario();">
+            <select name="ideliminar" id="ideliminar">
+                <option value="" disabled selected hidden>Selecciona un alumno</option>
+                <?php
+                $obj2 = new contacto();
+                $obj3 = new contacto();
+                $obj4 = new contacto();
+
+                if (isset($_POST["eliminar"])){
+                    $obj2->bajaalumno($_POST["ideliminar"]);
+                    $obj3->eliminarmatriculaalumno($_POST["ideliminar"]);
+                    $obj4->eliminarcalificacionalumno($_POST["ideliminar"]);
+                    $obj5->eliminarfaltaalumno($_POST["ideliminar"]);
+                }
+
+                while($registro = $resultado->fetch_assoc()){
+                    echo "<option value=".$registro["id"].">".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</option>";
+                }
+                ?>
+            </select>
+            <input type="submit" name="eliminar" value="Eliminar Alumno">
+        </form>
+
+        <?php
+        if(isset($_POST["eliminar"]) && !empty($_POST["ideliminar"])){
+            echo "Alumno Eliminado";
+        }
+    }
+    ?>
+</body>
+</html>

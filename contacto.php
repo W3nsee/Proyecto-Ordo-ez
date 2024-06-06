@@ -221,15 +221,25 @@ Class Contacto extends Conexion{
        $this->ejecutar_sentencia();
     }
 
+	public function eliminarcalificacionalumno($id){
+		$this->sentencia = "DELETE FROM calificacion WHERE id_alumno = '$id'";
+		$this->ejecutar_sentencia();
+	}
+
+	public function eliminarfaltaalumno($id){
+		$this->sentencia = "DELETE FROM faltas_asistencia WHERE alumno_id = '$id'";
+		$this->ejecutar_sentencia();
+	 }
+
     public function eliminarmatriculaasignatura($id){
        $this->sentencia = "DELETE FROM matricula WHERE id_asignatura = '$id'";
        $this->ejecutar_sentencia();
     }
 
-    public function eliminaridmaestro($id){
-       $this->sentencia = "DELETE FROM impartir WHERE id_maestro = '$id'";
-       $this->ejecutar_sentencia();
-    }
+    public function eliminarmaestroimpartir($id){
+		$this->sentencia = "UPDATE impartir SET nombre_maestro = '', apellido_paterno = '', apellido_materno = '', id_maestro = '' WHERE id_maestro = '$id'";
+		$this->ejecutar_sentencia();
+	}	
 
     public function eliminaridasignatura($id){
        $this->sentencia = "DELETE FROM impartir WHERE id_asignatura = '$id'";

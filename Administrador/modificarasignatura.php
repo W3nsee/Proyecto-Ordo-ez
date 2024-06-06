@@ -107,21 +107,22 @@ while ($registro_horario = $resultado_horario->fetch_assoc()) {
 $obj14 = new contacto();
 $resultado = $obj14->consultarmaestroconidasignatura($idasignatura);
 
-// Verificar si se encontraron datos del maestro
-if($resultado->num_rows > 0) {
-    // Mostrar los detalles del maestro anterior
-    while ($registro = $resultado->fetch_assoc()){
+// Verificar si el campo id_maestro está vacío
+while ($registro = $resultado->fetch_assoc()) {
+    if (empty($registro['id_maestro'])) {
+        // Mostrar un mensaje indicando que los datos están vacíos
+        echo 'AVISO: La asignatura no es impartida por ningún maestro por el momento.';
+    } else {
+        // Mostrar los detalles del maestro anterior
         $nombremaestro = $registro['nombre_maestro'];
         $apellidopaterno = $registro['apellido_paterno'];
         $apellidomaterno = $registro['apellido_materno'];
 
         echo 'Maestro que imparte la asignatura: ' . $nombremaestro . " " . $apellidopaterno .  " " .$apellidomaterno;
     }
-} else {
-    // Mostrar un mensaje indicando que los datos están vacíos
-    echo 'AVISO: La asigantura no es impartida por ningun maestro por el momento.';
 }
 ?>
+
 
 <input type="hidden" name="maestro" id="maestroInput" class="boton">
 <p>NOTA: No olvides seleccionar por lo menos un maestro antes de modificar los datos.</p>
