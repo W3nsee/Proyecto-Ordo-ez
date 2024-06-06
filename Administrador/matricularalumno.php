@@ -40,7 +40,6 @@
 </body>
 </html>
 
-
 <?php
 // Incluir el archivo PHP que contiene la clase Contacto
 require_once("contacto.php");
@@ -51,23 +50,34 @@ if(isset($_POST['insert'])){
     $idalumno = isset($_POST['alumno']) ? $_POST['alumno'] : '';
     $idasignatura = isset($_POST['asignatura']) ? $_POST['asignatura'] : '';
     
+    // Verificar si el alumno ya está matriculado en la asignatura seleccionada
     $obj = new contacto();
+    $resultado = $obj->consultarsolounalumnomatriculado($idalumno, $idasignatura);
+    
+    if($resultado->num_rows > 0) {
+        // Mostrar un mensaje indicando que el alumno ya está matriculado en esta asignatura
+        echo "El alumno ya está matriculado en esta asignatura.";
+    } else {
+        // Obtener detalles del alumno y la asignatura para la matrícula
+        $obj = new contacto();
         $resultado = $obj->cargaralumno($idalumno);
         while ($registro = $resultado->fetch_assoc()) {
-        $nombrealumno = $registro["nombre"];
-        $apellidopaterno = $registro["apellido_paterno"];
-        $apellidomaterno = $registro["apellido_materno"];
-    }
+            $nombrealumno = $registro["nombre"];
+            $apellidopaterno = $registro["apellido_paterno"];
+            $apellidomaterno = $registro["apellido_materno"];
+        }
 
-    $obj2 = new contacto();
+        $obj2 = new contacto();
         $resultado = $obj2->cargarasignatura($idasignatura);
         while ($registro = $resultado->fetch_assoc()) {
-        $nombreasignatura = $registro["nombre"];
+            $nombreasignatura = $registro["nombre"];
+        }
+
+        // Matricular al alumno si no está matriculado en la asignatura
+        $obj3 = new contacto();
+        $obj3->matricularalumno($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,$apellidopaterno,$apellidomaterno);
+
+        echo "Alumno Matriculado";
     }
-
-    $obj3 = new contacto();
-    $obj3->matricularalumno($idasignatura,$nombreasignatura,$idalumno,$nombrealumno,$apellidopaterno,$apellidomaterno);
-
-    echo "Alumno Matriculado";
 }
 ?>
