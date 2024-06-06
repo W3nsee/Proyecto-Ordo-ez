@@ -21,6 +21,7 @@
 		<a href="?opc=modificarmaestro"><li>Modificar Maestro</li></a>
 		<a href="?opc=modificarasignatura"><li>Modificar Asignatura</li></a>
 		<a href="?opc=matricularalumno"><li>Matricular Alumno</li></a>
+		<a href="?opc=revisarjustificantes"><li>Revisar Justificantes</li></a>
 	  </ul>
 	</div>
 
@@ -60,6 +61,9 @@
 		    		case 'matricularalumno':
 		    		    include ("Administrador/matricularalumno.php");
 		    		    break;
+					case 'revisarjustificantes':
+						include ("Administrador/revisarjustificantes.php");
+						break;
 		    	}
 		    }
 		?>

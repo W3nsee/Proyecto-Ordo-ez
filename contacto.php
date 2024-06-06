@@ -196,6 +196,12 @@ Class Contacto extends Conexion{
 		return $resultado;
 	}
 
+	public function consultarjustificantes($id){
+		$this->sentencia = "SELECT * FROM justificantes WHERE id_alumno = $id;";
+		$resultado = $this->obtener_sentencia();
+		return $resultado;
+	}
+
 	public function contarfaltas($idalumno, $idasignatura) {
     $this->sentencia = "SELECT COUNT(*) AS fecha_falta FROM faltas_asistencia WHERE alumno_id = '$idalumno' AND id_asignatura = '$idasignatura'";
     $resultado = $this->obtener_sentencia();
