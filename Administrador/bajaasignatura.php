@@ -6,6 +6,7 @@
     <title>Dar de Baja una Asignatura</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Administrador/CSS/baja_asignatura.css">
     <script>
         function confirmarEliminar() {
             return confirm("¿Estás seguro de que deseas eliminar esta asignatura?");
@@ -22,50 +23,56 @@
     </script>
 </head>
 <body>
-    <h1>Dar de Baja una Asignatura</h1> 
 
-    <?php
-    require_once("contacto.php");
-    $obj = new contacto();
-    $resultado = $obj->consultarasignatura();
+    <h1 class="titulo">Dar de Baja una Asignatura</h1> 
 
-    if ($resultado->num_rows === 0) {
-        echo "<p>No hay asignaturas disponibles.</p>";
-    } else {
-        ?>
-
-        <form action="" method="post" onsubmit="return validarFormulario();">
-            <select name="ideliminar" id="ideliminar">
-                <option value="" disabled selected hidden>Selecciona una asignatura</option>
-                <?php
-        $obj2 = new contacto();
-        $obj3 = new contacto();
-        $obj4 = new contacto();
-        $obj5 = new contacto();
-        $obj6 = new contacto();
-
-        if (isset($_POST["eliminar"])){
-            $obj->bajaasignatura($_POST["ideliminar"]);
-            $obj2->eliminarmatriculaasignatura($_POST["ideliminar"]);
-            $obj3->eliminaridasignatura($_POST["ideliminar"]);
-            $obj4->eliminarhorario($_POST["ideliminar"]);
-            $obj5->eliminartodocalificacion($_POST["ideliminar"]);
-            $obj6->eliminartodofaltas($_POST["ideliminar"]);
-        }
-        
-        while($registro = $resultado->fetch_assoc()){
-            echo "<option value=".$registro["id"].">".$registro["nombre"]."</option>";
-        }
-        ?>
-            </select>
-            <input type="submit" name="eliminar" value="Eliminar Asignatura">
-        </form>
+    <div class="cont_eliminar">
 
         <?php
-        if(isset($_POST["eliminar"]) && !empty($_POST["ideliminar"])){
-            echo "Asignatura Eliminado";
+        require_once("contacto.php");
+        $obj = new contacto();
+        $resultado = $obj->consultarasignatura();
+
+        if ($resultado->num_rows === 0) {
+            echo "<p>No hay asignaturas disponibles.</p>";
+        } else {
+            ?>
+
+            <form action="" method="post" onsubmit="return validarFormulario();">
+                <select class="seleccion" name="ideliminar" id="ideliminar">
+                    <option value="" disabled selected hidden>Selecciona una asignatura</option>
+                    <?php
+            $obj2 = new contacto();
+            $obj3 = new contacto();
+            $obj4 = new contacto();
+            $obj5 = new contacto();
+            $obj6 = new contacto();
+
+            if (isset($_POST["eliminar"])){
+                $obj->bajaasignatura($_POST["ideliminar"]);
+                $obj2->eliminarmatriculaasignatura($_POST["ideliminar"]);
+                $obj3->eliminaridasignatura($_POST["ideliminar"]);
+                $obj4->eliminarhorario($_POST["ideliminar"]);
+                $obj5->eliminartodocalificacion($_POST["ideliminar"]);
+                $obj6->eliminartodofaltas($_POST["ideliminar"]);
+            }
+            
+            while($registro = $resultado->fetch_assoc()){
+                echo "<option value=".$registro["id"].">".$registro["nombre"]."</option>";
+            }
+            ?>
+                </select>
+                <input class="boton_eliminar" type="submit" name="eliminar" value="Eliminar Asignatura">
+            </form>
+
+            <?php
+            if(isset($_POST["eliminar"]) && !empty($_POST["ideliminar"])){
+                echo "Asignatura Eliminado";
+            }
         }
-    }
-    ?>
+        ?>
+
+    </div>
+
 </body>
 </html>
