@@ -5,6 +5,12 @@ body{
  
 }
 
+h2,h1{
+
+    font-family: "sen"; /*Tipo de fuente*/
+
+}
+
 
 .caja {
     position: relative;
@@ -115,3 +121,127 @@ img{
     cursor: pointer;
 }
 
+.titulo{
+
+    text-align: center; /*Centrar el texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 40px;  /*Tamaño de la fuente*/
+    color: #f9f9f9; /*Color del texto*/
+    background-color: #83072d; /*Color de fondo*/
+    margin: 0px;
+    padding: 40px;
+
+}
+
+.cont_form{
+
+    height: auto;
+    width: 1000px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+}
+
+/*----------------------------Crear Asignatura---------------------------*/
+
+.cont_nombre_asignatura{
+
+    justify-content: center; /*Centrar el texto*/
+    translate: 110px 0px; /*Desplazar el texto*/
+    width: 800px;
+
+}
+
+.label_asignatura{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 20px 30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 210px; /*Ancho de la caja*/
+    border-radius: 10px;
+
+}
+
+.input_asignatura{
+
+    height: 56px; /*Alto de la caja*/
+    width: 740px; /*Ancho de la caja*/
+    padding: 5px; /*Espacio interno de la caja*/
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    font-family: inherit; /*Tipo de fuente*/
+    font-size: 23px; /*Tamaño de la fuente*/
+    background: #f9f9f9; /*Color de fondo*/
+    color: rgba(0, 0, 0, 0.75); /*Color del borde*/
+    padding: 3px 3px 3px 15px; /*Espacio interno del borde*/
+
+}
+
+/*---------------------------- Crear horario ---------------------------*/
+
+.label_horario{
+
+    font-family: "sen"; /*Tipo de fuente*/
+    text-align: center; /*Centrar el texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    color: #222222; /*Color del texto*/
+    translate: 90px 30px; /*Desplazar el texto*/
+    background: #f9f9f9; /*Color de fondo*/
+    width: 160px; /*Ancho de la caja*/
+    border-radius: 10px;
+
+}
+
+.cont_horarios{
+
+    justify-content: center; /*Centrar el texto*/
+    padding: 10px;
+    border: 2px solid #222222; /*Borde de la caja*/
+    border-radius: 8px;  /*Borde redondeado de la caja*/
+    outline: none; /*Borrador de la caja*/
+    color: #222222; /*Color del texto*/
+    width: 800px;
+    margin-left: 80px;
+
+}
+
+/*------------------------ Guardar ------------------------*/
+
+.boton_guardar{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: 320px 120px; /*Desplazar el texto*/ 
+    width: 250px;
+    height: 50px;
+    background: #222222 /*Color de fondo*/;
+    color: #F9F9F9; /*Color del texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.boton_guardar:hover{
+
+    background-color: #83072d; /*Color de fondo*/
+    color: #f9f9f9; /*Color del texto*/
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+
+}

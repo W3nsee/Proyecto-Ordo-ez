@@ -1,0 +1,74 @@
+.titulo{
+
+    text-align: center; /*Centrar el texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 40px;  /*Tamaño de la fuente*/
+    color: #f9f9f9; /*Color del texto*/
+    background-color: #83072d; /*Color de fondo*/
+    margin: 0px;
+    padding: 40px;
+
+}
+
+.cont_eliminar{
+
+    height: auto;
+    width: 1000px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+
+}
+
+.seleccion{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: 0px 0px; /*Desplazar el texto*/
+    width: 500px;
+    height: 50px;
+    background: #f9f9f9 /*Color de fondo*/;
+    color: #222222; /*Color del texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    border-radius: 10px;
+    border: 2px solid #222222;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.boton_eliminar{
+
+    display: flex; /*Centrar el texto*/
+    justify-content: center; /*Centrar el texto*/
+    translate: 620px -80px; /*Desplazar el texto*/ 
+    width: 250px;
+    height: 50px;
+    background: #222222 /*Color de fondo*/;
+    color: #F9F9F9; /*Color del texto*/
+    font-family: "sen"; /*Tipo de fuente*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.boton_eliminar:hover{
+
+    background-color: #83072d; /*Color de fondo*/
+    color: #f9f9f9; /*Color del texto*/
+    cursor: pointer; /*Centrar el texto*/
+    font-size: 20px;
+    font-family: "sen"; /*Tipo de fuente*/
+    margin-left: 30px;
+    border-radius: 10px;
+
+}

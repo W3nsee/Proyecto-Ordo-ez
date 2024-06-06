@@ -6,73 +6,140 @@
     <title>Alta Asignatura</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Administrador/crear_asignatura.css">
+    <link rel="stylesheet" href="Administrador/CSS/crear_asignatura.css">
     <style>
         /* Sirve para cambiar el color de los placecholder */
         ::-webkit-input-placeholder {
             color: #cdcdcd;
         }
     </style>
+
+        <!--Fuentes de google-->
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-    <h1>Dar de Alta una Asignatura</h1> 
+
+    <h1 class="titulo">Dar de Alta una Asignatura</h1> 
     <!-- Formulario -->
     <form id="altaForm" action="" method="post" onsubmit="return validarFormulario()">
-        Nombre de la Asignatura: <input type="text" name="nombre" placeholder="Ejem. Español" required><br/><br/>
 
-        <!-- Agregar campos de horario -->
-        <h2>Crear Horario</h2>
-        <label for="lunes">Lunes</label>:
-        <input type="checkbox" name="lunes" id="lunes_check" onclick="toggleHora('lunes')"> 
-        <input type="time" name="lunes_inicio" id="lunes_inicio" disabled> -
-        <input type="time" name="lunes_fin" id="lunes_fin" disabled><br/><br/>
+        <div class="cont_form">
 
-        <label for="martes">Martes</label>:
-        <input type="checkbox" name="martes" id="martes_check" onclick="toggleHora('martes')"> 
-        <input type="time" name="martes_inicio" id="martes_inicio" disabled> -
-        <input type="time" name="martes_fin" id="martes_fin" disabled><br/><br/>
+            <div class="cont_nombre_asignatura">
 
-        <label for="miercoles">Miércoles</label>:
-        <input type="checkbox" name="miercoles" id="miercoles_check" onclick="toggleHora('miercoles')"> 
-        <input type="time" name="miercoles_inicio" id="miercoles_inicio" disabled> -
-        <input type="time" name="miercoles_fin" id="miercoles_fin" disabled><br/><br/>
+                <h2 class="label_asignatura">Nombre Asignatura</h2>
+                <input class="input_asignatura" type="text" name="nombre" placeholder="Ejem. Español" required><br/><br/>
 
-        <label for="jueves">Jueves</label>:
-        <input type="checkbox" name="jueves" id="jueves_check" onclick="toggleHora('jueves')"> 
-        <input type="time" name="jueves_inicio" id="jueves_inicio" disabled> -
-        <input type="time" name="jueves_fin" id="jueves_fin" disabled><br/><br/>
+            </div>
 
-        <label for="viernes">Viernes</label>:
-        <input type="checkbox" name="viernes" id="viernes_check" onclick="toggleHora('viernes')"> 
-        <input type="time" name="viernes_inicio" id="viernes_inicio" disabled> -
-        <input type="time" name="viernes_fin" id="viernes_fin" disabled><br/><br/>
+            <!-- Agregar campos de horario -->
 
-        <h1>Profesor que impartirá la asignatura:</h1>
-        <input type="hidden" name="maestro" id="maestroInput" class="boton">
-        <input type="submit" name="insert" value="Guardar" class="boton">
+            <h2 class="label_horario">Crear Horario</h2>
+
+            <div class="cont_horarios">
+
+                <div class="cont_lunes">
+
+                    <h2 class="label_lunes">Lunes</h2>
+
+                    <input class="check_lunes" type="checkbox" name="lunes" id="lunes_check" onclick="toggleHora('lunes')"> 
+                    <input class="inicio_lunes" type="time" name="lunes_inicio" id="lunes_inicio" disabled> -
+                    <input class="fin_lunes" type="time" name="lunes_fin" id="lunes_fin" disabled><br/><br/>
+
+                </div>
+
+                <div class="cont_martes">
+
+                    <h2 class="label_martes">Martes</h2>
+
+                    <input class="check_martes" type="checkbox" name="martes" id="martes_check" onclick="toggleHora('martes')"> 
+                    <input class="inicio_martes" type="time" name="martes_inicio" id="martes_inicio" disabled> -
+                    <input class="fin_martes" type="time" name="martes_fin" id="martes_fin" disabled><br/><br/>
+
+                </div>
+
+                <div class="cont_miercoles">
+
+                    <h2 class="label_miercoles">Miércoles</h2>
+
+                    <input class="check_miercoles" type="checkbox" name="miercoles" id="miercoles_check" onclick="toggleHora('miercoles')">
+                    <input class="inicio_miercoles" type="time" name="miercoles_inicio" id="miercoles_inicio" disabled> -
+                    <input class="fin_miercoles" type="time" name="miercoles_fin" id="miercoles_fin" disabled><br/><br/>
+
+                </div>
+
+                <div class="cont_jueves">
+
+                    <h2 class="label_jueves">Jueves</h2>
+
+                    <input class="check_jueves" type="checkbox" name="jueves" id="jueves_check" onclick="toggleHora('jueves')"> 
+                    <input class="inicio_jueves" type="time" name="jueves_inicio" id="jueves_inicio" disabled> -
+                    <input class="fin_jueves" type="time" name="jueves_fin" id="jueves_fin" disabled><br/><br/>
+
+                </div>
+
+                <div class="cont_viernes">
+
+                    <h2 class="label_viernes">Viernes</h2>
+
+                    <input class="check_viernes" type="checkbox" name="viernes" id="viernes_check" onclick="toggleHora('viernes')">
+                    <input class="inicio_viernes" type="time" name="viernes_inicio" id="viernes_inicio" disabled> -
+                    <input class="fin_viernes" type="time" name="viernes_fin" id="viernes_fin" disabled><br/><br/>
+
+                </div>
+
+            </div>
+
+            <!-- Agregar campos de horario -->
+
+            <h2>Profesor que impartirá la asignatura:</h2>
+
+            <div class="cont_maestros">
+
+                <div class="slider">
+                    <?php
+                        require_once("contacto.php");
+                        $obj = new Contacto();
+                        $resultado = $obj->consultarmaestro();
+                
+                        // Verificar si hay maestros disponibles antes de mostrarlos
+                        if($resultado->num_rows == 0) 
+                        {
+
+                            echo "<p>No hay maestros disponibles.</p>";
+
+                        } 
+                        else 
+                        {
+                            while($registro = $resultado->fetch_assoc())
+                            {
+                                if(isset($registro["nombre"])) 
+                                {
+                                    $idmaestro = $registro['id']; // Obtener el ID del maestro
+                                    echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\" id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
+                                    <div class='texto'>".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</div></div>";
+
+                                }
+                            }
+                        }
+                    ?>
+                </div>
+
+            </div>
+
+            <input type="hidden" name="maestro" id="maestroInput" class="boton">
+            <input class="boton_guardar" type="submit" name="insert" value="Guardar">
+
+        </div>
+        
     </form>
 
     <!-- Div que muestra los maestros -->
-    <div class="slider">
-        <?php
-        require_once("contacto.php");
-        $obj = new Contacto();
-        $resultado = $obj->consultarmaestro();
-       
-        // Verificar si hay maestros disponibles antes de mostrarlos
-        if($resultado->num_rows == 0) {
-            echo "<p>No hay maestros disponibles.</p>";
-        } else {
-            while($registro = $resultado->fetch_assoc()){
-                if(isset($registro["nombre"])) {
-                    $idmaestro = $registro['id']; // Obtener el ID del maestro
-                    echo "<div class='img_caja' onclick=\"actualizarMaestro('$idmaestro')\" id='resultado'> <img class='foto' src='https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGFic3RyYWN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60' alt='Image'>
-                    <div class='texto'>".$registro["nombre"]." ".$registro["apellido_paterno"]." ".$registro["apellido_materno"]."</div></div>";
-                }
-            }
-        }
-        ?>
-    </div>
 
     <script>
     function actualizarMaestro(idmaestro) {

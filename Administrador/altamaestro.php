@@ -30,6 +30,13 @@ if(isset($_POST['insertar'])){
     <title>Alta Alumnos</title>
     <link rel="stylesheet" href="Administrador/CSS/alta_maestro.css">
 
+    <!--Fuentes de google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
 
