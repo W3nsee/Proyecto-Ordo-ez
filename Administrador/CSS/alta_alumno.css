@@ -67,7 +67,8 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: -335px 150px; /*Desplazar el texto*/
+    translate: -160px 150px; /*Desplazar el texto*/
+    width: 600px;
 
 }
 
@@ -77,9 +78,9 @@
     text-align: center; /*Centrar el texto*/
     font-size: 20px; /*Tamaño de la fuente*/
     color: #222222; /*Color del texto*/
-    translate: 190px -28px;  /*Desplazar el texto*/
+    translate: 230px -28px;  /*Desplazar el texto*/
     background: #f9f9f9; /*Color de fondo*/
-    width: 180px; /*Ancho de la caja*/
+    width: 190px; /*Ancho de la caja*/
     border-radius: 10px;
     
 }
@@ -87,7 +88,7 @@
 .input_apellido_paterno{
 
     height: 56px; /*Alto de la caja*/
-    width: 390px; /*Ancho de la caja*/
+    width: 350px; /*Ancho de la caja*/
     padding: 5px; /*Espacio interno de la caja*/
     border: 2px solid #222222; /*Borde de la caja*/
     border-radius: 8px; /*Borde redondeado de la caja*/
@@ -106,9 +107,11 @@
 .cont_apellido_materno{
 
     display: flex; /*Centrar el texto*/
-    justify-content: center; /*Centrar el texto*/
-    translate: 155px 84px; /*Desplazar el texto*/
-    width: 1000px;
+    flex-direction: row-reverse;
+    justify-content: right; /*Centrar el texto*/
+    translate: 550px 84px; /*Desplazar el texto*/
+    width: 600px;
+    
 
 }
 
@@ -118,9 +121,9 @@
     text-align: center; /*Centrar el texto*/
     font-size: 20px; /*Tamaño de la fuente*/
     color: #222222; /*Color del texto*/
-    translate: 190px -28px; /*Desplazar el texto*/
+    translate: -380px -28px; /*Desplazar el texto*/
     background: #f9f9f9; /*Color de fondo*/
-    width: 180px; /*Ancho de la caja*/
+    width: 280px; /*Ancho de la caja*/
     border-radius: 10px;
     
 }
@@ -128,7 +131,7 @@
 .input_apellido_materno{
 
     height: 56px; /*Alto de la caja*/
-    width: 390px; /*Ancho de la caja*/
+    width: 520px; /*Ancho de la caja*/
     padding: 5px; /*Espacio interno de la caja*/
     border: 2px solid #222222; /*Borde de la caja*/
     border-radius: 8px;  /*Borde redondeado de la caja*/
@@ -148,7 +151,9 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: -433px 150px; /*Desplazar el texto*/
+    translate: -390px 150px; /*Desplazar el texto*/
+
+    
 
 }
 
@@ -158,9 +163,9 @@
     text-align: center; /*Centrar el texto*/
     font-size: 20px; /*Tamaño de la fuente*/
     color: #222222; /*Color del texto*/
-    translate: 228px -30px; /*Desplazar el texto*/
+    translate: 250px -30px; /*Desplazar el texto*/
     background: #f9f9f9; /*Color de fondo*/
-    width: 220px; /*Ancho de la caja*/
+    width: 240px; /*Ancho de la caja*/
     border-radius: 10px;
     
 }
@@ -168,7 +173,7 @@
 .input_fecha_nacimiento{
 
     height: 56px; /*Alto de la caja*/
-    width: 240px; /*Ancho de la caja*/
+    width: 340px; /*Ancho de la caja*/
     padding: 5px; /*Espacio interno de la caja*/
     border: 2px solid #222222; /*Borde de la caja*/
     border-radius: 8px;  /*Borde redondeado de la caja*/
@@ -188,7 +193,8 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: -105px 84px; /*Desplazar el texto*/
+    translate: 450px 84px; /*Desplazar el texto*/
+    width: 500px;
 
 }
 
@@ -208,7 +214,7 @@
 .input_telefono{
 
     height: 56px; /*Alto de la caja*/
-    width: 240px; /*Ancho de la caja*/
+    width: 440px; /*Ancho de la caja*/
     padding: 5px; /*Espacio interno de la caja*/
     border: 2px solid #222222; /*Borde de la caja*/
     border-radius: 8px;  /*Borde redondeado de la caja*/
@@ -228,7 +234,7 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: 315px 18px; /*Desplazar el texto*/
+    translate: -230px 150px; /*Desplazar el texto*/
     width: 800px;
 
 }
@@ -269,7 +275,7 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: -410px 84px; /*Desplazar el texto*/
+    translate: -410px 204px; /*Desplazar el texto*/
 
 }
 
@@ -401,8 +407,9 @@
 .cont_grado{
 
     display: flex; /*Centrar el texto*/
-    justify-content: center; /*Centrar el texto*/
-    translate: 190px 4px; /*Desplazar el texto*/
+    flex-direction: row-reverse;
+    justify-content: right; /*Centrar el texto*/
+    translate: 200px 124px; /*Desplazar el texto*/
     width: 500px;
 
 }
@@ -413,7 +420,7 @@
     text-align: center; /*Centrar el texto*/
     font-size: 20px; /*Tamaño de la fuente*/
     color: #222222; /*Color del texto*/
-    translate: 90px -30px; /*Desplazar el texto*/
+    translate: -200px -30px; /*Desplazar el texto*/
     background: #f9f9f9; /*Color de fondo*/
     width: 80px; /*Ancho de la caja*/ 
     border-radius: 10px;
@@ -588,8 +595,9 @@
 .cont_grupo{
 
     display: flex; /*Centrar el texto*/
-    justify-content: center; /*Centrar el texto*/
-    translate: 390px -76px; /*Desplazar el texto*/
+    flex-direction: row-reverse;
+    justify-content: left; /*Centrar el texto*/
+    translate: 735px 46px; /*Desplazar el texto*/
     width: 800px;
 
 }
@@ -600,7 +608,7 @@
     text-align: center; /*Centrar el texto*/
     font-size: 20px; /*Tamaño de la fuente*/
     color: #222222; /*Color del texto*/
-    translate: 125px -30px; /*Desplazar el texto*/
+    translate: -195px -30px; /*Desplazar el texto*/
     background: #f9f9f9; /*Color de fondo*/
     width: 110px; /*Ancho de la caja*/
     border-radius: 10px;
@@ -776,7 +784,7 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: -270px 4px; /*Desplazar el texto*/
+    translate: -270px 104px; /*Desplazar el texto*/
 
 }
 
@@ -849,7 +857,7 @@
 
     display: flex; /*Centrar el texto*/
     justify-content: center; /*Centrar el texto*/
-    translate: 300px 20px; /*Desplazar el texto*/ 
+    translate: 300px 120px; /*Desplazar el texto*/ 
     width: 300px;
 
 }
